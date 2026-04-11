@@ -38,7 +38,7 @@ Pages use **support@talking-buttons.com**. Configure receiving mail or replace t
 
 ## Screenshots
 
-Place marketing screenshots under [`images/`](images/) and replace the placeholder blocks on the home pages.
+Marketing screenshots live under [`images/`](images/) and are shown on the English and Russian home pages (`en/index.html`, `ru/index.html`).
 
 ## Canonical URLs
 

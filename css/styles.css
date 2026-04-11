@@ -259,6 +259,45 @@ li {
   font-size: 0.9375rem;
 }
 
+/* Mobile app screenshots (landing) */
+.app-screenshots {
+  margin: 2rem 0 1.5rem;
+}
+
+.app-screenshots h2 {
+  margin-top: 0;
+  font-size: 1.15rem;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 0.85rem;
+  margin-top: 0.75rem;
+  list-style: none;
+  padding: 0;
+}
+
+@media (min-width: 40rem) {
+  .screenshot-grid {
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    gap: 1rem;
+  }
+}
+
+.screenshot-item {
+  margin: 0;
+}
+
+.screenshot-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
 .site-footer {
   margin-top: 3rem;
   padding-top: 1.5rem;
