@@ -269,53 +269,75 @@ li {
   font-size: 1.15rem;
 }
 
-.screenshot-grid {
-  display: grid;
-  /* Narrow screens: 3 columns; wide: 5 columns → 9 screenshots in two rows (5 + 4) */
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.5rem 0.65rem;
-  margin-top: 0.75rem;
+/* Horizontal carousel: one row, swipe / trackpad / scrollbar */
+.screenshot-carousel-hint {
+  margin: 0.35rem 0 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.screenshot-carousel {
+  margin-top: 0.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 0.5rem;
+  padding: 0.35rem 0 0.65rem;
+  outline: none;
+}
+
+.screenshot-carousel:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .screenshot-carousel {
+    scroll-behavior: smooth;
+  }
+}
+
+.screenshot-track {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  gap: 0.75rem;
   list-style: none;
-  padding: 0;
-}
-
-@media (min-width: 36rem) {
-  .screenshot-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0.55rem 0.75rem;
-  }
-}
-
-@media (min-width: 52rem) {
-  .screenshot-grid {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 0.6rem 0.85rem;
-  }
+  margin: 0;
+  padding: 0 0.25rem;
+  width: max-content;
+  min-height: min-content;
 }
 
 .screenshot-item {
+  flex: 0 0 auto;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 0;
+  scroll-snap-align: center;
+  scroll-snap-stop: normal;
 }
 
 .screenshot-item img {
   display: block;
   width: auto;
-  max-width: 100%;
+  max-width: min(64vw, 30rem);
   height: auto;
-  max-height: 11rem;
+  max-height: 28rem;
   object-fit: contain;
   border-radius: 8px;
   border: 1px solid var(--border);
   background: var(--surface);
 }
 
-@media (min-width: 52rem) {
+@media (min-width: 40rem) {
   .screenshot-item img {
-    max-height: 10rem;
+    max-width: min(28vw, 28rem);
+    max-height: 30rem;
   }
 }
 
