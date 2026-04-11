@@ -11,6 +11,16 @@ Static HTML/CSS for **talking-buttons.com**, served from this folder via **GitHu
 
 Same IDs as in [`app/src/main/res/values/strings.xml`](../app/src/main/res/values/strings.xml).
 
+## Language redirect (`/` → `/en/` or `/ru/`)
+
+The root [`index.html`](index.html) runs a short script that:
+
+1. Reads **`localStorage.tb_locale`** (`en` or `ru`) if set.
+2. Otherwise picks a locale from **`navigator.languages` / `navigator.language`** (Russian if the primary tag is `ru` or starts with `ru-`, else English), stores it, and redirects with **`location.replace`** to `en/` or `ru/`.
+3. Each localized page sets `tb_locale` on load so the last visited language wins (including after using the header language switch).
+
+With **JavaScript disabled**, the root page shows the manual language chooser inside `<noscript>`.
+
 ## Enable GitHub Pages
 
 1. Repository **Settings → Pages**.

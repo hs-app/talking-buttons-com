@@ -2,6 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script>
+(function () {
+  try {
+    var KEY = 'tb_locale';
+    var stored = localStorage.getItem(KEY);
+    var locale;
+    if (stored === 'en' || stored === 'ru') {
+      locale = stored;
+    } else {
+      var langs = navigator.languages || [navigator.language || ''];
+      locale = 'en';
+      for (var i = 0; i < langs.length; i++) {
+        var tag = String(langs[i] || '').toLowerCase();
+        if (tag === 'ru' || tag.indexOf('ru-') === 0) {
+          locale = 'ru';
+          break;
+        }
+      }
+      localStorage.setItem(KEY, locale);
+    }
+    var target = locale === 'ru' ? 'ru/' : 'en/';
+    location.replace(target);
+  } catch (e) {
+    /* Fall through: show noscript chooser */
+  }
+})();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Talking Buttons — Choose language</title>
   <meta name="description" content="Talking Buttons AAC communication boards. Choose English or Russian.">
@@ -12,24 +39,26 @@
   <link rel="alternate" hreflang="x-default" href="https://talking-buttons.com/en/">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="wrap">
-      <p class="logo"><a href="./">Talking Buttons</a></p>
-    </div>
-  </header>
-  <main id="main" class="wrap chooser">
-    <h1>Talking Buttons</h1>
-    <p class="lead">AAC picture communication boards for Android and Chrome. Choose a language.</p>
-    <div class="chooser-links">
-      <a href="en/">English</a>
-      <a href="ru/">Русский</a>
-    </div>
-  </main>
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>© Talking Buttons</p>
-    </div>
-  </footer>
+  <noscript>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <p class="logo"><a href="./">Talking Buttons</a></p>
+      </div>
+    </header>
+    <main id="main" class="wrap chooser">
+      <h1>Talking Buttons</h1>
+      <p class="lead">AAC picture communication boards for Android and Chrome. JavaScript is off — choose a language.</p>
+      <div class="chooser-links">
+        <a href="en/">English</a>
+        <a href="ru/">Русский</a>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>© Talking Buttons</p>
+      </div>
+    </footer>
+  </noscript>
 </body>
 </html>
