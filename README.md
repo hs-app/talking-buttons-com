@@ -1,1 +1,35 @@
-# talking-buttons-com
+# Talking Buttons — marketing site (GitHub Pages)
+
+Static HTML/CSS for **talking-buttons.com**, served from this folder via **GitHub Pages** (`/docs` on the default branch).
+
+## Store links (source of truth in repo)
+
+| Product | URL |
+|--------|-----|
+| Android (Google Play) | `https://play.google.com/store/apps/details?id=app.hobbysoft.speakingbuttons` |
+| Chrome extension | `https://chromewebstore.google.com/detail/opdmjidbeogobcfeaedkneafgnljjfid` |
+
+Same IDs as in [`app/src/main/res/values/strings.xml`](../app/src/main/res/values/strings.xml).
+
+## Enable GitHub Pages
+
+1. Repository **Settings → Pages**.
+2. **Build and deployment → Source:** Deploy from a branch.
+3. Branch: `main` (or your default), folder: **`/docs`**.
+4. After the first deploy, under **Custom domain**, enter `talking-buttons.com` if DNS is ready. The [`CNAME`](CNAME) file in this folder should match your chosen hostname (apex or `www`).
+
+## DNS (apex domain)
+
+At your DNS provider, follow [GitHub Pages custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) — typically **A** and **AAAA** records for `talking-buttons.com`, or **CNAME** to `<user>.github.io` for a `www` subdomain.
+
+## Support email
+
+Pages use **support@talking-buttons.com**. Configure receiving mail or replace the address in all `*.html` files.
+
+## Screenshots
+
+Place marketing screenshots under [`images/`](images/) and replace the placeholder blocks on the home pages.
+
+## Canonical URLs
+
+Pages assume the site is served at **https://talking-buttons.com/**. If you test on `https://<user>.github.io/<repo>/`, relative links still work; `canonical` and `hreflang` URLs point at the custom domain.
