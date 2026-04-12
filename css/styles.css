@@ -372,10 +372,25 @@ li {
   }
 }
 
-@media (min-width: 60rem) {
-  .one_screenshot-item img {
-    max-width: min(56vw, 56rem);
-    max-height: 60rem;
+/* Single screenshot (non-carousel) */
+.screenshot-single {
+  margin-top: 0.75rem;
+}
+
+.screenshot-single img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 24rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+@media (min-width: 40rem) {
+  .screenshot-single img {
+    max-height: 28rem;
   }
 }
 

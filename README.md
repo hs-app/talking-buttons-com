@@ -34,7 +34,7 @@ At your DNS provider, follow [GitHub Pages custom domain](https://docs.github.co
 
 ## Support email
 
-Pages use **support@talking-buttons.com**. Configure receiving mail or replace the address in all `*.html` files.
+Pages use **app.hobbysoft@gmail.com**.
 
 ## Screenshots
 
