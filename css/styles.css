@@ -1,4 +1,5 @@
 /* Talking Buttons — marketing site (static)
+   Mobile-first: base rules = narrow viewports; @media (min-width: …) adds wider layouts.
    Light default; dark when OS/browser prefers dark (optional). */
 :root {
   color-scheme: light dark;
@@ -11,7 +12,29 @@
   --border: #c5d0df;
   --focus: #b45309;
   --on-accent: #ffffff;
-  --maxw: 42rem;
+  /* Content width: full-bleed text block on small phones; cap grows at larger breakpoints */
+  --maxw: 100%;
+  --pad-inline: 1rem;
+}
+
+/* Tablet-ish and up: readable max line length, slightly roomier gutters */
+@media (min-width: 36rem) {
+  :root {
+    --maxw: 42rem;
+    --pad-inline: 1.25rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --maxw: 48rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --maxw: 52rem;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,6 +69,12 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -87,9 +116,11 @@ a:focus-visible {
 }
 
 .wrap {
+  box-sizing: border-box;
+  width: 100%;
   max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 0 1.25rem 3rem;
+  margin-inline: auto;
+  padding: 0 var(--pad-inline) 3rem;
 }
 
 .site-header {
