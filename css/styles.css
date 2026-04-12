@@ -451,3 +451,91 @@ li {
   margin-top: 0;
   font-size: 1.1rem;
 }
+
+/* Board repository (OBF/OBZ downloads) */
+.board-repo-intro {
+  margin-bottom: 1.25rem;
+}
+
+.board-repo-wrap {
+  margin: 1rem 0 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.board-repo {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.board-repo caption {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.board-repo th,
+.board-repo td {
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+}
+
+.board-repo th {
+  font-weight: 600;
+  color: var(--text);
+  background: var(--bg);
+  white-space: nowrap;
+}
+
+.board-repo tbody tr:last-child th,
+.board-repo tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.board-repo td.board-repo-name {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.board-repo-note {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.board-download {
+  display: inline-block;
+  padding: 0.35rem 0.65rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--on-accent);
+  background: var(--accent);
+  text-decoration: none;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.board-download:hover {
+  background: var(--accent-hover);
+  color: var(--on-accent);
+}
+
+.board-download:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+@media (max-width: 44rem) {
+  .board-repo th:nth-child(3),
+  .board-repo td:nth-child(3) {
+    display: none;
+  }
+}

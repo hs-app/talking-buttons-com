@@ -36,6 +36,10 @@ At your DNS provider, follow [GitHub Pages custom domain](https://docs.github.co
 
 Pages use **app.hobbysoft@gmail.com**.
 
+## Board library (OBF/OBZ)
+
+Ready-made boards are listed on [`en/boards.html`](en/boards.html) and [`ru/boards.html`](ru/boards.html). Put downloadable files in [`downloads/boards/`](downloads/boards/) using the filenames referenced there (see [`downloads/boards/README.md`](downloads/boards/README.md)).
+
 ## Screenshots
 
 Marketing screenshots live under [`images/`](images/) and are shown on the English and Russian home pages (`en/index.html`, `ru/index.html`).
