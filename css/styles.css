@@ -372,6 +372,13 @@ li {
   }
 }
 
+@media (min-width: 60rem) {
+  .one_screenshot-item img {
+    max-width: min(56vw, 56rem);
+    max-height: 60rem;
+  }
+}
+
 .site-footer {
   margin-top: 3rem;
   padding-top: 1.5rem;
