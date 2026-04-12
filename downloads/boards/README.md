@@ -1,5 +1,7 @@
 # AAC board files (OBF / OBZ)
 
+On the board library pages, each row has two download buttons (Android app and Chrome extension); both point to the **same file** — one OBF/OBZ per row.
+
 Place **Open Board Format** files here using the **same filenames** referenced in:
 
 - [`en/boards.html`](../../en/boards.html)

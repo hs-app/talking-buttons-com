@@ -520,7 +520,10 @@ li {
   background: var(--accent);
   text-decoration: none;
   border-radius: 6px;
-  white-space: nowrap;
+  white-space: normal;
+  line-height: 1.25;
+  text-align: center;
+  max-width: 9.5rem;
 }
 
 .board-download:hover {
@@ -531,6 +534,18 @@ li {
 .board-download:focus-visible {
   outline: 3px solid var(--focus);
   outline-offset: 2px;
+}
+
+.board-download--secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.board-download--secondary:hover {
+  background: var(--surface);
+  color: var(--accent-hover);
+  border-color: var(--accent-hover);
 }
 
 @media (max-width: 44rem) {
