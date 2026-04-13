@@ -1,13 +1,32 @@
 {
+  "format": "open-board-0.1",
   "id": "tb-yes-no-basics-ru",
   "name": "Да/Нет и базовые",
   "locale": "ru",
-  "version": "1.0.0",
-  "author": "Talking Buttons SLP/AT Team",
-  "grid": { "rows": 3, "columns": 4 },
+  "description_html": "Доска 3×4 для ответов да/нет и коммуникативной коррекции.",
+  "grid": {
+    "rows": 3,
+    "columns": 4,
+    "order": [
+      [1, 2, 3, 4],
+      [5, 6, 7, 8],
+      [9, 10, 11, 12]
+    ]
+  },
   "buttons": [
-    { "label": "Да" }, { "label": "Нет" }, { "label": "Возможно" }, { "label": "Не сейчас" },
-    { "label": "Помогите" }, { "label": "Подождите" }, { "label": "Стоп" }, { "label": "Повторите" },
-    { "label": "Понимаю" }, { "label": "Не понимаю" }, { "label": "Еще" }, { "label": "Готово" }
-  ]
+    { "id": 1, "label": "Да" },
+    { "id": 2, "label": "Нет" },
+    { "id": 3, "label": "Возможно" },
+    { "id": 4, "label": "Не сейчас" },
+    { "id": 5, "label": "Помогите" },
+    { "id": 6, "label": "Подождите" },
+    { "id": 7, "label": "Стоп" },
+    { "id": 8, "label": "Повторите" },
+    { "id": 9, "label": "Понимаю" },
+    { "id": 10, "label": "Не понимаю" },
+    { "id": 11, "label": "Еще" },
+    { "id": 12, "label": "Готово" }
+  ],
+  "images": [],
+  "sounds": []
 }

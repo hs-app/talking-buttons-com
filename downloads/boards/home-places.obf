@@ -1,13 +1,32 @@
 {
+  "format": "open-board-0.1",
   "id": "tb-home-places",
   "name": "Home and Places",
   "locale": "en",
-  "version": "1.0.0",
-  "author": "Talking Buttons SLP/AT Team",
-  "grid": { "rows": 3, "columns": 4 },
+  "description_html": "A 3×4 board for communicating about locations and navigation.",
+  "grid": {
+    "rows": 3,
+    "columns": 4,
+    "order": [
+      [1, 2, 3, 4],
+      [5, 6, 7, 8],
+      [9, 10, 11, 12]
+    ]
+  },
   "buttons": [
-    { "label": "Home" }, { "label": "Kitchen" }, { "label": "Bathroom" }, { "label": "Bedroom" },
-    { "label": "School" }, { "label": "Clinic" }, { "label": "Outside" }, { "label": "Car" },
-    { "label": "Go there" }, { "label": "Stay here" }, { "label": "Need help" }, { "label": "Back" }
-  ]
+    { "id": 1, "label": "Home" },
+    { "id": 2, "label": "Kitchen" },
+    { "id": 3, "label": "Bathroom" },
+    { "id": 4, "label": "Bedroom" },
+    { "id": 5, "label": "School" },
+    { "id": 6, "label": "Clinic" },
+    { "id": 7, "label": "Outside" },
+    { "id": 8, "label": "Car" },
+    { "id": 9, "label": "Go there" },
+    { "id": 10, "label": "Stay here" },
+    { "id": 11, "label": "Need help" },
+    { "id": 12, "label": "Back" }
+  ],
+  "images": [],
+  "sounds": []
 }

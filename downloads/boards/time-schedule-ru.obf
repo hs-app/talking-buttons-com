@@ -1,13 +1,32 @@
 {
+  "format": "open-board-0.1",
   "id": "tb-time-schedule-ru",
   "name": "Время и расписание",
   "locale": "ru",
-  "version": "1.0.0",
-  "author": "Talking Buttons SLP/AT Team",
-  "grid": { "rows": 3, "columns": 4 },
+  "description_html": "Доска 3×4 для выражения временных понятий и расписания.",
+  "grid": {
+    "rows": 3,
+    "columns": 4,
+    "order": [
+      [1, 2, 3, 4],
+      [5, 6, 7, 8],
+      [9, 10, 11, 12]
+    ]
+  },
   "buttons": [
-    { "label": "Сейчас" }, { "label": "Позже" }, { "label": "Скоро" }, { "label": "Сегодня" },
-    { "label": "Завтра" }, { "label": "Утро" }, { "label": "День" }, { "label": "Ночь" },
-    { "label": "Сначала" }, { "label": "Потом" }, { "label": "Готово" }, { "label": "Подождите" }
-  ]
+    { "id": 1, "label": "Сейчас" },
+    { "id": 2, "label": "Позже" },
+    { "id": 3, "label": "Скоро" },
+    { "id": 4, "label": "Сегодня" },
+    { "id": 5, "label": "Завтра" },
+    { "id": 6, "label": "Утро" },
+    { "id": 7, "label": "День" },
+    { "id": 8, "label": "Ночь" },
+    { "id": 9, "label": "Сначала" },
+    { "id": 10, "label": "Потом" },
+    { "id": 11, "label": "Готово" },
+    { "id": 12, "label": "Подождите" }
+  ],
+  "images": [],
+  "sounds": []
 }

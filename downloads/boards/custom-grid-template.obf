@@ -1,14 +1,32 @@
 {
+  "format": "open-board-0.1",
   "id": "tb-custom-grid-template",
   "name": "Customizable Grid Template",
   "locale": "en",
-  "version": "1.0.0",
-  "author": "Talking Buttons SLP/AT Team",
-  "grid": { "rows": 3, "columns": 4 },
+  "description_html": "Template for local editing. Replace labels and add images/recordings.",
+  "grid": {
+    "rows": 3,
+    "columns": 4,
+    "order": [
+      [1, 2, 3, 4],
+      [5, 6, 7, 8],
+      [9, 10, 11, 12]
+    ]
+  },
   "buttons": [
-    { "label": "Yes" }, { "label": "No" }, { "label": "Help" }, { "label": "Wait" },
-    { "label": "Custom 1" }, { "label": "Custom 2" }, { "label": "Custom 3" }, { "label": "Custom 4" },
-    { "label": "Custom 5" }, { "label": "Custom 6" }, { "label": "Custom 7" }, { "label": "Custom 8" }
+    { "id": 1, "label": "Yes" },
+    { "id": 2, "label": "No" },
+    { "id": 3, "label": "Help" },
+    { "id": 4, "label": "Wait" },
+    { "id": 5, "label": "Custom 1" },
+    { "id": 6, "label": "Custom 2" },
+    { "id": 7, "label": "Custom 3" },
+    { "id": 8, "label": "Custom 4" },
+    { "id": 9, "label": "Custom 5" },
+    { "id": 10, "label": "Custom 6" },
+    { "id": 11, "label": "Custom 7" },
+    { "id": 12, "label": "Custom 8" }
   ],
-  "note": "Template for local editing. Replace labels and add images/recordings."
+  "images": [],
+  "sounds": []
 }

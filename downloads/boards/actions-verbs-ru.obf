@@ -1,13 +1,32 @@
 {
+  "format": "open-board-0.1",
   "id": "tb-actions-verbs-ru",
   "name": "Действия",
   "locale": "ru",
-  "version": "1.0.0",
-  "author": "Talking Buttons SLP/AT Team",
-  "grid": { "rows": 3, "columns": 4 },
+  "description_html": "Доска 3×4 с основными глаголами действий.",
+  "grid": {
+    "rows": 3,
+    "columns": 4,
+    "order": [
+      [1, 2, 3, 4],
+      [5, 6, 7, 8],
+      [9, 10, 11, 12]
+    ]
+  },
   "buttons": [
-    { "label": "Идти" }, { "label": "Стоп" }, { "label": "Иди сюда" }, { "label": "Открыть" },
-    { "label": "Закрыть" }, { "label": "Сесть" }, { "label": "Встать" }, { "label": "Смотреть" },
-    { "label": "Слушать" }, { "label": "Помогите" }, { "label": "Подождите" }, { "label": "Готово" }
-  ]
+    { "id": 1, "label": "Идти" },
+    { "id": 2, "label": "Стоп" },
+    { "id": 3, "label": "Иди сюда" },
+    { "id": 4, "label": "Открыть" },
+    { "id": 5, "label": "Закрыть" },
+    { "id": 6, "label": "Сесть" },
+    { "id": 7, "label": "Встать" },
+    { "id": 8, "label": "Смотреть" },
+    { "id": 9, "label": "Слушать" },
+    { "id": 10, "label": "Помогите" },
+    { "id": 11, "label": "Подождите" },
+    { "id": 12, "label": "Готово" }
+  ],
+  "images": [],
+  "sounds": []
 }

@@ -1,13 +1,32 @@
 {
+  "format": "open-board-0.1",
   "id": "tb-quick-starter",
   "name": "Quick Starter",
   "locale": "en",
-  "version": "1.0.0",
-  "author": "Talking Buttons SLP/AT Team",
-  "grid": { "rows": 3, "columns": 4 },
+  "description_html": "A 3×4 starter board with core words for basic communication needs.",
+  "grid": {
+    "rows": 3,
+    "columns": 4,
+    "order": [
+      [1, 2, 3, 4],
+      [5, 6, 7, 8],
+      [9, 10, 11, 12]
+    ]
+  },
   "buttons": [
-    { "label": "Yes" }, { "label": "No" }, { "label": "Help" }, { "label": "Wait" },
-    { "label": "Pain" }, { "label": "Water" }, { "label": "Toilet" }, { "label": "Food" },
-    { "label": "Repeat" }, { "label": "I don't understand" }, { "label": "Stop" }, { "label": "Thank you" }
-  ]
+    { "id": 1, "label": "Yes" },
+    { "id": 2, "label": "No" },
+    { "id": 3, "label": "Help" },
+    { "id": 4, "label": "Wait" },
+    { "id": 5, "label": "Pain" },
+    { "id": 6, "label": "Water" },
+    { "id": 7, "label": "Toilet" },
+    { "id": 8, "label": "Food" },
+    { "id": 9, "label": "Repeat" },
+    { "id": 10, "label": "I don't understand" },
+    { "id": 11, "label": "Stop" },
+    { "id": 12, "label": "Thank you" }
+  ],
+  "images": [],
+  "sounds": []
 }

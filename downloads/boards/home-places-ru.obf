@@ -1,13 +1,32 @@
 {
+  "format": "open-board-0.1",
   "id": "tb-home-places-ru",
   "name": "Дом и места",
   "locale": "ru",
-  "version": "1.0.0",
-  "author": "Talking Buttons SLP/AT Team",
-  "grid": { "rows": 3, "columns": 4 },
+  "description_html": "Доска 3×4 для обозначения мест и навигации.",
+  "grid": {
+    "rows": 3,
+    "columns": 4,
+    "order": [
+      [1, 2, 3, 4],
+      [5, 6, 7, 8],
+      [9, 10, 11, 12]
+    ]
+  },
   "buttons": [
-    { "label": "Дом" }, { "label": "Кухня" }, { "label": "Ванная" }, { "label": "Спальня" },
-    { "label": "Школа" }, { "label": "Клиника" }, { "label": "Улица" }, { "label": "Машина" },
-    { "label": "Пойдем туда" }, { "label": "Останемся здесь" }, { "label": "Нужна помощь" }, { "label": "Назад" }
-  ]
+    { "id": 1, "label": "Дом" },
+    { "id": 2, "label": "Кухня" },
+    { "id": 3, "label": "Ванная" },
+    { "id": 4, "label": "Спальня" },
+    { "id": 5, "label": "Школа" },
+    { "id": 6, "label": "Клиника" },
+    { "id": 7, "label": "Улица" },
+    { "id": 8, "label": "Машина" },
+    { "id": 9, "label": "Пойдем туда" },
+    { "id": 10, "label": "Останемся здесь" },
+    { "id": 11, "label": "Нужна помощь" },
+    { "id": 12, "label": "Назад" }
+  ],
+  "images": [],
+  "sounds": []
 }

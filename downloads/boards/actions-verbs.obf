@@ -1,13 +1,32 @@
 {
+  "format": "open-board-0.1",
   "id": "tb-actions-verbs",
   "name": "Actions",
   "locale": "en",
-  "version": "1.0.0",
-  "author": "Talking Buttons SLP/AT Team",
-  "grid": { "rows": 3, "columns": 4 },
+  "description_html": "A 3×4 board with common action verbs for directing activities.",
+  "grid": {
+    "rows": 3,
+    "columns": 4,
+    "order": [
+      [1, 2, 3, 4],
+      [5, 6, 7, 8],
+      [9, 10, 11, 12]
+    ]
+  },
   "buttons": [
-    { "label": "Go" }, { "label": "Stop" }, { "label": "Come" }, { "label": "Open" },
-    { "label": "Close" }, { "label": "Sit" }, { "label": "Stand" }, { "label": "Look" },
-    { "label": "Listen" }, { "label": "Help" }, { "label": "Wait" }, { "label": "Finish" }
-  ]
+    { "id": 1, "label": "Go" },
+    { "id": 2, "label": "Stop" },
+    { "id": 3, "label": "Come" },
+    { "id": 4, "label": "Open" },
+    { "id": 5, "label": "Close" },
+    { "id": 6, "label": "Sit" },
+    { "id": 7, "label": "Stand" },
+    { "id": 8, "label": "Look" },
+    { "id": 9, "label": "Listen" },
+    { "id": 10, "label": "Help" },
+    { "id": 11, "label": "Wait" },
+    { "id": 12, "label": "Finish" }
+  ],
+  "images": [],
+  "sounds": []
 }

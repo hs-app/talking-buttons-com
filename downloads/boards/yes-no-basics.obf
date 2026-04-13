@@ -1,13 +1,32 @@
 {
+  "format": "open-board-0.1",
   "id": "tb-yes-no-basics",
   "name": "Yes / No + Help",
   "locale": "en",
-  "version": "1.0.0",
-  "author": "Talking Buttons SLP/AT Team",
-  "grid": { "rows": 3, "columns": 4 },
+  "description_html": "A 3×4 board focused on yes/no responses and communication repair.",
+  "grid": {
+    "rows": 3,
+    "columns": 4,
+    "order": [
+      [1, 2, 3, 4],
+      [5, 6, 7, 8],
+      [9, 10, 11, 12]
+    ]
+  },
   "buttons": [
-    { "label": "Yes" }, { "label": "No" }, { "label": "Maybe" }, { "label": "Not now" },
-    { "label": "Help" }, { "label": "Wait" }, { "label": "Stop" }, { "label": "Repeat" },
-    { "label": "I understand" }, { "label": "I don't understand" }, { "label": "More" }, { "label": "Done" }
-  ]
+    { "id": 1, "label": "Yes" },
+    { "id": 2, "label": "No" },
+    { "id": 3, "label": "Maybe" },
+    { "id": 4, "label": "Not now" },
+    { "id": 5, "label": "Help" },
+    { "id": 6, "label": "Wait" },
+    { "id": 7, "label": "Stop" },
+    { "id": 8, "label": "Repeat" },
+    { "id": 9, "label": "I understand" },
+    { "id": 10, "label": "I don't understand" },
+    { "id": 11, "label": "More" },
+    { "id": 12, "label": "Done" }
+  ],
+  "images": [],
+  "sounds": []
 }

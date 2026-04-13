@@ -1,13 +1,32 @@
 {
+  "format": "open-board-0.1",
   "id": "tb-school-learning",
   "name": "School and Learning",
   "locale": "en",
-  "version": "1.0.0",
-  "author": "Talking Buttons SLP/AT Team",
-  "grid": { "rows": 3, "columns": 4 },
+  "description_html": "A 3×4 board for classroom activities and learning-related communication.",
+  "grid": {
+    "rows": 3,
+    "columns": 4,
+    "order": [
+      [1, 2, 3, 4],
+      [5, 6, 7, 8],
+      [9, 10, 11, 12]
+    ]
+  },
   "buttons": [
-    { "label": "Class" }, { "label": "Teacher" }, { "label": "Break" }, { "label": "Homework" },
-    { "label": "Read" }, { "label": "Write" }, { "label": "Math" }, { "label": "Speech" },
-    { "label": "I know" }, { "label": "I need help" }, { "label": "Repeat" }, { "label": "Finished" }
-  ]
+    { "id": 1, "label": "Class" },
+    { "id": 2, "label": "Teacher" },
+    { "id": 3, "label": "Break" },
+    { "id": 4, "label": "Homework" },
+    { "id": 5, "label": "Read" },
+    { "id": 6, "label": "Write" },
+    { "id": 7, "label": "Math" },
+    { "id": 8, "label": "Speech" },
+    { "id": 9, "label": "I know" },
+    { "id": 10, "label": "I need help" },
+    { "id": 11, "label": "Repeat" },
+    { "id": 12, "label": "Finished" }
+  ],
+  "images": [],
+  "sounds": []
 }

@@ -1,16 +1,25 @@
 {
+  "format": "open-board-0.1",
   "id": "tb-sample-single-ru",
   "name": "Одна доска (пример)",
   "locale": "ru",
-  "version": "1.0.0",
-  "author": "Talking Buttons SLP/AT Team",
-  "grid": { "rows": 2, "columns": 3 },
+  "description_html": "Минимальная доска 2×3 с основными словами для общения.",
+  "grid": {
+    "rows": 2,
+    "columns": 3,
+    "order": [
+      [1, 2, 3],
+      [4, 5, 6]
+    ]
+  },
   "buttons": [
-    { "label": "Да" },
-    { "label": "Нет" },
-    { "label": "Помогите" },
-    { "label": "Подождите" },
-    { "label": "Боль" },
-    { "label": "Вода" }
-  ]
+    { "id": 1, "label": "Да" },
+    { "id": 2, "label": "Нет" },
+    { "id": 3, "label": "Помогите" },
+    { "id": 4, "label": "Подождите" },
+    { "id": 5, "label": "Боль" },
+    { "id": 6, "label": "Вода" }
+  ],
+  "images": [],
+  "sounds": []
 }

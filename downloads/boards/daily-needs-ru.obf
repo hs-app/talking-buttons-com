@@ -1,13 +1,32 @@
 {
+  "format": "open-board-0.1",
   "id": "tb-daily-needs-ru",
   "name": "Бытовые нужды",
   "locale": "ru",
-  "version": "1.0.0",
-  "author": "Talking Buttons SLP/AT Team",
-  "grid": { "rows": 3, "columns": 4 },
+  "description_html": "Доска 3×4 для выражения повседневных потребностей и комфорта.",
+  "grid": {
+    "rows": 3,
+    "columns": 4,
+    "order": [
+      [1, 2, 3, 4],
+      [5, 6, 7, 8],
+      [9, 10, 11, 12]
+    ]
+  },
   "buttons": [
-    { "label": "Пить" }, { "label": "Есть" }, { "label": "Туалет" }, { "label": "Отдых" },
-    { "label": "Холодно" }, { "label": "Жарко" }, { "label": "Одеяло" }, { "label": "Лекарство" },
-    { "label": "Боль" }, { "label": "Помогите" }, { "label": "Подождите" }, { "label": "Спасибо" }
-  ]
+    { "id": 1, "label": "Пить" },
+    { "id": 2, "label": "Есть" },
+    { "id": 3, "label": "Туалет" },
+    { "id": 4, "label": "Отдых" },
+    { "id": 5, "label": "Холодно" },
+    { "id": 6, "label": "Жарко" },
+    { "id": 7, "label": "Одеяло" },
+    { "id": 8, "label": "Лекарство" },
+    { "id": 9, "label": "Боль" },
+    { "id": 10, "label": "Помогите" },
+    { "id": 11, "label": "Подождите" },
+    { "id": 12, "label": "Спасибо" }
+  ],
+  "images": [],
+  "sounds": []
 }
