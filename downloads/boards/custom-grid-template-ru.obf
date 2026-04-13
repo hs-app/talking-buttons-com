@@ -1,0 +1,14 @@
+{
+  "id": "tb-custom-grid-template-ru",
+  "name": "Шаблон настраиваемой сетки",
+  "locale": "ru",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Да" }, { "label": "Нет" }, { "label": "Помогите" }, { "label": "Подождите" },
+    { "label": "Своя 1" }, { "label": "Своя 2" }, { "label": "Своя 3" }, { "label": "Своя 4" },
+    { "label": "Своя 5" }, { "label": "Своя 6" }, { "label": "Своя 7" }, { "label": "Своя 8" }
+  ],
+  "note": "Шаблон для локального редактирования. Замените подписи и добавьте изображения/записи."
+}

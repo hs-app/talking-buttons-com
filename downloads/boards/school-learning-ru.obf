@@ -1,0 +1,13 @@
+{
+  "id": "tb-school-learning-ru",
+  "name": "Школа и занятия",
+  "locale": "ru",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Класс" }, { "label": "Учитель" }, { "label": "Перерыв" }, { "label": "Домашнее задание" },
+    { "label": "Читать" }, { "label": "Писать" }, { "label": "Математика" }, { "label": "Логопед" },
+    { "label": "Я знаю" }, { "label": "Мне нужна помощь" }, { "label": "Повторите" }, { "label": "Готово" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "tb-time-schedule-ru",
+  "name": "Время и расписание",
+  "locale": "ru",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Сейчас" }, { "label": "Позже" }, { "label": "Скоро" }, { "label": "Сегодня" },
+    { "label": "Завтра" }, { "label": "Утро" }, { "label": "День" }, { "label": "Ночь" },
+    { "label": "Сначала" }, { "label": "Потом" }, { "label": "Готово" }, { "label": "Подождите" }
+  ]
+}

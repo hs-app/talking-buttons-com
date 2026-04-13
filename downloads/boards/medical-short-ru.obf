@@ -1,0 +1,13 @@
+{
+  "id": "tb-medical-short-ru",
+  "name": "Медицина (кратко)",
+  "locale": "ru",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Боль" }, { "label": "Тошнит" }, { "label": "Головокружение" }, { "label": "Трудно дышать" },
+    { "label": "Голова" }, { "label": "Грудь" }, { "label": "Живот" }, { "label": "Нога" },
+    { "label": "Позовите медсестру" }, { "label": "Срочно" }, { "label": "Вода" }, { "label": "Туалет" }
+  ]
+}

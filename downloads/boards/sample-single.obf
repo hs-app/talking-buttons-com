@@ -9,8 +9,8 @@
     { "label": "Yes" },
     { "label": "No" },
     { "label": "Help" },
-    { "label": "Water" },
+    { "label": "Wait" },
     { "label": "Pain" },
-    { "label": "Thank you" }
+    { "label": "Water" }
   ]
 }

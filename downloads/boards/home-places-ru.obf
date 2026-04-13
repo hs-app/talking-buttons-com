@@ -1,0 +1,13 @@
+{
+  "id": "tb-home-places-ru",
+  "name": "Дом и места",
+  "locale": "ru",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Дом" }, { "label": "Кухня" }, { "label": "Ванная" }, { "label": "Спальня" },
+    { "label": "Школа" }, { "label": "Клиника" }, { "label": "Улица" }, { "label": "Машина" },
+    { "label": "Пойдем туда" }, { "label": "Останемся здесь" }, { "label": "Нужна помощь" }, { "label": "Назад" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "tb-emotions-ru",
+  "name": "Эмоции",
+  "locale": "ru",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Радостно" }, { "label": "Грустно" }, { "label": "Злюсь" }, { "label": "Тревожно" },
+    { "label": "Спокойно" }, { "label": "Страшно" }, { "label": "Устал" }, { "label": "Раздражен" },
+    { "label": "Нужен перерыв" }, { "label": "Нужна поддержка" }, { "label": "Помогите" }, { "label": "Поговорите со мной" }
+  ]
+}

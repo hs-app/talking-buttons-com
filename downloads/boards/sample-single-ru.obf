@@ -1,0 +1,16 @@
+{
+  "id": "tb-sample-single-ru",
+  "name": "Одна доска (пример)",
+  "locale": "ru",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 2, "columns": 3 },
+  "buttons": [
+    { "label": "Да" },
+    { "label": "Нет" },
+    { "label": "Помогите" },
+    { "label": "Подождите" },
+    { "label": "Боль" },
+    { "label": "Вода" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "tb-daily-needs-ru",
+  "name": "Бытовые нужды",
+  "locale": "ru",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Пить" }, { "label": "Есть" }, { "label": "Туалет" }, { "label": "Отдых" },
+    { "label": "Холодно" }, { "label": "Жарко" }, { "label": "Одеяло" }, { "label": "Лекарство" },
+    { "label": "Боль" }, { "label": "Помогите" }, { "label": "Подождите" }, { "label": "Спасибо" }
+  ]
+}

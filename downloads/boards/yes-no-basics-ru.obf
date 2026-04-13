@@ -1,0 +1,13 @@
+{
+  "id": "tb-yes-no-basics-ru",
+  "name": "Да/Нет и базовые",
+  "locale": "ru",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Да" }, { "label": "Нет" }, { "label": "Возможно" }, { "label": "Не сейчас" },
+    { "label": "Помогите" }, { "label": "Подождите" }, { "label": "Стоп" }, { "label": "Повторите" },
+    { "label": "Понимаю" }, { "label": "Не понимаю" }, { "label": "Еще" }, { "label": "Готово" }
+  ]
+}

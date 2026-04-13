@@ -7,7 +7,7 @@
   "grid": { "rows": 3, "columns": 4 },
   "buttons": [
     { "label": "Go" }, { "label": "Stop" }, { "label": "Come" }, { "label": "Open" },
-    { "label": "Close" }, { "label": "Sit" }, { "label": "Stand" }, { "label": "Read" },
-    { "label": "Write" }, { "label": "Look" }, { "label": "Listen" }, { "label": "Finish" }
+    { "label": "Close" }, { "label": "Sit" }, { "label": "Stand" }, { "label": "Look" },
+    { "label": "Listen" }, { "label": "Help" }, { "label": "Wait" }, { "label": "Finish" }
   ]
 }

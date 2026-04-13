@@ -1,0 +1,13 @@
+{
+  "id": "tb-quick-starter-ru",
+  "name": "Быстрый старт",
+  "locale": "ru",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Да" }, { "label": "Нет" }, { "label": "Помогите" }, { "label": "Подождите" },
+    { "label": "Боль" }, { "label": "Вода" }, { "label": "Туалет" }, { "label": "Еда" },
+    { "label": "Повторите" }, { "label": "Не понимаю" }, { "label": "Стоп" }, { "label": "Спасибо" }
+  ]
+}

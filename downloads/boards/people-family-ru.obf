@@ -1,0 +1,13 @@
+{
+  "id": "tb-people-family-ru",
+  "name": "Люди и семья",
+  "locale": "ru",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Мама" }, { "label": "Папа" }, { "label": "Партнер" }, { "label": "Ребенок" },
+    { "label": "Медсестра" }, { "label": "Врач" }, { "label": "Терапевт" }, { "label": "Учитель" },
+    { "label": "Друг" }, { "label": "Позвоните семье" }, { "label": "Побудьте со мной" }, { "label": "Спасибо" }
+  ]
+}

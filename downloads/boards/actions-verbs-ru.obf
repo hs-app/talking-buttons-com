@@ -1,0 +1,13 @@
+{
+  "id": "tb-actions-verbs-ru",
+  "name": "Действия",
+  "locale": "ru",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Идти" }, { "label": "Стоп" }, { "label": "Иди сюда" }, { "label": "Открыть" },
+    { "label": "Закрыть" }, { "label": "Сесть" }, { "label": "Встать" }, { "label": "Смотреть" },
+    { "label": "Слушать" }, { "label": "Помогите" }, { "label": "Подождите" }, { "label": "Готово" }
+  ]
+}
