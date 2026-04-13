@@ -521,7 +521,11 @@ li {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1.0rem;
+}
+
+/* Use margin, not gap: flex `gap` is ignored in some older browsers / embedded WebViews. */
+.board-download-stack .board-download + .board-download {
+  margin-top: 0.75rem;
 }
 
 .board-download {
