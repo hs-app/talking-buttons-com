@@ -31,51 +31,63 @@
     "buttons":  [
                     {
                         "id":  1,
-                        "label":  "Мама"
+                        "label":  "Мама",
+                        "background_color":  "#C2443A"
                     },
                     {
                         "id":  2,
-                        "label":  "Папа"
+                        "label":  "Папа",
+                        "background_color":  "#2F6A63"
                     },
                     {
                         "id":  3,
-                        "label":  "Подождите"
+                        "label":  "Подождите",
+                        "background_color":  "#3A6C2E"
                     },
                     {
                         "id":  4,
-                        "label":  "Ребенок"
+                        "label":  "Ребенок",
+                        "background_color":  "#6C4BD9"
                     },
                     {
                         "id":  5,
-                        "label":  "Медсестра"
+                        "label":  "Медсестра",
+                        "background_color":  "#C46827"
                     },
                     {
                         "id":  6,
-                        "label":  "Врач"
+                        "label":  "Врач",
+                        "background_color":  "#A3445B"
                     },
                     {
                         "id":  7,
-                        "label":  "Терапевт"
+                        "label":  "Терапевт",
+                        "background_color":  "#5C3A9C"
                     },
                     {
                         "id":  8,
-                        "label":  "Учитель"
+                        "label":  "Учитель",
+                        "background_color":  "#4A4A4A"
                     },
                     {
                         "id":  9,
-                        "label":  "Помогите"
+                        "label":  "Помогите",
+                        "background_color":  "#C2443A"
                     },
                     {
                         "id":  10,
-                        "label":  "Позвоните семье"
+                        "label":  "Позвоните семье",
+                        "background_color":  "#2F6A63"
                     },
                     {
                         "id":  11,
-                        "label":  "Побудьте со мной"
+                        "label":  "Побудьте со мной",
+                        "background_color":  "#3A6C2E"
                     },
                     {
                         "id":  12,
-                        "label":  "Спасибо"
+                        "label":  "Спасибо",
+                        "background_color":  "#6C4BD9"
                     }
                 ],
     "images":  [

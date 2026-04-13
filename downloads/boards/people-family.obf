@@ -31,51 +31,63 @@
     "buttons":  [
                     {
                         "id":  1,
-                        "label":  "Mom"
+                        "label":  "Mom",
+                        "background_color":  "#C2443A"
                     },
                     {
                         "id":  2,
-                        "label":  "Dad"
+                        "label":  "Dad",
+                        "background_color":  "#2F6A63"
                     },
                     {
                         "id":  3,
-                        "label":  "Wait"
+                        "label":  "Wait",
+                        "background_color":  "#3A6C2E"
                     },
                     {
                         "id":  4,
-                        "label":  "Child"
+                        "label":  "Child",
+                        "background_color":  "#6C4BD9"
                     },
                     {
                         "id":  5,
-                        "label":  "Nurse"
+                        "label":  "Nurse",
+                        "background_color":  "#C46827"
                     },
                     {
                         "id":  6,
-                        "label":  "Doctor"
+                        "label":  "Doctor",
+                        "background_color":  "#A3445B"
                     },
                     {
                         "id":  7,
-                        "label":  "Therapist"
+                        "label":  "Therapist",
+                        "background_color":  "#5C3A9C"
                     },
                     {
                         "id":  8,
-                        "label":  "Teacher"
+                        "label":  "Teacher",
+                        "background_color":  "#4A4A4A"
                     },
                     {
                         "id":  9,
-                        "label":  "Help"
+                        "label":  "Help",
+                        "background_color":  "#C2443A"
                     },
                     {
                         "id":  10,
-                        "label":  "Call family"
+                        "label":  "Call family",
+                        "background_color":  "#2F6A63"
                     },
                     {
                         "id":  11,
-                        "label":  "Stay with me"
+                        "label":  "Stay with me",
+                        "background_color":  "#3A6C2E"
                     },
                     {
                         "id":  12,
-                        "label":  "Thank you"
+                        "label":  "Thank you",
+                        "background_color":  "#6C4BD9"
                     }
                 ],
     "images":  [

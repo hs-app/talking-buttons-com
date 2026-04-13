@@ -1,32 +1,99 @@
-{
-  "format": "open-board-0.1",
-  "id": "tb-school-learning-ru",
-  "name": "Школа и занятия",
-  "locale": "ru",
-  "description_html": "Доска 3×4 для общения в учебной среде.",
-  "grid": {
-    "rows": 3,
-    "columns": 4,
-    "order": [
-      [1, 2, 3, 4],
-      [5, 6, 7, 8],
-      [9, 10, 11, 12]
-    ]
-  },
-  "buttons": [
-    { "id": 1, "label": "Класс" },
-    { "id": 2, "label": "Учитель" },
-    { "id": 3, "label": "Перерыв" },
-    { "id": 4, "label": "Домашнее задание" },
-    { "id": 5, "label": "Читать" },
-    { "id": 6, "label": "Писать" },
-    { "id": 7, "label": "Математика" },
-    { "id": 8, "label": "Логопед" },
-    { "id": 9, "label": "Я знаю" },
-    { "id": 10, "label": "Мне нужна помощь" },
-    { "id": 11, "label": "Повторите" },
-    { "id": 12, "label": "Готово" }
-  ],
-  "images": [],
-  "sounds": []
+﻿{
+    "format":  "open-board-0.1",
+    "id":  "tb-school-learning-ru",
+    "name":  "Школа и занятия",
+    "locale":  "ru",
+    "description_html":  "Доска 3×4 для общения в учебной среде.",
+    "grid":  {
+                 "rows":  3,
+                 "columns":  4,
+                 "order":  [
+                               [
+                                   1,
+                                   2,
+                                   3,
+                                   4
+                               ],
+                               [
+                                   5,
+                                   6,
+                                   7,
+                                   8
+                               ],
+                               [
+                                   9,
+                                   10,
+                                   11,
+                                   12
+                               ]
+                           ]
+             },
+    "buttons":  [
+                    {
+                        "id":  1,
+                        "label":  "Класс",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  2,
+                        "label":  "Учитель",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  3,
+                        "label":  "Перерыв",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  4,
+                        "label":  "Домашнее задание",
+                        "background_color":  "#6C4BD9"
+                    },
+                    {
+                        "id":  5,
+                        "label":  "Читать",
+                        "background_color":  "#C46827"
+                    },
+                    {
+                        "id":  6,
+                        "label":  "Писать",
+                        "background_color":  "#A3445B"
+                    },
+                    {
+                        "id":  7,
+                        "label":  "Математика",
+                        "background_color":  "#5C3A9C"
+                    },
+                    {
+                        "id":  8,
+                        "label":  "Логопед",
+                        "background_color":  "#4A4A4A"
+                    },
+                    {
+                        "id":  9,
+                        "label":  "Я знаю",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  10,
+                        "label":  "Мне нужна помощь",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  11,
+                        "label":  "Повторите",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  12,
+                        "label":  "Готово",
+                        "background_color":  "#6C4BD9"
+                    }
+                ],
+    "images":  [
+
+               ],
+    "sounds":  [
+
+               ]
 }

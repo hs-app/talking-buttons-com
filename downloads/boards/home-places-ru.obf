@@ -31,51 +31,63 @@
     "buttons":  [
                     {
                         "id":  1,
-                        "label":  "Дом"
+                        "label":  "Дом",
+                        "background_color":  "#C2443A"
                     },
                     {
                         "id":  2,
-                        "label":  "Кухня"
+                        "label":  "Кухня",
+                        "background_color":  "#2F6A63"
                     },
                     {
                         "id":  3,
-                        "label":  "Ванная"
+                        "label":  "Ванная",
+                        "background_color":  "#3A6C2E"
                     },
                     {
                         "id":  4,
-                        "label":  "Спальня"
+                        "label":  "Спальня",
+                        "background_color":  "#6C4BD9"
                     },
                     {
                         "id":  5,
-                        "label":  "Школа"
+                        "label":  "Школа",
+                        "background_color":  "#C46827"
                     },
                     {
                         "id":  6,
-                        "label":  "Клиника"
+                        "label":  "Клиника",
+                        "background_color":  "#A3445B"
                     },
                     {
                         "id":  7,
-                        "label":  "Улица"
+                        "label":  "Улица",
+                        "background_color":  "#5C3A9C"
                     },
                     {
                         "id":  8,
-                        "label":  "Машина"
+                        "label":  "Машина",
+                        "background_color":  "#4A4A4A"
                     },
                     {
                         "id":  9,
-                        "label":  "Пойдем туда"
+                        "label":  "Пойдем туда",
+                        "background_color":  "#C2443A"
                     },
                     {
                         "id":  10,
-                        "label":  "Останемся здесь"
+                        "label":  "Останемся здесь",
+                        "background_color":  "#2F6A63"
                     },
                     {
                         "id":  11,
-                        "label":  "Нужна помощь"
+                        "label":  "Нужна помощь",
+                        "background_color":  "#3A6C2E"
                     },
                     {
                         "id":  12,
-                        "label":  "Подождите"
+                        "label":  "Подождите",
+                        "background_color":  "#6C4BD9"
                     }
                 ],
     "images":  [

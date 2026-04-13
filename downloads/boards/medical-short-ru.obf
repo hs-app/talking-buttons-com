@@ -31,51 +31,63 @@
     "buttons":  [
                     {
                         "id":  1,
-                        "label":  "Боль"
+                        "label":  "Боль",
+                        "background_color":  "#C2443A"
                     },
                     {
                         "id":  2,
-                        "label":  "Тошнит"
+                        "label":  "Тошнит",
+                        "background_color":  "#2F6A63"
                     },
                     {
                         "id":  3,
-                        "label":  "Головокружение"
+                        "label":  "Головокружение",
+                        "background_color":  "#3A6C2E"
                     },
                     {
                         "id":  4,
-                        "label":  "Трудно дышать"
+                        "label":  "Трудно дышать",
+                        "background_color":  "#6C4BD9"
                     },
                     {
                         "id":  5,
-                        "label":  "Голова"
+                        "label":  "Голова",
+                        "background_color":  "#C46827"
                     },
                     {
                         "id":  6,
-                        "label":  "Грудь"
+                        "label":  "Грудь",
+                        "background_color":  "#A3445B"
                     },
                     {
                         "id":  7,
-                        "label":  "Живот"
+                        "label":  "Живот",
+                        "background_color":  "#5C3A9C"
                     },
                     {
                         "id":  8,
-                        "label":  "Подождите"
+                        "label":  "Подождите",
+                        "background_color":  "#4A4A4A"
                     },
                     {
                         "id":  9,
-                        "label":  "Позовите медсестру"
+                        "label":  "Позовите медсестру",
+                        "background_color":  "#C2443A"
                     },
                     {
                         "id":  10,
-                        "label":  "Срочно"
+                        "label":  "Срочно",
+                        "background_color":  "#2F6A63"
                     },
                     {
                         "id":  11,
-                        "label":  "Вода"
+                        "label":  "Вода",
+                        "background_color":  "#3A6C2E"
                     },
                     {
                         "id":  12,
-                        "label":  "Туалет"
+                        "label":  "Туалет",
+                        "background_color":  "#6C4BD9"
                     }
                 ],
     "images":  [

@@ -1,32 +1,99 @@
-{
-  "format": "open-board-0.1",
-  "id": "tb-actions-verbs",
-  "name": "Actions",
-  "locale": "en",
-  "description_html": "A 3×4 board with common action verbs for directing activities.",
-  "grid": {
-    "rows": 3,
-    "columns": 4,
-    "order": [
-      [1, 2, 3, 4],
-      [5, 6, 7, 8],
-      [9, 10, 11, 12]
-    ]
-  },
-  "buttons": [
-    { "id": 1, "label": "Go" },
-    { "id": 2, "label": "Stop" },
-    { "id": 3, "label": "Come" },
-    { "id": 4, "label": "Open" },
-    { "id": 5, "label": "Close" },
-    { "id": 6, "label": "Sit" },
-    { "id": 7, "label": "Stand" },
-    { "id": 8, "label": "Look" },
-    { "id": 9, "label": "Listen" },
-    { "id": 10, "label": "Help" },
-    { "id": 11, "label": "Wait" },
-    { "id": 12, "label": "Finish" }
-  ],
-  "images": [],
-  "sounds": []
+﻿{
+    "format":  "open-board-0.1",
+    "id":  "tb-actions-verbs",
+    "name":  "Actions",
+    "locale":  "en",
+    "description_html":  "A 3×4 board with common action verbs for directing activities.",
+    "grid":  {
+                 "rows":  3,
+                 "columns":  4,
+                 "order":  [
+                               [
+                                   1,
+                                   2,
+                                   3,
+                                   4
+                               ],
+                               [
+                                   5,
+                                   6,
+                                   7,
+                                   8
+                               ],
+                               [
+                                   9,
+                                   10,
+                                   11,
+                                   12
+                               ]
+                           ]
+             },
+    "buttons":  [
+                    {
+                        "id":  1,
+                        "label":  "Go",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  2,
+                        "label":  "Stop",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  3,
+                        "label":  "Come",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  4,
+                        "label":  "Open",
+                        "background_color":  "#6C4BD9"
+                    },
+                    {
+                        "id":  5,
+                        "label":  "Close",
+                        "background_color":  "#C46827"
+                    },
+                    {
+                        "id":  6,
+                        "label":  "Sit",
+                        "background_color":  "#A3445B"
+                    },
+                    {
+                        "id":  7,
+                        "label":  "Stand",
+                        "background_color":  "#5C3A9C"
+                    },
+                    {
+                        "id":  8,
+                        "label":  "Look",
+                        "background_color":  "#4A4A4A"
+                    },
+                    {
+                        "id":  9,
+                        "label":  "Listen",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  10,
+                        "label":  "Help",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  11,
+                        "label":  "Wait",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  12,
+                        "label":  "Finish",
+                        "background_color":  "#6C4BD9"
+                    }
+                ],
+    "images":  [
+
+               ],
+    "sounds":  [
+
+               ]
 }

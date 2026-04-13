@@ -1,32 +1,99 @@
-{
-  "format": "open-board-0.1",
-  "id": "tb-custom-grid-template-ru",
-  "name": "Шаблон настраиваемой сетки",
-  "locale": "ru",
-  "description_html": "Шаблон для локального редактирования. Замените подписи и добавьте изображения/записи.",
-  "grid": {
-    "rows": 3,
-    "columns": 4,
-    "order": [
-      [1, 2, 3, 4],
-      [5, 6, 7, 8],
-      [9, 10, 11, 12]
-    ]
-  },
-  "buttons": [
-    { "id": 1, "label": "Да" },
-    { "id": 2, "label": "Нет" },
-    { "id": 3, "label": "Помогите" },
-    { "id": 4, "label": "Подождите" },
-    { "id": 5, "label": "Своя 1" },
-    { "id": 6, "label": "Своя 2" },
-    { "id": 7, "label": "Своя 3" },
-    { "id": 8, "label": "Своя 4" },
-    { "id": 9, "label": "Своя 5" },
-    { "id": 10, "label": "Своя 6" },
-    { "id": 11, "label": "Своя 7" },
-    { "id": 12, "label": "Своя 8" }
-  ],
-  "images": [],
-  "sounds": []
+﻿{
+    "format":  "open-board-0.1",
+    "id":  "tb-custom-grid-template-ru",
+    "name":  "Шаблон настраиваемой сетки",
+    "locale":  "ru",
+    "description_html":  "Шаблон для локального редактирования. Замените подписи и добавьте изображения/записи.",
+    "grid":  {
+                 "rows":  3,
+                 "columns":  4,
+                 "order":  [
+                               [
+                                   1,
+                                   2,
+                                   3,
+                                   4
+                               ],
+                               [
+                                   5,
+                                   6,
+                                   7,
+                                   8
+                               ],
+                               [
+                                   9,
+                                   10,
+                                   11,
+                                   12
+                               ]
+                           ]
+             },
+    "buttons":  [
+                    {
+                        "id":  1,
+                        "label":  "Да",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  2,
+                        "label":  "Нет",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  3,
+                        "label":  "Помогите",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  4,
+                        "label":  "Подождите",
+                        "background_color":  "#6C4BD9"
+                    },
+                    {
+                        "id":  5,
+                        "label":  "Своя 1",
+                        "background_color":  "#C46827"
+                    },
+                    {
+                        "id":  6,
+                        "label":  "Своя 2",
+                        "background_color":  "#A3445B"
+                    },
+                    {
+                        "id":  7,
+                        "label":  "Своя 3",
+                        "background_color":  "#5C3A9C"
+                    },
+                    {
+                        "id":  8,
+                        "label":  "Своя 4",
+                        "background_color":  "#4A4A4A"
+                    },
+                    {
+                        "id":  9,
+                        "label":  "Своя 5",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  10,
+                        "label":  "Своя 6",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  11,
+                        "label":  "Своя 7",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  12,
+                        "label":  "Своя 8",
+                        "background_color":  "#6C4BD9"
+                    }
+                ],
+    "images":  [
+
+               ],
+    "sounds":  [
+
+               ]
 }

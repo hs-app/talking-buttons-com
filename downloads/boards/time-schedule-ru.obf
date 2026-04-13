@@ -31,51 +31,63 @@
     "buttons":  [
                     {
                         "id":  1,
-                        "label":  "Сейчас"
+                        "label":  "Сейчас",
+                        "background_color":  "#C2443A"
                     },
                     {
                         "id":  2,
-                        "label":  "Позже"
+                        "label":  "Позже",
+                        "background_color":  "#2F6A63"
                     },
                     {
                         "id":  3,
-                        "label":  "Скоро"
+                        "label":  "Скоро",
+                        "background_color":  "#3A6C2E"
                     },
                     {
                         "id":  4,
-                        "label":  "Сегодня"
+                        "label":  "Сегодня",
+                        "background_color":  "#6C4BD9"
                     },
                     {
                         "id":  5,
-                        "label":  "Завтра"
+                        "label":  "Завтра",
+                        "background_color":  "#C46827"
                     },
                     {
                         "id":  6,
-                        "label":  "Утро"
+                        "label":  "Утро",
+                        "background_color":  "#A3445B"
                     },
                     {
                         "id":  7,
-                        "label":  "День"
+                        "label":  "День",
+                        "background_color":  "#5C3A9C"
                     },
                     {
                         "id":  8,
-                        "label":  "Помогите"
+                        "label":  "Помогите",
+                        "background_color":  "#4A4A4A"
                     },
                     {
                         "id":  9,
-                        "label":  "Сначала"
+                        "label":  "Сначала",
+                        "background_color":  "#C2443A"
                     },
                     {
                         "id":  10,
-                        "label":  "Потом"
+                        "label":  "Потом",
+                        "background_color":  "#2F6A63"
                     },
                     {
                         "id":  11,
-                        "label":  "Готово"
+                        "label":  "Готово",
+                        "background_color":  "#3A6C2E"
                     },
                     {
                         "id":  12,
-                        "label":  "Подождите"
+                        "label":  "Подождите",
+                        "background_color":  "#6C4BD9"
                     }
                 ],
     "images":  [

@@ -1,32 +1,99 @@
-{
-  "format": "open-board-0.1",
-  "id": "tb-yes-no-basics-ru",
-  "name": "Да/Нет и базовые",
-  "locale": "ru",
-  "description_html": "Доска 3×4 для ответов да/нет и коммуникативной коррекции.",
-  "grid": {
-    "rows": 3,
-    "columns": 4,
-    "order": [
-      [1, 2, 3, 4],
-      [5, 6, 7, 8],
-      [9, 10, 11, 12]
-    ]
-  },
-  "buttons": [
-    { "id": 1, "label": "Да" },
-    { "id": 2, "label": "Нет" },
-    { "id": 3, "label": "Возможно" },
-    { "id": 4, "label": "Не сейчас" },
-    { "id": 5, "label": "Помогите" },
-    { "id": 6, "label": "Подождите" },
-    { "id": 7, "label": "Стоп" },
-    { "id": 8, "label": "Повторите" },
-    { "id": 9, "label": "Понимаю" },
-    { "id": 10, "label": "Не понимаю" },
-    { "id": 11, "label": "Еще" },
-    { "id": 12, "label": "Готово" }
-  ],
-  "images": [],
-  "sounds": []
+﻿{
+    "format":  "open-board-0.1",
+    "id":  "tb-yes-no-basics-ru",
+    "name":  "Да/Нет и базовые",
+    "locale":  "ru",
+    "description_html":  "Доска 3×4 для ответов да/нет и коммуникативной коррекции.",
+    "grid":  {
+                 "rows":  3,
+                 "columns":  4,
+                 "order":  [
+                               [
+                                   1,
+                                   2,
+                                   3,
+                                   4
+                               ],
+                               [
+                                   5,
+                                   6,
+                                   7,
+                                   8
+                               ],
+                               [
+                                   9,
+                                   10,
+                                   11,
+                                   12
+                               ]
+                           ]
+             },
+    "buttons":  [
+                    {
+                        "id":  1,
+                        "label":  "Да",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  2,
+                        "label":  "Нет",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  3,
+                        "label":  "Возможно",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  4,
+                        "label":  "Не сейчас",
+                        "background_color":  "#6C4BD9"
+                    },
+                    {
+                        "id":  5,
+                        "label":  "Помогите",
+                        "background_color":  "#C46827"
+                    },
+                    {
+                        "id":  6,
+                        "label":  "Подождите",
+                        "background_color":  "#A3445B"
+                    },
+                    {
+                        "id":  7,
+                        "label":  "Стоп",
+                        "background_color":  "#5C3A9C"
+                    },
+                    {
+                        "id":  8,
+                        "label":  "Повторите",
+                        "background_color":  "#4A4A4A"
+                    },
+                    {
+                        "id":  9,
+                        "label":  "Понимаю",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  10,
+                        "label":  "Не понимаю",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  11,
+                        "label":  "Еще",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  12,
+                        "label":  "Готово",
+                        "background_color":  "#6C4BD9"
+                    }
+                ],
+    "images":  [
+
+               ],
+    "sounds":  [
+
+               ]
 }

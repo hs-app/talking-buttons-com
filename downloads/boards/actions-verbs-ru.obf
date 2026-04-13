@@ -1,32 +1,99 @@
-{
-  "format": "open-board-0.1",
-  "id": "tb-actions-verbs-ru",
-  "name": "Действия",
-  "locale": "ru",
-  "description_html": "Доска 3×4 с основными глаголами действий.",
-  "grid": {
-    "rows": 3,
-    "columns": 4,
-    "order": [
-      [1, 2, 3, 4],
-      [5, 6, 7, 8],
-      [9, 10, 11, 12]
-    ]
-  },
-  "buttons": [
-    { "id": 1, "label": "Идти" },
-    { "id": 2, "label": "Стоп" },
-    { "id": 3, "label": "Иди сюда" },
-    { "id": 4, "label": "Открыть" },
-    { "id": 5, "label": "Закрыть" },
-    { "id": 6, "label": "Сесть" },
-    { "id": 7, "label": "Встать" },
-    { "id": 8, "label": "Смотреть" },
-    { "id": 9, "label": "Слушать" },
-    { "id": 10, "label": "Помогите" },
-    { "id": 11, "label": "Подождите" },
-    { "id": 12, "label": "Готово" }
-  ],
-  "images": [],
-  "sounds": []
+﻿{
+    "format":  "open-board-0.1",
+    "id":  "tb-actions-verbs-ru",
+    "name":  "Действия",
+    "locale":  "ru",
+    "description_html":  "Доска 3×4 с основными глаголами действий.",
+    "grid":  {
+                 "rows":  3,
+                 "columns":  4,
+                 "order":  [
+                               [
+                                   1,
+                                   2,
+                                   3,
+                                   4
+                               ],
+                               [
+                                   5,
+                                   6,
+                                   7,
+                                   8
+                               ],
+                               [
+                                   9,
+                                   10,
+                                   11,
+                                   12
+                               ]
+                           ]
+             },
+    "buttons":  [
+                    {
+                        "id":  1,
+                        "label":  "Идти",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  2,
+                        "label":  "Стоп",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  3,
+                        "label":  "Иди сюда",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  4,
+                        "label":  "Открыть",
+                        "background_color":  "#6C4BD9"
+                    },
+                    {
+                        "id":  5,
+                        "label":  "Закрыть",
+                        "background_color":  "#C46827"
+                    },
+                    {
+                        "id":  6,
+                        "label":  "Сесть",
+                        "background_color":  "#A3445B"
+                    },
+                    {
+                        "id":  7,
+                        "label":  "Встать",
+                        "background_color":  "#5C3A9C"
+                    },
+                    {
+                        "id":  8,
+                        "label":  "Смотреть",
+                        "background_color":  "#4A4A4A"
+                    },
+                    {
+                        "id":  9,
+                        "label":  "Слушать",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  10,
+                        "label":  "Помогите",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  11,
+                        "label":  "Подождите",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  12,
+                        "label":  "Готово",
+                        "background_color":  "#6C4BD9"
+                    }
+                ],
+    "images":  [
+
+               ],
+    "sounds":  [
+
+               ]
 }

@@ -31,51 +31,63 @@
     "buttons":  [
                     {
                         "id":  1,
-                        "label":  "Now"
+                        "label":  "Now",
+                        "background_color":  "#C2443A"
                     },
                     {
                         "id":  2,
-                        "label":  "Later"
+                        "label":  "Later",
+                        "background_color":  "#2F6A63"
                     },
                     {
                         "id":  3,
-                        "label":  "Soon"
+                        "label":  "Soon",
+                        "background_color":  "#3A6C2E"
                     },
                     {
                         "id":  4,
-                        "label":  "Today"
+                        "label":  "Today",
+                        "background_color":  "#6C4BD9"
                     },
                     {
                         "id":  5,
-                        "label":  "Tomorrow"
+                        "label":  "Tomorrow",
+                        "background_color":  "#C46827"
                     },
                     {
                         "id":  6,
-                        "label":  "Morning"
+                        "label":  "Morning",
+                        "background_color":  "#A3445B"
                     },
                     {
                         "id":  7,
-                        "label":  "Afternoon"
+                        "label":  "Afternoon",
+                        "background_color":  "#5C3A9C"
                     },
                     {
                         "id":  8,
-                        "label":  "Help"
+                        "label":  "Help",
+                        "background_color":  "#4A4A4A"
                     },
                     {
                         "id":  9,
-                        "label":  "First"
+                        "label":  "First",
+                        "background_color":  "#C2443A"
                     },
                     {
                         "id":  10,
-                        "label":  "Then"
+                        "label":  "Then",
+                        "background_color":  "#2F6A63"
                     },
                     {
                         "id":  11,
-                        "label":  "Finished"
+                        "label":  "Finished",
+                        "background_color":  "#3A6C2E"
                     },
                     {
                         "id":  12,
-                        "label":  "Wait"
+                        "label":  "Wait",
+                        "background_color":  "#6C4BD9"
                     }
                 ],
     "images":  [

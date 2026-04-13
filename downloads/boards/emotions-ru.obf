@@ -1,32 +1,99 @@
-{
-  "format": "open-board-0.1",
-  "id": "tb-emotions-ru",
-  "name": "Эмоции",
-  "locale": "ru",
-  "description_html": "Доска 3×4 для выражения чувств и эмоциональных потребностей.",
-  "grid": {
-    "rows": 3,
-    "columns": 4,
-    "order": [
-      [1, 2, 3, 4],
-      [5, 6, 7, 8],
-      [9, 10, 11, 12]
-    ]
-  },
-  "buttons": [
-    { "id": 1, "label": "Радостно" },
-    { "id": 2, "label": "Грустно" },
-    { "id": 3, "label": "Злюсь" },
-    { "id": 4, "label": "Тревожно" },
-    { "id": 5, "label": "Спокойно" },
-    { "id": 6, "label": "Страшно" },
-    { "id": 7, "label": "Устал" },
-    { "id": 8, "label": "Раздражен" },
-    { "id": 9, "label": "Нужен перерыв" },
-    { "id": 10, "label": "Нужна поддержка" },
-    { "id": 11, "label": "Помогите" },
-    { "id": 12, "label": "Поговорите со мной" }
-  ],
-  "images": [],
-  "sounds": []
+﻿{
+    "format":  "open-board-0.1",
+    "id":  "tb-emotions-ru",
+    "name":  "Эмоции",
+    "locale":  "ru",
+    "description_html":  "Доска 3×4 для выражения чувств и эмоциональных потребностей.",
+    "grid":  {
+                 "rows":  3,
+                 "columns":  4,
+                 "order":  [
+                               [
+                                   1,
+                                   2,
+                                   3,
+                                   4
+                               ],
+                               [
+                                   5,
+                                   6,
+                                   7,
+                                   8
+                               ],
+                               [
+                                   9,
+                                   10,
+                                   11,
+                                   12
+                               ]
+                           ]
+             },
+    "buttons":  [
+                    {
+                        "id":  1,
+                        "label":  "Радостно",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  2,
+                        "label":  "Грустно",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  3,
+                        "label":  "Злюсь",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  4,
+                        "label":  "Тревожно",
+                        "background_color":  "#6C4BD9"
+                    },
+                    {
+                        "id":  5,
+                        "label":  "Спокойно",
+                        "background_color":  "#C46827"
+                    },
+                    {
+                        "id":  6,
+                        "label":  "Страшно",
+                        "background_color":  "#A3445B"
+                    },
+                    {
+                        "id":  7,
+                        "label":  "Устал",
+                        "background_color":  "#5C3A9C"
+                    },
+                    {
+                        "id":  8,
+                        "label":  "Раздражен",
+                        "background_color":  "#4A4A4A"
+                    },
+                    {
+                        "id":  9,
+                        "label":  "Нужен перерыв",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  10,
+                        "label":  "Нужна поддержка",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  11,
+                        "label":  "Помогите",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  12,
+                        "label":  "Поговорите со мной",
+                        "background_color":  "#6C4BD9"
+                    }
+                ],
+    "images":  [
+
+               ],
+    "sounds":  [
+
+               ]
 }

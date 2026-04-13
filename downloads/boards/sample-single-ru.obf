@@ -1,25 +1,61 @@
-{
-  "format": "open-board-0.1",
-  "id": "tb-sample-single-ru",
-  "name": "Одна доска (пример)",
-  "locale": "ru",
-  "description_html": "Минимальная доска 2×3 с основными словами для общения.",
-  "grid": {
-    "rows": 2,
-    "columns": 3,
-    "order": [
-      [1, 2, 3],
-      [4, 5, 6]
-    ]
-  },
-  "buttons": [
-    { "id": 1, "label": "Да" },
-    { "id": 2, "label": "Нет" },
-    { "id": 3, "label": "Помогите" },
-    { "id": 4, "label": "Подождите" },
-    { "id": 5, "label": "Боль" },
-    { "id": 6, "label": "Вода" }
-  ],
-  "images": [],
-  "sounds": []
+﻿{
+    "format":  "open-board-0.1",
+    "id":  "tb-sample-single-ru",
+    "name":  "Одна доска (пример)",
+    "locale":  "ru",
+    "description_html":  "Минимальная доска 2×3 с основными словами для общения.",
+    "grid":  {
+                 "rows":  2,
+                 "columns":  3,
+                 "order":  [
+                               [
+                                   1,
+                                   2,
+                                   3
+                               ],
+                               [
+                                   4,
+                                   5,
+                                   6
+                               ]
+                           ]
+             },
+    "buttons":  [
+                    {
+                        "id":  1,
+                        "label":  "Да",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  2,
+                        "label":  "Нет",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  3,
+                        "label":  "Помогите",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  4,
+                        "label":  "Подождите",
+                        "background_color":  "#6C4BD9"
+                    },
+                    {
+                        "id":  5,
+                        "label":  "Боль",
+                        "background_color":  "#C46827"
+                    },
+                    {
+                        "id":  6,
+                        "label":  "Вода",
+                        "background_color":  "#A3445B"
+                    }
+                ],
+    "images":  [
+
+               ],
+    "sounds":  [
+
+               ]
 }

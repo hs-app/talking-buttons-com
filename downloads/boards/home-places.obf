@@ -31,51 +31,63 @@
     "buttons":  [
                     {
                         "id":  1,
-                        "label":  "Home"
+                        "label":  "Home",
+                        "background_color":  "#C2443A"
                     },
                     {
                         "id":  2,
-                        "label":  "Kitchen"
+                        "label":  "Kitchen",
+                        "background_color":  "#2F6A63"
                     },
                     {
                         "id":  3,
-                        "label":  "Bathroom"
+                        "label":  "Bathroom",
+                        "background_color":  "#3A6C2E"
                     },
                     {
                         "id":  4,
-                        "label":  "Bedroom"
+                        "label":  "Bedroom",
+                        "background_color":  "#6C4BD9"
                     },
                     {
                         "id":  5,
-                        "label":  "School"
+                        "label":  "School",
+                        "background_color":  "#C46827"
                     },
                     {
                         "id":  6,
-                        "label":  "Clinic"
+                        "label":  "Clinic",
+                        "background_color":  "#A3445B"
                     },
                     {
                         "id":  7,
-                        "label":  "Outside"
+                        "label":  "Outside",
+                        "background_color":  "#5C3A9C"
                     },
                     {
                         "id":  8,
-                        "label":  "Car"
+                        "label":  "Car",
+                        "background_color":  "#4A4A4A"
                     },
                     {
                         "id":  9,
-                        "label":  "Go there"
+                        "label":  "Go there",
+                        "background_color":  "#C2443A"
                     },
                     {
                         "id":  10,
-                        "label":  "Stay here"
+                        "label":  "Stay here",
+                        "background_color":  "#2F6A63"
                     },
                     {
                         "id":  11,
-                        "label":  "Need help"
+                        "label":  "Need help",
+                        "background_color":  "#3A6C2E"
                     },
                     {
                         "id":  12,
-                        "label":  "Wait"
+                        "label":  "Wait",
+                        "background_color":  "#6C4BD9"
                     }
                 ],
     "images":  [

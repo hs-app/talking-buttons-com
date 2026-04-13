@@ -31,51 +31,63 @@
     "buttons":  [
                     {
                         "id":  1,
-                        "label":  "Pain"
+                        "label":  "Pain",
+                        "background_color":  "#C2443A"
                     },
                     {
                         "id":  2,
-                        "label":  "Nausea"
+                        "label":  "Nausea",
+                        "background_color":  "#2F6A63"
                     },
                     {
                         "id":  3,
-                        "label":  "Dizzy"
+                        "label":  "Dizzy",
+                        "background_color":  "#3A6C2E"
                     },
                     {
                         "id":  4,
-                        "label":  "Breathing"
+                        "label":  "Breathing",
+                        "background_color":  "#6C4BD9"
                     },
                     {
                         "id":  5,
-                        "label":  "Head"
+                        "label":  "Head",
+                        "background_color":  "#C46827"
                     },
                     {
                         "id":  6,
-                        "label":  "Chest"
+                        "label":  "Chest",
+                        "background_color":  "#A3445B"
                     },
                     {
                         "id":  7,
-                        "label":  "Stomach"
+                        "label":  "Stomach",
+                        "background_color":  "#5C3A9C"
                     },
                     {
                         "id":  8,
-                        "label":  "Wait"
+                        "label":  "Wait",
+                        "background_color":  "#4A4A4A"
                     },
                     {
                         "id":  9,
-                        "label":  "Call nurse"
+                        "label":  "Call nurse",
+                        "background_color":  "#C2443A"
                     },
                     {
                         "id":  10,
-                        "label":  "Emergency"
+                        "label":  "Emergency",
+                        "background_color":  "#2F6A63"
                     },
                     {
                         "id":  11,
-                        "label":  "Water"
+                        "label":  "Water",
+                        "background_color":  "#3A6C2E"
                     },
                     {
                         "id":  12,
-                        "label":  "Toilet"
+                        "label":  "Toilet",
+                        "background_color":  "#6C4BD9"
                     }
                 ],
     "images":  [
