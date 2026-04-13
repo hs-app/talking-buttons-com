@@ -5,26 +5,40 @@
     "locale":  "ru",
     "description_html":  "Доска 3×4 для ответов да/нет и коммуникативной коррекции.",
     "grid":  {
-                 "rows":  3,
-                 "columns":  4,
+                 "rows":  4,
+                 "columns":  6,
                  "order":  [
                                [
                                    1,
                                    2,
                                    3,
-                                   4
-                               ],
-                               [
+                                   4,
                                    5,
-                                   6,
-                                   7,
-                                   8
+                                   6
                                ],
                                [
+                                   7,
+                                   8,
                                    9,
                                    10,
                                    11,
                                    12
+                               ],
+                               [
+                                   13,
+                                   14,
+                                   15,
+                                   16,
+                                   17,
+                                   18
+                               ],
+                               [
+                                   19,
+                                   20,
+                                   21,
+                                   22,
+                                   23,
+                                   24
                                ]
                            ]
              },
@@ -88,6 +102,66 @@
                         "id":  12,
                         "label":  "Готово",
                         "background_color":  "#6C4BD9"
+                    },
+                    {
+                        "id":  13,
+                        "label":  "Не уверен",
+                        "background_color":  "#C46827"
+                    },
+                    {
+                        "id":  14,
+                        "label":  "Попробуйте снова",
+                        "background_color":  "#A3445B"
+                    },
+                    {
+                        "id":  15,
+                        "label":  "Позже, пожалуйста",
+                        "background_color":  "#5C3A9C"
+                    },
+                    {
+                        "id":  16,
+                        "label":  "Я передумал",
+                        "background_color":  "#4A4A4A"
+                    },
+                    {
+                        "id":  17,
+                        "label":  "Правильно",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  18,
+                        "label":  "Неправильно",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  19,
+                        "label":  "Я согласен",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  20,
+                        "label":  "Я не согласен",
+                        "background_color":  "#6C4BD9"
+                    },
+                    {
+                        "id":  21,
+                        "label":  "Конечно",
+                        "background_color":  "#C46827"
+                    },
+                    {
+                        "id":  22,
+                        "label":  "Ни за что",
+                        "background_color":  "#A3445B"
+                    },
+                    {
+                        "id":  23,
+                        "label":  "Может позже",
+                        "background_color":  "#5C3A9C"
+                    },
+                    {
+                        "id":  24,
+                        "label":  "Спросите еще раз",
+                        "background_color":  "#4A4A4A"
                     }
                 ],
     "images":  [

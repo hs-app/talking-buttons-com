@@ -5,18 +5,40 @@
     "locale":  "ru",
     "description_html":  "Минимальная доска 2×3 с основными словами для общения.",
     "grid":  {
-                 "rows":  2,
-                 "columns":  3,
+                 "rows":  4,
+                 "columns":  6,
                  "order":  [
                                [
                                    1,
                                    2,
-                                   3
-                               ],
-                               [
+                                   3,
                                    4,
                                    5,
                                    6
+                               ],
+                               [
+                                   7,
+                                   8,
+                                   9,
+                                   10,
+                                   11,
+                                   12
+                               ],
+                               [
+                                   13,
+                                   14,
+                                   15,
+                                   16,
+                                   17,
+                                   18
+                               ],
+                               [
+                                   19,
+                                   20,
+                                   21,
+                                   22,
+                                   23,
+                                   24
                                ]
                            ]
              },
@@ -50,6 +72,96 @@
                         "id":  6,
                         "label":  "Вода",
                         "background_color":  "#A3445B"
+                    },
+                    {
+                        "id":  7,
+                        "label":  "Пожалуйста",
+                        "background_color":  "#5C3A9C"
+                    },
+                    {
+                        "id":  8,
+                        "label":  "Стоп",
+                        "background_color":  "#4A4A4A"
+                    },
+                    {
+                        "id":  9,
+                        "label":  "Еще",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  10,
+                        "label":  "Готово",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  11,
+                        "label":  "Голодно",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  12,
+                        "label":  "Холодно",
+                        "background_color":  "#6C4BD9"
+                    },
+                    {
+                        "id":  13,
+                        "label":  "Жарко",
+                        "background_color":  "#C46827"
+                    },
+                    {
+                        "id":  14,
+                        "label":  "Туалет",
+                        "background_color":  "#A3445B"
+                    },
+                    {
+                        "id":  15,
+                        "label":  "Позовите семью",
+                        "background_color":  "#5C3A9C"
+                    },
+                    {
+                        "id":  16,
+                        "label":  "Мне срочно нужна помощь",
+                        "background_color":  "#4A4A4A"
+                    },
+                    {
+                        "id":  17,
+                        "label":  "Спасибо",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  18,
+                        "label":  "Да, пожалуйста",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  19,
+                        "label":  "Нет, спасибо",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  20,
+                        "label":  "Повторите, пожалуйста",
+                        "background_color":  "#6C4BD9"
+                    },
+                    {
+                        "id":  21,
+                        "label":  "Пожалуйста, помогите",
+                        "background_color":  "#C46827"
+                    },
+                    {
+                        "id":  22,
+                        "label":  "Со мной все в порядке",
+                        "background_color":  "#A3445B"
+                    },
+                    {
+                        "id":  23,
+                        "label":  "Нужно лекарство",
+                        "background_color":  "#5C3A9C"
+                    },
+                    {
+                        "id":  24,
+                        "label":  "Поговорим позже",
+                        "background_color":  "#4A4A4A"
                     }
                 ],
     "images":  [

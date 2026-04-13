@@ -5,26 +5,40 @@
     "locale":  "en",
     "description_html":  "A 3×4 board for communicating about locations and navigation.",
     "grid":  {
-                 "rows":  3,
-                 "columns":  4,
+                 "rows":  4,
+                 "columns":  6,
                  "order":  [
                                [
                                    1,
                                    2,
                                    3,
-                                   4
-                               ],
-                               [
+                                   4,
                                    5,
-                                   6,
-                                   7,
-                                   8
+                                   6
                                ],
                                [
+                                   7,
+                                   8,
                                    9,
                                    10,
                                    11,
                                    12
+                               ],
+                               [
+                                   13,
+                                   14,
+                                   15,
+                                   16,
+                                   17,
+                                   18
+                               ],
+                               [
+                                   19,
+                                   20,
+                                   21,
+                                   22,
+                                   23,
+                                   24
                                ]
                            ]
              },
@@ -88,6 +102,66 @@
                         "id":  12,
                         "label":  "Wait",
                         "background_color":  "#6C4BD9"
+                    },
+                    {
+                        "id":  13,
+                        "label":  "Living room",
+                        "background_color":  "#C46827"
+                    },
+                    {
+                        "id":  14,
+                        "label":  "Dining room",
+                        "background_color":  "#A3445B"
+                    },
+                    {
+                        "id":  15,
+                        "label":  "Garden",
+                        "background_color":  "#5C3A9C"
+                    },
+                    {
+                        "id":  16,
+                        "label":  "Store",
+                        "background_color":  "#4A4A4A"
+                    },
+                    {
+                        "id":  17,
+                        "label":  "Pharmacy",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  18,
+                        "label":  "Bus stop",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  19,
+                        "label":  "Go home",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  20,
+                        "label":  "Need directions",
+                        "background_color":  "#6C4BD9"
+                    },
+                    {
+                        "id":  21,
+                        "label":  "Hospital",
+                        "background_color":  "#C46827"
+                    },
+                    {
+                        "id":  22,
+                        "label":  "Park",
+                        "background_color":  "#A3445B"
+                    },
+                    {
+                        "id":  23,
+                        "label":  "Office",
+                        "background_color":  "#5C3A9C"
+                    },
+                    {
+                        "id":  24,
+                        "label":  "Bathroom please",
+                        "background_color":  "#4A4A4A"
                     }
                 ],
     "images":  [

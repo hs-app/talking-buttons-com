@@ -5,26 +5,40 @@
     "locale":  "en",
     "description_html":  "A 3×4 board with common action verbs for directing activities.",
     "grid":  {
-                 "rows":  3,
-                 "columns":  4,
+                 "rows":  4,
+                 "columns":  6,
                  "order":  [
                                [
                                    1,
                                    2,
                                    3,
-                                   4
-                               ],
-                               [
+                                   4,
                                    5,
-                                   6,
-                                   7,
-                                   8
+                                   6
                                ],
                                [
+                                   7,
+                                   8,
                                    9,
                                    10,
                                    11,
                                    12
+                               ],
+                               [
+                                   13,
+                                   14,
+                                   15,
+                                   16,
+                                   17,
+                                   18
+                               ],
+                               [
+                                   19,
+                                   20,
+                                   21,
+                                   22,
+                                   23,
+                                   24
                                ]
                            ]
              },
@@ -88,6 +102,66 @@
                         "id":  12,
                         "label":  "Finish",
                         "background_color":  "#6C4BD9"
+                    },
+                    {
+                        "id":  13,
+                        "label":  "Take",
+                        "background_color":  "#C46827"
+                    },
+                    {
+                        "id":  14,
+                        "label":  "Give",
+                        "background_color":  "#A3445B"
+                    },
+                    {
+                        "id":  15,
+                        "label":  "Bring",
+                        "background_color":  "#5C3A9C"
+                    },
+                    {
+                        "id":  16,
+                        "label":  "Push",
+                        "background_color":  "#4A4A4A"
+                    },
+                    {
+                        "id":  17,
+                        "label":  "Pull",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  18,
+                        "label":  "Turn on",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  19,
+                        "label":  "Turn off",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  20,
+                        "label":  "Show me",
+                        "background_color":  "#6C4BD9"
+                    },
+                    {
+                        "id":  21,
+                        "label":  "Carry",
+                        "background_color":  "#C46827"
+                    },
+                    {
+                        "id":  22,
+                        "label":  "Drop",
+                        "background_color":  "#A3445B"
+                    },
+                    {
+                        "id":  23,
+                        "label":  "Hold",
+                        "background_color":  "#5C3A9C"
+                    },
+                    {
+                        "id":  24,
+                        "label":  "Release",
+                        "background_color":  "#4A4A4A"
                     }
                 ],
     "images":  [

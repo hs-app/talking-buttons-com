@@ -5,26 +5,40 @@
     "locale":  "ru",
     "description_html":  "Доска 3×4 для обращения к людям и выражения социальных потребностей.",
     "grid":  {
-                 "rows":  3,
-                 "columns":  4,
+                 "rows":  4,
+                 "columns":  6,
                  "order":  [
                                [
                                    1,
                                    2,
                                    3,
-                                   4
-                               ],
-                               [
+                                   4,
                                    5,
-                                   6,
-                                   7,
-                                   8
+                                   6
                                ],
                                [
+                                   7,
+                                   8,
                                    9,
                                    10,
                                    11,
                                    12
+                               ],
+                               [
+                                   13,
+                                   14,
+                                   15,
+                                   16,
+                                   17,
+                                   18
+                               ],
+                               [
+                                   19,
+                                   20,
+                                   21,
+                                   22,
+                                   23,
+                                   24
                                ]
                            ]
              },
@@ -88,6 +102,66 @@
                         "id":  12,
                         "label":  "Спасибо",
                         "background_color":  "#6C4BD9"
+                    },
+                    {
+                        "id":  13,
+                        "label":  "Брат",
+                        "background_color":  "#C46827"
+                    },
+                    {
+                        "id":  14,
+                        "label":  "Сестра",
+                        "background_color":  "#A3445B"
+                    },
+                    {
+                        "id":  15,
+                        "label":  "Бабушка",
+                        "background_color":  "#5C3A9C"
+                    },
+                    {
+                        "id":  16,
+                        "label":  "Дедушка",
+                        "background_color":  "#4A4A4A"
+                    },
+                    {
+                        "id":  17,
+                        "label":  "Помощник",
+                        "background_color":  "#C2443A"
+                    },
+                    {
+                        "id":  18,
+                        "label":  "Позвоните маме",
+                        "background_color":  "#2F6A63"
+                    },
+                    {
+                        "id":  19,
+                        "label":  "Позвоните папе",
+                        "background_color":  "#3A6C2E"
+                    },
+                    {
+                        "id":  20,
+                        "label":  "Я скучаю",
+                        "background_color":  "#6C4BD9"
+                    },
+                    {
+                        "id":  21,
+                        "label":  "Дядя",
+                        "background_color":  "#C46827"
+                    },
+                    {
+                        "id":  22,
+                        "label":  "Тетя",
+                        "background_color":  "#A3445B"
+                    },
+                    {
+                        "id":  23,
+                        "label":  "Сосед",
+                        "background_color":  "#5C3A9C"
+                    },
+                    {
+                        "id":  24,
+                        "label":  "Позовите помощника",
+                        "background_color":  "#4A4A4A"
                     }
                 ],
     "images":  [
