@@ -505,6 +505,12 @@ li {
   color: var(--text);
 }
 
+.board-repo-row--reserved td {
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+}
+
 .board-repo-note {
   margin-top: 1rem;
   font-size: 0.875rem;
