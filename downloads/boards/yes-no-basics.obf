@@ -1,0 +1,13 @@
+{
+  "id": "tb-yes-no-basics",
+  "name": "Yes / No + Help",
+  "locale": "en",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Yes" }, { "label": "No" }, { "label": "Maybe" }, { "label": "Not now" },
+    { "label": "Help" }, { "label": "Wait" }, { "label": "Stop" }, { "label": "Repeat" },
+    { "label": "I understand" }, { "label": "I don't understand" }, { "label": "More" }, { "label": "Done" }
+  ]
+}

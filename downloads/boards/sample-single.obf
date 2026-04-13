@@ -1,0 +1,16 @@
+{
+  "id": "tb-sample-single",
+  "name": "Single-board sample",
+  "locale": "en",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 2, "columns": 3 },
+  "buttons": [
+    { "label": "Yes" },
+    { "label": "No" },
+    { "label": "Help" },
+    { "label": "Water" },
+    { "label": "Pain" },
+    { "label": "Thank you" }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "tb-custom-grid-template",
+  "name": "Customizable Grid Template",
+  "locale": "en",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Custom 1" }, { "label": "Custom 2" }, { "label": "Custom 3" }, { "label": "Custom 4" },
+    { "label": "Custom 5" }, { "label": "Custom 6" }, { "label": "Custom 7" }, { "label": "Custom 8" },
+    { "label": "Custom 9" }, { "label": "Custom 10" }, { "label": "Custom 11" }, { "label": "Custom 12" }
+  ],
+  "note": "Template for local editing. Replace labels and add images/recordings."
+}

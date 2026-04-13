@@ -1,0 +1,13 @@
+{
+  "id": "tb-people-family",
+  "name": "People and Family",
+  "locale": "en",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Mom" }, { "label": "Dad" }, { "label": "Partner" }, { "label": "Child" },
+    { "label": "Nurse" }, { "label": "Doctor" }, { "label": "Therapist" }, { "label": "Teacher" },
+    { "label": "Friend" }, { "label": "Call family" }, { "label": "Stay with me" }, { "label": "Thank you" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "tb-actions-verbs",
+  "name": "Actions",
+  "locale": "en",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Go" }, { "label": "Stop" }, { "label": "Come" }, { "label": "Open" },
+    { "label": "Close" }, { "label": "Sit" }, { "label": "Stand" }, { "label": "Read" },
+    { "label": "Write" }, { "label": "Look" }, { "label": "Listen" }, { "label": "Finish" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "tb-daily-needs",
+  "name": "Daily Needs",
+  "locale": "en",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Drink" }, { "label": "Food" }, { "label": "Toilet" }, { "label": "Rest" },
+    { "label": "Cold" }, { "label": "Hot" }, { "label": "Blanket" }, { "label": "Medicine" },
+    { "label": "Pain" }, { "label": "Help" }, { "label": "Wait" }, { "label": "Thank you" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "tb-school-learning",
+  "name": "School and Learning",
+  "locale": "en",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Class" }, { "label": "Teacher" }, { "label": "Break" }, { "label": "Homework" },
+    { "label": "Read" }, { "label": "Write" }, { "label": "Math" }, { "label": "Speech" },
+    { "label": "I know" }, { "label": "I need help" }, { "label": "Repeat" }, { "label": "Finished" }
+  ]
+}

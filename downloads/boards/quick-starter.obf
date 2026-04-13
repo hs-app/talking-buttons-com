@@ -1,0 +1,13 @@
+{
+  "id": "tb-quick-starter",
+  "name": "Quick Starter",
+  "locale": "en",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Yes" }, { "label": "No" }, { "label": "Help" }, { "label": "Wait" },
+    { "label": "Pain" }, { "label": "Water" }, { "label": "Toilet" }, { "label": "Food" },
+    { "label": "Repeat" }, { "label": "I don't understand" }, { "label": "Stop" }, { "label": "Thank you" }
+  ]
+}

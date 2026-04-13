@@ -1,0 +1,13 @@
+{
+  "id": "tb-home-places",
+  "name": "Home and Places",
+  "locale": "en",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Home" }, { "label": "Kitchen" }, { "label": "Bathroom" }, { "label": "Bedroom" },
+    { "label": "School" }, { "label": "Clinic" }, { "label": "Outside" }, { "label": "Car" },
+    { "label": "Go there" }, { "label": "Stay here" }, { "label": "Need help" }, { "label": "Back" }
+  ]
+}

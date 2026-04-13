@@ -1,0 +1,13 @@
+{
+  "id": "tb-emotions",
+  "name": "Emotions",
+  "locale": "en",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Happy" }, { "label": "Sad" }, { "label": "Angry" }, { "label": "Worried" },
+    { "label": "Calm" }, { "label": "Scared" }, { "label": "Tired" }, { "label": "Frustrated" },
+    { "label": "Need break" }, { "label": "Need comfort" }, { "label": "Help" }, { "label": "Talk to me" }
+  ]
+}

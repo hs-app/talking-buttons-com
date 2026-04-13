@@ -1,0 +1,13 @@
+{
+  "id": "tb-medical-short",
+  "name": "Medical Short",
+  "locale": "en",
+  "version": "1.0.0",
+  "author": "Talking Buttons SLP/AT Team",
+  "grid": { "rows": 3, "columns": 4 },
+  "buttons": [
+    { "label": "Pain" }, { "label": "Nausea" }, { "label": "Dizzy" }, { "label": "Breathing" },
+    { "label": "Head" }, { "label": "Chest" }, { "label": "Stomach" }, { "label": "Leg" },
+    { "label": "Call nurse" }, { "label": "Emergency" }, { "label": "Water" }, { "label": "Toilet" }
+  ]
+}
