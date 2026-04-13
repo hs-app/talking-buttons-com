@@ -1,32 +1,87 @@
-{
-  "format": "open-board-0.1",
-  "id": "tb-medical-short",
-  "name": "Medical Short",
-  "locale": "en",
-  "description_html": "A 3×4 board for communicating medical symptoms and urgent needs.",
-  "grid": {
-    "rows": 3,
-    "columns": 4,
-    "order": [
-      [1, 2, 3, 4],
-      [5, 6, 7, 8],
-      [9, 10, 11, 12]
-    ]
-  },
-  "buttons": [
-    { "id": 1, "label": "Pain" },
-    { "id": 2, "label": "Nausea" },
-    { "id": 3, "label": "Dizzy" },
-    { "id": 4, "label": "Breathing" },
-    { "id": 5, "label": "Head" },
-    { "id": 6, "label": "Chest" },
-    { "id": 7, "label": "Stomach" },
-    { "id": 8, "label": "Leg" },
-    { "id": 9, "label": "Call nurse" },
-    { "id": 10, "label": "Emergency" },
-    { "id": 11, "label": "Water" },
-    { "id": 12, "label": "Toilet" }
-  ],
-  "images": [],
-  "sounds": []
+﻿{
+    "format":  "open-board-0.1",
+    "id":  "tb-medical-short",
+    "name":  "Medical Short",
+    "locale":  "en",
+    "description_html":  "A 3×4 board for communicating medical symptoms and urgent needs.",
+    "grid":  {
+                 "rows":  3,
+                 "columns":  4,
+                 "order":  [
+                               [
+                                   1,
+                                   2,
+                                   3,
+                                   4
+                               ],
+                               [
+                                   5,
+                                   6,
+                                   7,
+                                   8
+                               ],
+                               [
+                                   9,
+                                   10,
+                                   11,
+                                   12
+                               ]
+                           ]
+             },
+    "buttons":  [
+                    {
+                        "id":  1,
+                        "label":  "Pain"
+                    },
+                    {
+                        "id":  2,
+                        "label":  "Nausea"
+                    },
+                    {
+                        "id":  3,
+                        "label":  "Dizzy"
+                    },
+                    {
+                        "id":  4,
+                        "label":  "Breathing"
+                    },
+                    {
+                        "id":  5,
+                        "label":  "Head"
+                    },
+                    {
+                        "id":  6,
+                        "label":  "Chest"
+                    },
+                    {
+                        "id":  7,
+                        "label":  "Stomach"
+                    },
+                    {
+                        "id":  8,
+                        "label":  "Wait"
+                    },
+                    {
+                        "id":  9,
+                        "label":  "Call nurse"
+                    },
+                    {
+                        "id":  10,
+                        "label":  "Emergency"
+                    },
+                    {
+                        "id":  11,
+                        "label":  "Water"
+                    },
+                    {
+                        "id":  12,
+                        "label":  "Toilet"
+                    }
+                ],
+    "images":  [
+
+               ],
+    "sounds":  [
+
+               ]
 }

@@ -1,32 +1,87 @@
-{
-  "format": "open-board-0.1",
-  "id": "tb-time-schedule",
-  "name": "Time and Schedule",
-  "locale": "en",
-  "description_html": "A 3×4 board for expressing time concepts and scheduling.",
-  "grid": {
-    "rows": 3,
-    "columns": 4,
-    "order": [
-      [1, 2, 3, 4],
-      [5, 6, 7, 8],
-      [9, 10, 11, 12]
-    ]
-  },
-  "buttons": [
-    { "id": 1, "label": "Now" },
-    { "id": 2, "label": "Later" },
-    { "id": 3, "label": "Soon" },
-    { "id": 4, "label": "Today" },
-    { "id": 5, "label": "Tomorrow" },
-    { "id": 6, "label": "Morning" },
-    { "id": 7, "label": "Afternoon" },
-    { "id": 8, "label": "Night" },
-    { "id": 9, "label": "First" },
-    { "id": 10, "label": "Then" },
-    { "id": 11, "label": "Finished" },
-    { "id": 12, "label": "Wait" }
-  ],
-  "images": [],
-  "sounds": []
+﻿{
+    "format":  "open-board-0.1",
+    "id":  "tb-time-schedule",
+    "name":  "Time and Schedule",
+    "locale":  "en",
+    "description_html":  "A 3×4 board for expressing time concepts and scheduling.",
+    "grid":  {
+                 "rows":  3,
+                 "columns":  4,
+                 "order":  [
+                               [
+                                   1,
+                                   2,
+                                   3,
+                                   4
+                               ],
+                               [
+                                   5,
+                                   6,
+                                   7,
+                                   8
+                               ],
+                               [
+                                   9,
+                                   10,
+                                   11,
+                                   12
+                               ]
+                           ]
+             },
+    "buttons":  [
+                    {
+                        "id":  1,
+                        "label":  "Now"
+                    },
+                    {
+                        "id":  2,
+                        "label":  "Later"
+                    },
+                    {
+                        "id":  3,
+                        "label":  "Soon"
+                    },
+                    {
+                        "id":  4,
+                        "label":  "Today"
+                    },
+                    {
+                        "id":  5,
+                        "label":  "Tomorrow"
+                    },
+                    {
+                        "id":  6,
+                        "label":  "Morning"
+                    },
+                    {
+                        "id":  7,
+                        "label":  "Afternoon"
+                    },
+                    {
+                        "id":  8,
+                        "label":  "Help"
+                    },
+                    {
+                        "id":  9,
+                        "label":  "First"
+                    },
+                    {
+                        "id":  10,
+                        "label":  "Then"
+                    },
+                    {
+                        "id":  11,
+                        "label":  "Finished"
+                    },
+                    {
+                        "id":  12,
+                        "label":  "Wait"
+                    }
+                ],
+    "images":  [
+
+               ],
+    "sounds":  [
+
+               ]
 }

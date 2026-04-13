@@ -1,32 +1,87 @@
-{
-  "format": "open-board-0.1",
-  "id": "tb-people-family",
-  "name": "People and Family",
-  "locale": "en",
-  "description_html": "A 3×4 board for referring to people, caregivers and social needs.",
-  "grid": {
-    "rows": 3,
-    "columns": 4,
-    "order": [
-      [1, 2, 3, 4],
-      [5, 6, 7, 8],
-      [9, 10, 11, 12]
-    ]
-  },
-  "buttons": [
-    { "id": 1, "label": "Mom" },
-    { "id": 2, "label": "Dad" },
-    { "id": 3, "label": "Partner" },
-    { "id": 4, "label": "Child" },
-    { "id": 5, "label": "Nurse" },
-    { "id": 6, "label": "Doctor" },
-    { "id": 7, "label": "Therapist" },
-    { "id": 8, "label": "Teacher" },
-    { "id": 9, "label": "Friend" },
-    { "id": 10, "label": "Call family" },
-    { "id": 11, "label": "Stay with me" },
-    { "id": 12, "label": "Thank you" }
-  ],
-  "images": [],
-  "sounds": []
+﻿{
+    "format":  "open-board-0.1",
+    "id":  "tb-people-family",
+    "name":  "People and Family",
+    "locale":  "en",
+    "description_html":  "A 3×4 board for referring to people, caregivers and social needs.",
+    "grid":  {
+                 "rows":  3,
+                 "columns":  4,
+                 "order":  [
+                               [
+                                   1,
+                                   2,
+                                   3,
+                                   4
+                               ],
+                               [
+                                   5,
+                                   6,
+                                   7,
+                                   8
+                               ],
+                               [
+                                   9,
+                                   10,
+                                   11,
+                                   12
+                               ]
+                           ]
+             },
+    "buttons":  [
+                    {
+                        "id":  1,
+                        "label":  "Mom"
+                    },
+                    {
+                        "id":  2,
+                        "label":  "Dad"
+                    },
+                    {
+                        "id":  3,
+                        "label":  "Wait"
+                    },
+                    {
+                        "id":  4,
+                        "label":  "Child"
+                    },
+                    {
+                        "id":  5,
+                        "label":  "Nurse"
+                    },
+                    {
+                        "id":  6,
+                        "label":  "Doctor"
+                    },
+                    {
+                        "id":  7,
+                        "label":  "Therapist"
+                    },
+                    {
+                        "id":  8,
+                        "label":  "Teacher"
+                    },
+                    {
+                        "id":  9,
+                        "label":  "Help"
+                    },
+                    {
+                        "id":  10,
+                        "label":  "Call family"
+                    },
+                    {
+                        "id":  11,
+                        "label":  "Stay with me"
+                    },
+                    {
+                        "id":  12,
+                        "label":  "Thank you"
+                    }
+                ],
+    "images":  [
+
+               ],
+    "sounds":  [
+
+               ]
 }

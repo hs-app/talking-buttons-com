@@ -1,32 +1,87 @@
-{
-  "format": "open-board-0.1",
-  "id": "tb-home-places",
-  "name": "Home and Places",
-  "locale": "en",
-  "description_html": "A 3×4 board for communicating about locations and navigation.",
-  "grid": {
-    "rows": 3,
-    "columns": 4,
-    "order": [
-      [1, 2, 3, 4],
-      [5, 6, 7, 8],
-      [9, 10, 11, 12]
-    ]
-  },
-  "buttons": [
-    { "id": 1, "label": "Home" },
-    { "id": 2, "label": "Kitchen" },
-    { "id": 3, "label": "Bathroom" },
-    { "id": 4, "label": "Bedroom" },
-    { "id": 5, "label": "School" },
-    { "id": 6, "label": "Clinic" },
-    { "id": 7, "label": "Outside" },
-    { "id": 8, "label": "Car" },
-    { "id": 9, "label": "Go there" },
-    { "id": 10, "label": "Stay here" },
-    { "id": 11, "label": "Need help" },
-    { "id": 12, "label": "Back" }
-  ],
-  "images": [],
-  "sounds": []
+﻿{
+    "format":  "open-board-0.1",
+    "id":  "tb-home-places",
+    "name":  "Home and Places",
+    "locale":  "en",
+    "description_html":  "A 3×4 board for communicating about locations and navigation.",
+    "grid":  {
+                 "rows":  3,
+                 "columns":  4,
+                 "order":  [
+                               [
+                                   1,
+                                   2,
+                                   3,
+                                   4
+                               ],
+                               [
+                                   5,
+                                   6,
+                                   7,
+                                   8
+                               ],
+                               [
+                                   9,
+                                   10,
+                                   11,
+                                   12
+                               ]
+                           ]
+             },
+    "buttons":  [
+                    {
+                        "id":  1,
+                        "label":  "Home"
+                    },
+                    {
+                        "id":  2,
+                        "label":  "Kitchen"
+                    },
+                    {
+                        "id":  3,
+                        "label":  "Bathroom"
+                    },
+                    {
+                        "id":  4,
+                        "label":  "Bedroom"
+                    },
+                    {
+                        "id":  5,
+                        "label":  "School"
+                    },
+                    {
+                        "id":  6,
+                        "label":  "Clinic"
+                    },
+                    {
+                        "id":  7,
+                        "label":  "Outside"
+                    },
+                    {
+                        "id":  8,
+                        "label":  "Car"
+                    },
+                    {
+                        "id":  9,
+                        "label":  "Go there"
+                    },
+                    {
+                        "id":  10,
+                        "label":  "Stay here"
+                    },
+                    {
+                        "id":  11,
+                        "label":  "Need help"
+                    },
+                    {
+                        "id":  12,
+                        "label":  "Wait"
+                    }
+                ],
+    "images":  [
+
+               ],
+    "sounds":  [
+
+               ]
 }
