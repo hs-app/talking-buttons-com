@@ -521,7 +521,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.5rem;
+  gap: 1.0rem;
 }
 
 .board-download {
