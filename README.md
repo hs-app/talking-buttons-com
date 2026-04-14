@@ -1,6 +1,6 @@
 # Talking Buttons — marketing site (GitHub Pages)
 
-Static HTML/CSS for **talking-buttons.com**, served from this folder via **GitHub Pages** (`/docs` on the default branch).
+Static HTML/CSS for **talking-buttons.com**, served via **GitHub Pages** (`/ (root)` on the default branch).
 
 ## Store links (source of truth in repo)
 
@@ -25,7 +25,7 @@ With **JavaScript disabled**, the root page shows the manual language chooser in
 
 1. Repository **Settings → Pages**.
 2. **Build and deployment → Source:** Deploy from a branch.
-3. Branch: `main` (or your default), folder: **`/docs`**.
+3. Branch: `main` (or your default), folder: **`/ (root)`**.
 4. After the first deploy, under **Custom domain**, enter `talking-buttons.com` if DNS is ready. The [`CNAME`](CNAME) file in this folder should match your chosen hostname (apex or `www`).
 
 ## DNS (apex domain)
