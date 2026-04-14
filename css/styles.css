@@ -139,8 +139,19 @@ a:focus-visible {
 }
 
 .logo a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   color: var(--text);
   text-decoration: none;
+}
+
+.logo-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 4px;
+  vertical-align: middle;
+  flex-shrink: 0;
 }
 
 .logo a:hover {
