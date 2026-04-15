@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "bundles": {
+    "themed": {
+      "en": ["AAC_boards_phone.obz"],
+      "ru": ["AAC_boards_phone.obz"]
+    },
+    "symbols": {
+      "en": ["Adam_Urdu_Symbols.obz", "Mulberry_Symbols.obz"],
+      "ru": ["Adam_Urdu_Symbols.obz", "Mulberry_Symbols.obz"]
+    }
+  }
+}
