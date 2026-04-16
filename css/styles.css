@@ -3,14 +3,15 @@
    Light default; dark when OS/browser prefers dark (optional). */
 :root {
   color-scheme: light dark;
-  --bg: #f4f7fb;
+  /* Light, airy default palette */
+  --bg: #f9fbff;
   --surface: #ffffff;
-  --text: #15202b;
-  --text-muted: #3d4f5f;
-  --accent: #1565c0;
-  --accent-hover: #0d4a9e;
-  --border: #c5d0df;
-  --focus: #b45309;
+  --text: #13263a;
+  --text-muted: #58677a;
+  --accent: #1e88e5;
+  --accent-hover: #1565c0;
+  --border: #d6e2f2;
+  --focus: #f59e0b;
   --on-accent: #ffffff;
   /* Content width: full-bleed text block on small phones; cap grows at larger breakpoints */
   --maxw: 100%;
