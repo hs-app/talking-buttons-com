@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talking Buttons — Guide d'utilisation</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --primary: #1976d2;
+      --border: #e5e7eb;
+      --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+    .toc {
+      background: #e8f1fd;
+      border: 1px solid #d7e8fc;
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      margin-bottom: 20px;
+    }
+    .toc h2 { margin: 0 0 10px; font-size: 18px; }
+    .toc > ul {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .toc > ul > li {
+      margin-top: 8px;
+      padding-left: 0;
+    }
+    .toc > ul > li:first-child { margin-top: 0; }
+    .toc ul ul {
+      list-style: none;
+      margin: 6px 0 2px;
+      padding: 0 0 0 14px;
+      border-left: 2px solid #b6d2f5;
+    }
+    .toc ul ul li { margin-top: 4px; }
+    .toc ul ul li:first-child { margin-top: 0; }
+    .toc ul ul a { font-size: 0.95em; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px 18px 16px;
+      margin-bottom: 14px;
+    }
+    h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.3;
+      color: #111827;
+    }
+    h3 {
+      margin: 14px 0 6px;
+      font-size: 18px;
+      line-height: 1.35;
+      color: #111827;
+    }
+    p { margin: 0 0 8px; }
+    ul, ol { margin: 0 0 8px; padding-left: 20px; }
+    li + li { margin-top: 4px; }
+    .muted { color: var(--muted); }
+    .kbd {
+      display: inline-block;
+      border: 1px solid #d1d5db;
+      border-bottom-width: 2px;
+      border-radius: 6px;
+      padding: 0 6px;
+      background: #f9fafb;
+      font-size: 0.95em;
+      white-space: nowrap;
+    }
+    .note {
+      border-left: 4px solid var(--primary);
+      background: #f8fbff;
+      padding: 8px 10px;
+      border-radius: 6px;
+      margin-top: 8px;
+    }
+    a { color: var(--primary); }
+    code {
+      font-size: 1.2em;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 0; }
+      .card { box-shadow: none; break-inside: avoid; }
+      .toc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Talking Buttons — Guide d'utilisation</h1>
+    <p class="subtitle">
+      Apprenez à créer des tableaux CAA, personnaliser les boutons, gérer les voix et échanger des tableaux au format Open Board Format.
+    </p>
+
+    <section class="toc">
+      <h2>Sommaire</h2>
+      <ul>
+        <li><a href="#start">1. Premiers pas</a></li>
+        <li><a href="#create">2. Créer un nouveau tableau</a></li>
+        <li><a href="#size">3. Taille du tableau et grille</a></li>
+        <li>
+          <a href="#customize">4. Personnaliser les boutons</a>
+          <ul>
+            <li><a href="#btn-text">4.1 Texte du bouton</a></li>
+            <li><a href="#btn-lang">4.2 Langue du bouton</a></li>
+            <li><a href="#btn-bg">4.3 Arrière-plan du bouton</a></li>
+            <li><a href="#custom-audio">4.4 Audio personnalisé (remplace la synthèse vocale)</a></li>
+            <li><a href="#editor-actions">4.5 Effacer, Annuler et Enregistrer</a></li>
+          </ul>
+        </li>
+        <li><a href="#reorder">5. Ordre des boutons</a></li>
+        <li><a href="#voices">6. Langue et voix par défaut</a></li>
+        <li><a href="#importexport">7. Import, export et sauvegarde (OBZ/OBF)</a></li>
+        <li><a href="#tips">8. Conseils et différences avec le mobile</a></li>
+      </ul>
+    </section>
+
+    <section class="card" id="start">
+      <h2>1. Premiers pas</h2>
+      <ol>
+        <li>Installez l'extension depuis le Chrome Web Store.</li>
+        <li>Cliquez sur l'icône de l'extension dans la barre Chrome pour ouvrir le panneau latéral.</li>
+        <li>Utilisez les onglets en haut :
+          <ul>
+            <li><strong>Tableaux</strong> — liste des tableaux et actions rapides</li>
+            <li><strong>Import/Export</strong> — échange de fichiers OBZ/OBF</li>
+            <li><strong>Paramètres</strong> — valeurs par défaut de synthèse vocale</li>
+          </ul>
+        </li>
+      </ol>
+      <p class="note"><strong>Astuce :</strong> cliquez sur <span class="kbd">?</span> dans l'en-tête à tout moment pour rouvrir ce guide.</p>
+    </section>
+
+    <section class="card" id="create">
+      <h2>2. Créer un nouveau tableau</h2>
+      <ol>
+        <li>Ouvrez l'onglet <strong>Tableaux</strong>.</li>
+        <li>Cliquez sur le bouton <span class="kbd">+</span> dans l'en-tête.</li>
+        <li>Saisissez le nom du tableau et cliquez sur <strong>Enregistrer</strong>.</li>
+        <li>Le nouveau tableau s'ouvre dans un onglet plein du navigateur en <strong>mode Paramètres</strong>.</li>
+      </ol>
+    </section>
+
+    <section class="card" id="size">
+      <h2>3. Taille du tableau et grille</h2>
+      <p>Dans l'onglet du tableau, cliquez sur <strong>⚙ Paramètres</strong> pour modifier les options de toute la grille :</p>
+      <ul>
+        <li><strong>Lignes</strong> et <strong>Colonnes</strong> — taille de la grille</li>
+        <li><strong>Police</strong> — taille du texte sur les boutons</li>
+        <li><strong>Carré</strong> — boutons carrés</li>
+      </ul>
+      <p>Les modifications sont enregistrées immédiatement.</p>
+      <p>Quand vous avez terminé, cliquez sur <strong>✓ Terminé</strong> pour quitter le mode Paramètres et revenir à l'utilisation normale du tableau (mode parole).</p>
+    </section>
+
+    <section class="card" id="customize">
+      <h2>4. Personnaliser les boutons</h2>
+      <p>Dans l'onglet du tableau, en <strong>mode Paramètres</strong>, cliquez sur un bouton pour le modifier :</p>
+
+      <h3 id="btn-text">4.1 Texte du bouton</h3>
+      <ul>
+        <li>Définissez le texte principal — il est affiché et prononcé.</li>
+        <li>Ajoutez si besoin une note ou un sous-titre.</li>
+      </ul>
+
+      <h3 id="btn-lang">4.2 Langue du bouton</h3>
+      <ul>
+        <li>Chaque bouton peut utiliser la langue et la voix <strong>par défaut</strong>.</li>
+        <li>Ou vous pouvez définir une langue spécifique pour ce bouton.</li>
+      </ul>
+
+      <h3 id="btn-bg">4.3 Arrière-plan du bouton</h3>
+      <ul>
+        <li>Choisissez la couleur de fond.</li>
+        <li>Ajoutez ou retirez l'image de fond.</li>
+      </ul>
+
+      <h3 id="custom-audio">4.4 Audio personnalisé (remplace la synthèse vocale)</h3>
+      <p>
+        Chaque bouton peut parler avec le moteur de <strong>synthèse vocale (TTS)</strong> du navigateur ou avec un
+        <strong>message enregistré</strong>. Si un enregistrement est présent, il est prioritaire :
+        en appuyant sur le bouton, c'est votre audio qui est lu, pas la voix synthétisée.
+      </p>
+      <ul>
+        <li>Utilisez <strong>Enregistrer</strong>, <strong>Lire</strong> et <strong>Arrêter</strong> pour enregistrer et écouter le message.</li>
+        <li><strong>Microphone :</strong> la première fois, Chrome peut demander l'accès au microphone. Autorisez-le pour ce site.</li>
+        <li><strong>Préécoute :</strong> utilisez <strong>Lire</strong> pour écouter avant de fermer l'éditeur.</li>
+        <li><strong>Retour au TTS :</strong> appuyez sur <strong>Supprimer</strong> à côté de l'enregistrement pour le supprimer et réutiliser la synthèse pour ce bouton.</li>
+        <li><strong>OBZ/OBF :</strong> les tableaux avec audio personnalisé s'importent et s'exportent comme les autres ; si le format le permet, l'enregistrement reste lié au bouton.</li>
+      </ul>
+      <p class="note">
+        <strong>Rappel :</strong> l'audio personnalisé remplace la synthèse seulement pour ce bouton. La langue et la voix par défaut du panneau latéral s'appliquent encore aux boutons sans enregistrement ni langue propre.
+      </p>
+
+      <h3 id="editor-actions">4.5 Effacer, Annuler et Enregistrer</h3>
+      <p>En bas de l'éditeur de bouton :</p>
+      <ul>
+        <li><strong>Effacer</strong> — vide le bouton (supprime texte, note, langue, couleurs, image de fond et audio). Enregistrement immédiat et fermeture de l'éditeur.</li>
+        <li><strong>Annuler</strong> — ferme l'éditeur sans appliquer les changements de cette session. Le bouton reste comme la dernière sauvegarde.</li>
+        <li><strong>Enregistrer</strong> — enregistre tout le contenu de l'éditeur (y compris fond et audio) et ferme l'éditeur.</li>
+      </ul>
+      <p class="muted">Vous pouvez aussi appuyer sur <span class="kbd">Échap</span> — comme <strong>Annuler</strong>.</p>
+    </section>
+
+    <section class="card" id="reorder">
+      <h2>5. Ordre des boutons</h2>
+      <p>En <strong>mode Paramètres</strong>, faites glisser les boutons pour changer leur position.</p>
+      <p class="muted">Le nouvel ordre est enregistré automatiquement.</p>
+    </section>
+
+    <section class="card" id="voices">
+      <h2>6. Langue et voix par défaut</h2>
+      <ol>
+        <li>Ouvrez l'onglet <strong>Paramètres</strong> du panneau latéral.</li>
+        <li>Sélectionnez <strong>Langue par défaut</strong>.</li>
+        <li>Choisissez la <strong>Voix</strong> pour cette langue.</li>
+        <li>Cliquez sur <strong>▶ Tester</strong> pour entendre un extrait.</li>
+      </ol>
+      <p class="note">
+        Les voix enregistrées sont mémorisées par langue et utilisées lorsqu'un bouton n'a pas sa propre langue ou voix.
+      </p>
+    </section>
+
+    <section class="card" id="importexport">
+      <h2>7. Import, export et sauvegarde (OBZ/OBF)</h2>
+
+      <h3>7.1 Importer des tableaux</h3>
+      <ol>
+        <li>Ouvrez l'onglet <strong>Import/Export</strong>.</li>
+        <li>Choisissez le mode d'importation :
+          <ul>
+            <li><strong>Fusionner — ajouter aux tableaux existants</strong></li>
+            <li><strong>Remplacer — tout supprimer, puis importer</strong></li>
+          </ul>
+        </li>
+        <li>Choisissez un fichier <code>.obz</code> ou <code>.obf</code>.</li>
+      </ol>
+
+      <h3>7.2 Exporter des tableaux</h3>
+      <ul>
+        <li><strong>⬇ Exporter tous les tableaux</strong> crée un fichier de sauvegarde <code>.obz</code>.</li>
+        <li>Dans la liste des tableaux, utilisez l'action d'export sur la carte d'un tableau pour n'exporter que celui-ci.</li>
+      </ul>
+
+      <h3>7.3 Partage multiplateforme</h3>
+      <p>
+        Les tableaux sont compatibles avec l'application
+        <a href="https://play.google.com/store/apps/details?id=app.hobbysoft.speakingbuttons" target="_blank" rel="noopener">Talking Buttons pour Android</a>
+        via Open Board Format.
+        Vous pouvez exporter depuis l'extension et importer sur Android, ou l'inverse.
+      </p>
+    </section>
+
+    <section class="card" id="tips">
+      <h2>8. Conseils et différences avec le mobile</h2>
+      <ul>
+        <li>L'extension Chrome ouvre les tableaux dans un onglet normal du navigateur pour parler ou modifier.</li>
+        <li>Les voix TTS dépendent des voix installées dans le navigateur ou le système.</li>
+      </ul>
+      <p class="muted">Version : 1.7 — guide d'utilisation de l'extension (français).</p>
+    </section>
+  </main>
+</body>
+</html>

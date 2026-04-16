@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talking Buttons — Guía del usuario</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --primary: #1976d2;
+      --border: #e5e7eb;
+      --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+    .toc {
+      background: #e8f1fd;
+      border: 1px solid #d7e8fc;
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      margin-bottom: 20px;
+    }
+    .toc h2 { margin: 0 0 10px; font-size: 18px; }
+    .toc > ul {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .toc > ul > li {
+      margin-top: 8px;
+      padding-left: 0;
+    }
+    .toc > ul > li:first-child { margin-top: 0; }
+    .toc ul ul {
+      list-style: none;
+      margin: 6px 0 2px;
+      padding: 0 0 0 14px;
+      border-left: 2px solid #b6d2f5;
+    }
+    .toc ul ul li { margin-top: 4px; }
+    .toc ul ul li:first-child { margin-top: 0; }
+    .toc ul ul a { font-size: 0.95em; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px 18px 16px;
+      margin-bottom: 14px;
+    }
+    h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.3;
+      color: #111827;
+    }
+    h3 {
+      margin: 14px 0 6px;
+      font-size: 18px;
+      line-height: 1.35;
+      color: #111827;
+    }
+    p { margin: 0 0 8px; }
+    ul, ol { margin: 0 0 8px; padding-left: 20px; }
+    li + li { margin-top: 4px; }
+    .muted { color: var(--muted); }
+    .kbd {
+      display: inline-block;
+      border: 1px solid #d1d5db;
+      border-bottom-width: 2px;
+      border-radius: 6px;
+      padding: 0 6px;
+      background: #f9fafb;
+      font-size: 0.95em;
+      white-space: nowrap;
+    }
+    .note {
+      border-left: 4px solid var(--primary);
+      background: #f8fbff;
+      padding: 8px 10px;
+      border-radius: 6px;
+      margin-top: 8px;
+    }
+    a { color: var(--primary); }
+    code {
+      font-size: 1.2em;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 0; }
+      .card { box-shadow: none; break-inside: avoid; }
+      .toc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Talking Buttons — Guía del usuario</h1>
+    <p class="subtitle">
+      Aprenda a crear tableros CAA, personalizar botones, administrar voces e intercambiar tableros con Open Board Format.
+    </p>
+
+    <section class="toc">
+      <h2>Contenido</h2>
+      <ul>
+        <li><a href="#start">1. Primeros pasos</a></li>
+        <li><a href="#create">2. Crear un tablero nuevo</a></li>
+        <li><a href="#size">3. Tamaño del tablero y cuadrícula</a></li>
+        <li>
+          <a href="#customize">4. Personalizar botones</a>
+          <ul>
+            <li><a href="#btn-text">4.1 Texto del botón</a></li>
+            <li><a href="#btn-lang">4.2 Idioma del botón</a></li>
+            <li><a href="#btn-bg">4.3 Fondo del botón</a></li>
+            <li><a href="#custom-audio">4.4 Audio personalizado (reemplaza la síntesis de voz)</a></li>
+            <li><a href="#editor-actions">4.5 Borrar, Cancelar y Guardar</a></li>
+          </ul>
+        </li>
+        <li><a href="#reorder">5. Orden de los botones</a></li>
+        <li><a href="#voices">6. Idioma y voz predeterminados</a></li>
+        <li><a href="#importexport">7. Importar, exportar y copia de seguridad (OBZ/OBF)</a></li>
+        <li><a href="#tips">8. Consejos y diferencias respecto al móvil</a></li>
+      </ul>
+    </section>
+
+    <section class="card" id="start">
+      <h2>1. Primeros pasos</h2>
+      <ol>
+        <li>Instale la extensión desde Chrome Web Store.</li>
+        <li>Haga clic en el icono de la extensión en la barra de Chrome para abrir el panel lateral.</li>
+        <li>Use las pestañas superiores:
+          <ul>
+            <li><strong>Tableros</strong> — lista de tableros y acciones rápidas</li>
+            <li><strong>Importar/Exportar</strong> — intercambio de archivos OBZ/OBF</li>
+            <li><strong>Configuración</strong> — valores predeterminados de síntesis de voz</li>
+          </ul>
+        </li>
+      </ol>
+      <p class="note"><strong>Consejo:</strong> pulse <span class="kbd">?</span> en el encabezado en cualquier momento para volver a abrir esta guía.</p>
+    </section>
+
+    <section class="card" id="create">
+      <h2>2. Crear un tablero nuevo</h2>
+      <ol>
+        <li>Abra la pestaña <strong>Tableros</strong>.</li>
+        <li>Pulse el botón <span class="kbd">+</span> del encabezado.</li>
+        <li>Escriba el nombre del tablero y pulse <strong>Guardar</strong>.</li>
+        <li>El tablero nuevo se abre en una pestaña completa del navegador en <strong>modo Configuración</strong>.</li>
+      </ol>
+    </section>
+
+    <section class="card" id="size">
+      <h2>3. Tamaño del tablero y cuadrícula</h2>
+      <p>En la pestaña del tablero, pulse <strong>⚙ Configuración</strong> para editar las opciones de toda la cuadrícula:</p>
+      <ul>
+        <li><strong>Filas</strong> y <strong>Columnas</strong> — tamaño de la cuadrícula</li>
+        <li><strong>Fuente</strong> — tamaño del texto del botón</li>
+        <li><strong>Cuadrado</strong> — botones cuadrados</li>
+      </ul>
+      <p>Los cambios se guardan al instante.</p>
+      <p>Cuando termine, pulse <strong>✓ Listo</strong> para salir del modo Configuración y volver al uso normal del tablero (modo de habla).</p>
+    </section>
+
+    <section class="card" id="customize">
+      <h2>4. Personalizar botones</h2>
+      <p>En la pestaña del tablero, en <strong>modo Configuración</strong>, pulse cualquier botón para editarlo:</p>
+
+      <h3 id="btn-text">4.1 Texto del botón</h3>
+      <ul>
+        <li>Defina el texto principal que se muestra y se pronuncia.</li>
+        <li>Opcionalmente añada una nota o subtítulo.</li>
+      </ul>
+
+      <h3 id="btn-lang">4.2 Idioma del botón</h3>
+      <ul>
+        <li>Cada botón puede usar el idioma y la voz <strong>predeterminados</strong>.</li>
+        <li>O bien puede fijar un idioma concreto para ese botón.</li>
+      </ul>
+
+      <h3 id="btn-bg">4.3 Fondo del botón</h3>
+      <ul>
+        <li>Elija el color de fondo.</li>
+        <li>Añada o quite la imagen de fondo.</li>
+      </ul>
+
+      <h3 id="custom-audio">4.4 Audio personalizado (reemplaza la síntesis de voz)</h3>
+      <p>
+        Cada botón puede hablar con el motor de <strong>síntesis de voz (TTS)</strong> del navegador o con un
+        <strong>mensaje grabado</strong>. Si hay una grabación, tiene prioridad:
+        al pulsar el botón se reproduce su audio, no la voz sintetizada.
+      </p>
+      <ul>
+        <li>Use <strong>Grabar</strong>, <strong>Reproducir</strong> y <strong>Parar</strong> para grabar y escuchar el mensaje.</li>
+        <li><strong>Micrófono:</strong> la primera vez que graba, Chrome puede pedir permiso de micrófono. Permítalo para este sitio.</li>
+        <li><strong>Preescucha:</strong> use <strong>Reproducir</strong> para escuchar antes de cerrar el editor.</li>
+        <li><strong>Volver a TTS:</strong> pulse <strong>Eliminar</strong> junto a la grabación para borrarla y usar de nuevo la síntesis para ese botón.</li>
+        <li><strong>OBZ/OBF:</strong> los tableros con audio personalizado se pueden importar y exportar como los demás; si el formato lo admite, la grabación va con el botón.</li>
+      </ul>
+      <p class="note">
+        <strong>Recuerde:</strong> el audio personalizado solo sustituye la síntesis en ese botón. El idioma y la voz predeterminados del panel lateral siguen aplicándose a los botones sin grabación ni idioma propio.
+      </p>
+
+      <h3 id="editor-actions">4.5 Borrar, Cancelar y Guardar</h3>
+      <p>En la parte inferior del editor de botones:</p>
+      <ul>
+        <li><strong>Borrar</strong> — deja el botón vacío (quita texto, nota, idioma, colores, imagen de fondo y audio). Se guarda al instante y se cierra el editor.</li>
+        <li><strong>Cancelar</strong> — cierra el editor sin guardar los cambios de esta sesión. El botón queda como última vez guardado.</li>
+        <li><strong>Guardar</strong> — guarda todo lo del editor (incluidos fondo y audio) y cierra el editor.</li>
+      </ul>
+      <p class="muted">También puede pulsar <span class="kbd">Esc</span> para cerrar como con <strong>Cancelar</strong>.</p>
+    </section>
+
+    <section class="card" id="reorder">
+      <h2>5. Orden de los botones</h2>
+      <p>En el <strong>modo Configuración</strong>, arrastre y suelte los botones para cambiar su posición.</p>
+      <p class="muted">El nuevo orden se guarda automáticamente.</p>
+    </section>
+
+    <section class="card" id="voices">
+      <h2>6. Idioma y voz predeterminados</h2>
+      <ol>
+        <li>Vaya a la pestaña <strong>Configuración</strong> del panel lateral.</li>
+        <li>Seleccione <strong>Idioma predeterminado</strong>.</li>
+        <li>Elija la <strong>Voz</strong> para ese idioma.</li>
+        <li>Pulse <strong>▶ Probar</strong> para escuchar una muestra.</li>
+      </ol>
+      <p class="note">
+        Las voces guardadas se recuerdan por idioma y se usan cuando a un botón no se le asigna otro idioma/voz.
+      </p>
+    </section>
+
+    <section class="card" id="importexport">
+      <h2>7. Importar, exportar y copia de seguridad (OBZ/OBF)</h2>
+
+      <h3>7.1 Importar tableros</h3>
+      <ol>
+        <li>Abra la pestaña <strong>Importar/Exportar</strong>.</li>
+        <li>Elija el modo de importación:
+          <ul>
+            <li><strong>Fusionar — añadir a los tableros existentes</strong></li>
+            <li><strong>Reemplazar — eliminar todos, luego importar</strong></li>
+          </ul>
+        </li>
+        <li>Elija un archivo <code>.obz</code> o <code>.obf</code>.</li>
+      </ol>
+
+      <h3>7.2 Exportar tableros</h3>
+      <ul>
+        <li><strong>⬇ Exportar todos los tableros</strong> crea un archivo de copia de seguridad <code>.obz</code>.</li>
+        <li>En la lista de tableros, use la acción de exportar en la tarjeta de un tablero para exportar solo ese tablero.</li>
+      </ul>
+
+      <h3>7.3 Uso entre dispositivos</h3>
+      <p>
+        Los tableros son compatibles con la aplicación
+        <a href="https://play.google.com/store/apps/details?id=app.hobbysoft.speakingbuttons" target="_blank" rel="noopener">Talking Buttons para Android</a>
+        mediante Open Board Format.
+        Puede exportar desde la extensión e importar en Android, o al revés.
+      </p>
+    </section>
+
+    <section class="card" id="tips">
+      <h2>8. Consejos y diferencias respecto al móvil</h2>
+      <ul>
+        <li>La extensión de Chrome abre los tableros en una pestaña normal del navegador para hablar o editar.</li>
+        <li>Las voces de síntesis dependen de las voces instaladas en el navegador o el sistema.</li>
+      </ul>
+      <p class="muted">Versión: 1.7 — guía del usuario de la extensión (español).</p>
+    </section>
+  </main>
+</body>
+</html>

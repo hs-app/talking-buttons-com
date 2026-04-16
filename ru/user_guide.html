@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>«Говорящие кнопки» — руководство пользователя</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --primary: #1976d2;
+      --border: #e5e7eb;
+      --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+    .toc {
+      background: #e8f1fd;
+      border: 1px solid #d7e8fc;
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      margin-bottom: 20px;
+    }
+    .toc h2 { margin: 0 0 10px; font-size: 18px; }
+    .toc > ul {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .toc > ul > li {
+      margin-top: 8px;
+      padding-left: 0;
+    }
+    .toc > ul > li:first-child { margin-top: 0; }
+    .toc ul ul {
+      list-style: none;
+      margin: 6px 0 2px;
+      padding: 0 0 0 14px;
+      border-left: 2px solid #b6d2f5;
+    }
+    .toc ul ul li { margin-top: 4px; }
+    .toc ul ul li:first-child { margin-top: 0; }
+    .toc ul ul a { font-size: 0.95em; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px 18px 16px;
+      margin-bottom: 14px;
+    }
+    h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.3;
+      color: #111827;
+    }
+    h3 {
+      margin: 14px 0 6px;
+      font-size: 18px;
+      line-height: 1.35;
+      color: #111827;
+    }
+    p { margin: 0 0 8px; }
+    ul, ol { margin: 0 0 8px; padding-left: 20px; }
+    li + li { margin-top: 4px; }
+    .muted { color: var(--muted); }
+    .kbd {
+      display: inline-block;
+      border: 1px solid #d1d5db;
+      border-bottom-width: 2px;
+      border-radius: 6px;
+      padding: 0 6px;
+      background: #f9fafb;
+      font-size: 0.95em;
+      white-space: nowrap;
+    }
+    .note {
+      border-left: 4px solid var(--primary);
+      background: #f8fbff;
+      padding: 8px 10px;
+      border-radius: 6px;
+      margin-top: 8px;
+    }
+    a { color: var(--primary); }
+    code {
+      font-size: 1.2em;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 0; }
+      .card { box-shadow: none; break-inside: avoid; }
+      .toc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>«Говорящие кнопки» — руководство пользователя</h1>
+    <p class="subtitle">
+      Как создавать АДК-доски, настраивать кнопки, выбирать голоса и обмениваться досками в формате Open Board Format.
+    </p>
+
+    <section class="toc">
+      <h2>Содержание</h2>
+      <ul>
+        <li><a href="#start">1. Первые шаги</a></li>
+        <li><a href="#create">2. Новая доска</a></li>
+        <li><a href="#size">3. Размер доски и сетка</a></li>
+        <li>
+          <a href="#customize">4. Настройка кнопок</a>
+          <ul>
+            <li><a href="#btn-text">4.1 Текст кнопки</a></li>
+            <li><a href="#btn-lang">4.2 Язык кнопки</a></li>
+            <li><a href="#btn-bg">4.3 Фон кнопки</a></li>
+            <li><a href="#custom-audio">4.4 Своё аудио (вместо синтеза речи)</a></li>
+            <li><a href="#editor-actions">4.5 Очистить, Отмена и Сохранить</a></li>
+          </ul>
+        </li>
+        <li><a href="#reorder">5. Порядок кнопок</a></li>
+        <li><a href="#voices">6. Язык и голос по умолчанию</a></li>
+        <li><a href="#importexport">7. Импорт, экспорт и резервная копия (OBZ/OBF)</a></li>
+        <li><a href="#tips">8. Советы и отличия от мобильного приложения</a></li>
+      </ul>
+    </section>
+
+    <section class="card" id="start">
+      <h2>1. Первые шаги</h2>
+      <ol>
+        <li>Установите расширение из интернет-магазина Chrome.</li>
+        <li>Нажмите значок расширения на панели Chrome, чтобы открыть боковую панель.</li>
+        <li>Вверху доступны вкладки:
+          <ul>
+            <li><strong>Доски</strong> — список досок и быстрые действия</li>
+            <li><strong>Импорт/Экспорт</strong> — обмен файлами OBZ/OBF</li>
+            <li><strong>Настройки</strong> — параметры синтеза речи по умолчанию</li>
+          </ul>
+        </li>
+      </ol>
+      <p class="note"><strong>Совет:</strong> в любой момент нажмите <span class="kbd">?</span> в заголовке, чтобы снова открыть это руководство.</p>
+    </section>
+
+    <section class="card" id="create">
+      <h2>2. Новая доска</h2>
+      <ol>
+        <li>Откройте вкладку <strong>Доски</strong>.</li>
+        <li>Нажмите кнопку <span class="kbd">+</span> в заголовке.</li>
+        <li>Введите название доски и нажмите <strong>Сохранить</strong>.</li>
+        <li>Новая доска откроется на всю вкладку браузера в <strong>режиме настроек</strong>.</li>
+      </ol>
+    </section>
+
+    <section class="card" id="size">
+      <h2>3. Размер доски и сетка</h2>
+      <p>На вкладке доски нажмите <strong>⚙ Настройки</strong>, чтобы изменить параметры сетки кнопок:</p>
+      <ul>
+        <li><strong>Строк</strong> и <strong>Столбцов</strong> — размер сетки</li>
+        <li><strong>Шрифт</strong> — размер текста на кнопках</li>
+        <li><strong>Квадрат</strong> — квадратные кнопки</li>
+      </ul>
+      <p>Изменения сохраняются сразу.</p>
+      <p>Когда закончите, нажмите <strong>✓ Готово</strong>, чтобы выйти из режима настроек и вернуться к обычному использованию доски (режим речи).</p>
+    </section>
+
+    <section class="card" id="customize">
+      <h2>4. Настройка кнопок</h2>
+      <p>На вкладке доски в <strong>режиме настроек</strong> нажмите любую кнопку, чтобы открыть окно настроек:</p>
+
+      <h3 id="btn-text">4.1 Текст кнопки</h3>
+      <ul>
+        <li>Задайте основной текст — он показывается и произносится.</li>
+        <li>При необходимости добавьте заметку (подпись).</li>
+      </ul>
+
+      <h3 id="btn-lang">4.2 Язык кнопки</h3>
+      <ul>
+        <li>Для кнопки можно использовать язык и голос <strong>по умолчанию</strong>.</li>
+        <li>Или выбрать отдельный язык для этой кнопки.</li>
+      </ul>
+
+      <h3 id="btn-bg">4.3 Фон кнопки</h3>
+      <ul>
+        <li>Выберите цвет фона.</li>
+        <li>Добавьте или удалите фоновое изображение.</li>
+      </ul>
+
+      <h3 id="custom-audio">4.4 Своё аудио (вместо синтеза речи)</h3>
+      <p>
+        Каждая кнопка может говорить с помощью встроенного в браузер <strong>синтеза речи (TTS)</strong> или
+        <strong>записанного вами сообщения</strong>. Пока есть запись, она имеет приоритет:
+        нажатие на кнопку воспроизводит вашу запись, а не синтезированную речь.
+      </p>
+      <ul>
+        <li>Используйте <strong>Запись</strong>, <strong>Воспр.</strong> и <strong>Стоп</strong>, чтобы записать и прослушать сообщение.</li>
+        <li><strong>Микрофон:</strong> при первой записи Chrome может запросить доступ к микрофону. Разрешите его для этого сайта.</li>
+        <li><strong>Прослушивание записи:</strong> нажмите <strong>Воспр.</strong>, чтобы проверить запись перед закрытием редактора.</li>
+        <li><strong>Вернуться к синтезу речи:</strong> нажмите <strong>Удалить</strong> рядом с записью, чтобы убрать её и снова использовать TTS для этой кнопки.</li>
+        <li><strong>OBZ/OBF:</strong> доски со своим аудио можно импортировать и экспортировать как обычно; при поддержке формата, запись сохраняется вместе с кнопкой.</li>
+      </ul>
+      <p class="note">
+        <strong>Имейте в виду:</strong> аудио заменяет синтез только для этой кнопки. Язык и голос по умолчанию в боковой панели по-прежнему действуют для кнопок без записи и без своего языка.
+      </p>
+
+      <h3 id="editor-actions">4.5 Очистить, Отмена и Сохранить</h3>
+      <p>Кнопки внизу окна настроек:</p>
+      <ul>
+        <li><strong>Очистить</strong> — сбрасывает кнопку в пустую ячейку (убирает текст, заметку, язык, цвета, фон и запись). Сохраняется сразу, окно настроек закрывается.</li>
+        <li><strong>Отмена</strong> — закрывает окно настроек без сохранения изменений этой сессии. На кнопке остаётся последнее сохранённое состояние.</li>
+        <li><strong>Сохранить</strong> — сохраняет всё (в том числе фон и запись) и закрывает окно настроек.</li>
+      </ul>
+      <p class="muted">Также можно нажать <span class="kbd">Esc</span> — эффект как у <strong>Отмена</strong>.</p>
+    </section>
+
+    <section class="card" id="reorder">
+      <h2>5. Порядок кнопок</h2>
+      <p>В <strong>режиме настроек</strong> на вкладке доски перетаскивайте кнопки, меняя их порядок.</p>
+      <p class="muted">Новый порядок сохраняется автоматически.</p>
+    </section>
+
+    <section class="card" id="voices">
+      <h2>6. Язык и голос по умолчанию</h2>
+      <ol>
+        <li>Откройте вкладку <strong>Настройки</strong> в боковой панели.</li>
+        <li>Выберите <strong>Язык по умолчанию</strong>.</li>
+        <li>Выберите <strong>Голос</strong> для этого языка.</li>
+        <li>Нажмите <strong>▶ Тест</strong>, чтобы прослушать пример.</li>
+      </ol>
+      <p class="note">
+        Выбранные голоса запоминаются для каждого языка и используются, если у кнопки не задан другой язык или голос.
+      </p>
+    </section>
+
+    <section class="card" id="importexport">
+      <h2>7. Импорт, экспорт и резервная копия (OBZ/OBF)</h2>
+
+      <h3>7.1 Импорт досок</h3>
+      <ol>
+        <li>Откройте вкладку <strong>Импорт/Экспорт</strong>.</li>
+        <li>Выберите режим импорта:
+          <ul>
+            <li><strong>Добавить — к существующим доскам</strong></li>
+            <li><strong>Заменить — удалить все, затем импортировать</strong></li>
+          </ul>
+        </li>
+        <li>Выберите файл <code>.obz</code> или <code>.obf</code>.</li>
+      </ol>
+
+      <h3>7.2 Экспорт досок</h3>
+      <ul>
+        <li><strong>⬇ Экспортировать все доски</strong> создаёт один файл резервной копии <code>.obz</code>.</li>
+        <li>В списке досок используйте кнопку экспорта на карточке доски, чтобы выгрузить одну доску.</li>
+      </ul>
+
+      <h3>7.3 Обмен между устройствами</h3>
+      <p>
+        Доски совместимы с приложением
+        <a href="https://play.google.com/store/apps/details?id=app.hobbysoft.speakingbuttons" target="_blank" rel="noopener">«Говорящие кнопки»</a>
+        для Android через Open Board Format.
+        Можно экспортировать из расширения и импортировать в Android или наоборот.
+      </p>
+    </section>
+
+    <section class="card" id="tips">
+      <h2>8. Советы и отличия от мобильного приложения</h2>
+      <ul>
+        <li>Расширение открывает доски в обычной вкладке браузера для прослушивания и редактирования.</li>
+        <li>Набор голосов синтеза речи зависит от браузера и системы.</li>
+      </ul>
+      <p class="muted">Версия: 1.7 — руководство пользователя расширения (русский).</p>
+    </section>
+  </main>
+</body>
+</html>

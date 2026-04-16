@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talking Buttons — Benutzerhandbuch</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --primary: #1976d2;
+      --border: #e5e7eb;
+      --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+    .toc {
+      background: #e8f1fd;
+      border: 1px solid #d7e8fc;
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      margin-bottom: 20px;
+    }
+    .toc h2 { margin: 0 0 10px; font-size: 18px; }
+    .toc > ul {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .toc > ul > li {
+      margin-top: 8px;
+      padding-left: 0;
+    }
+    .toc > ul > li:first-child { margin-top: 0; }
+    .toc ul ul {
+      list-style: none;
+      margin: 6px 0 2px;
+      padding: 0 0 0 14px;
+      border-left: 2px solid #b6d2f5;
+    }
+    .toc ul ul li { margin-top: 4px; }
+    .toc ul ul li:first-child { margin-top: 0; }
+    .toc ul ul a { font-size: 0.95em; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px 18px 16px;
+      margin-bottom: 14px;
+    }
+    h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.3;
+      color: #111827;
+    }
+    h3 {
+      margin: 14px 0 6px;
+      font-size: 18px;
+      line-height: 1.35;
+      color: #111827;
+    }
+    p { margin: 0 0 8px; }
+    ul, ol { margin: 0 0 8px; padding-left: 20px; }
+    li + li { margin-top: 4px; }
+    .muted { color: var(--muted); }
+    .kbd {
+      display: inline-block;
+      border: 1px solid #d1d5db;
+      border-bottom-width: 2px;
+      border-radius: 6px;
+      padding: 0 6px;
+      background: #f9fafb;
+      font-size: 0.95em;
+      white-space: nowrap;
+    }
+    .note {
+      border-left: 4px solid var(--primary);
+      background: #f8fbff;
+      padding: 8px 10px;
+      border-radius: 6px;
+      margin-top: 8px;
+    }
+    a { color: var(--primary); }
+    code {
+      font-size: 1.2em;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 0; }
+      .card { box-shadow: none; break-inside: avoid; }
+      .toc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Talking Buttons — Benutzerhandbuch</h1>
+    <p class="subtitle">
+      So erstellen Sie AAC-Tafeln, passen Tasten an, verwalten Stimmen und tauschen Tafeln im Open Board Format aus.
+    </p>
+
+    <section class="toc">
+      <h2>Inhalt</h2>
+      <ul>
+        <li><a href="#start">1. Erste Schritte</a></li>
+        <li><a href="#create">2. Neue Tafel anlegen</a></li>
+        <li><a href="#size">3. Tafelgröße und Raster</a></li>
+        <li>
+          <a href="#customize">4. Tasten anpassen</a>
+          <ul>
+            <li><a href="#btn-text">4.1 Tastentext</a></li>
+            <li><a href="#btn-lang">4.2 Tastensprache</a></li>
+            <li><a href="#btn-bg">4.3 Tastenhintergrund</a></li>
+            <li><a href="#custom-audio">4.4 Eigene Aufnahme (statt Sprachsynthese)</a></li>
+            <li><a href="#editor-actions">4.5 Leeren, Abbrechen und Speichern</a></li>
+          </ul>
+        </li>
+        <li><a href="#reorder">5. Tasten neu anordnen</a></li>
+        <li><a href="#voices">6. Standardsprache und Stimme</a></li>
+        <li><a href="#importexport">7. Import, Export und Sicherung (OBZ/OBF)</a></li>
+        <li><a href="#tips">8. Hinweise und Unterschiede zur mobilen App</a></li>
+      </ul>
+    </section>
+
+    <section class="card" id="start">
+      <h2>1. Erste Schritte</h2>
+      <ol>
+        <li>Installieren Sie die Erweiterung aus dem Chrome Web Store.</li>
+        <li>Klicken Sie auf das Erweiterungssymbol in der Chrome-Symbolleiste, um die Seitenleiste zu öffnen.</li>
+        <li>Nutzen Sie die Registerkarten oben:
+          <ul>
+            <li><strong>Tafeln</strong> — Tafelliste und Schnellaktionen</li>
+            <li><strong>Import/Export</strong> — Austausch von OBZ/OBF-Dateien</li>
+            <li><strong>Einstellungen</strong> — Standardwerte für Sprachausgabe</li>
+          </ul>
+        </li>
+      </ol>
+      <p class="note"><strong>Tipp:</strong> Klicken Sie jederzeit auf <span class="kbd">?</span> in der Kopfzeile, um dieses Handbuch erneut zu öffnen.</p>
+    </section>
+
+    <section class="card" id="create">
+      <h2>2. Neue Tafel anlegen</h2>
+      <ol>
+        <li>Öffnen Sie die Registerkarte <strong>Tafeln</strong>.</li>
+        <li>Klicken Sie auf die Schaltfläche <span class="kbd">+</span> in der Kopfzeile.</li>
+        <li>Geben Sie den Tafelnamen ein und klicken Sie auf <strong>Speichern</strong>.</li>
+        <li>Die neue Tafel öffnet sich in einem vollen Browser-Tab im <strong>Einstellungsmodus</strong>.</li>
+      </ol>
+    </section>
+
+    <section class="card" id="size">
+      <h2>3. Tafelgröße und Raster</h2>
+      <p>Klicken Sie auf der Tafel-Registerkarte auf <strong>⚙ Einstellungen</strong>, um Optionen für das gesamte Raster zu bearbeiten:</p>
+      <ul>
+        <li><strong>Zeilen</strong> und <strong>Spalten</strong> — Rastergröße</li>
+        <li><strong>Schrift</strong> — Textgröße auf den Tasten</li>
+        <li><strong>Quadrat</strong> — quadratische Tasten</li>
+      </ul>
+      <p>Änderungen werden sofort gespeichert.</p>
+      <p>Wenn Sie fertig sind, klicken Sie auf <strong>✓ Fertig</strong>, um den Einstellungsmodus zu verlassen und die Tafel normal zu nutzen (Sprechmodus).</p>
+    </section>
+
+    <section class="card" id="customize">
+      <h2>4. Tasten anpassen</h2>
+      <p>Auf der Tafel-Registerkarte im <strong>Einstellungsmodus</strong> klicken Sie eine beliebige Taste zum Bearbeiten:</p>
+
+      <h3 id="btn-text">4.1 Tastentext</h3>
+      <ul>
+        <li>Legen Sie den Haupttext fest — er wird angezeigt und vorgelesen.</li>
+        <li>Fügen Sie optional eine Notiz oder Beschriftung hinzu.</li>
+      </ul>
+
+      <h3 id="btn-lang">4.2 Tastensprache</h3>
+      <ul>
+        <li>Jede Taste kann die <strong>Standard</strong>-Sprache und -Stimme verwenden.</li>
+        <li>Oder Sie setzen eine eigene Sprache für diese Taste.</li>
+      </ul>
+
+      <h3 id="btn-bg">4.3 Tastenhintergrund</h3>
+      <ul>
+        <li>Wählen Sie die Hintergrundfarbe.</li>
+        <li>Fügen Sie ein Hintergrundbild hinzu oder entfernen Sie es.</li>
+      </ul>
+
+      <h3 id="custom-audio">4.4 Eigene Aufnahme (statt Sprachsynthese)</h3>
+      <p>
+        Jede Taste kann mit der <strong>Text-zu-Sprache (TTS)</strong> des Browsers sprechen oder mit einer
+        <strong>eigenen Aufnahme</strong>. Ist eine Aufnahme vorhanden, hat sie Vorrang:
+        Beim Tippen wird Ihre Aufnahme abgespielt, nicht die synthetische Stimme.
+      </p>
+      <ul>
+        <li>Mit <strong>Aufnahme</strong>, <strong>Abspielen</strong> und <strong>Stopp</strong> nehmen Sie eine Nachricht auf und hören sie an.</li>
+        <li><strong>Mikrofon:</strong> Beim ersten Aufnehmen kann Chrome nach Mikrofonzugriff fragen. Erlauben Sie ihn für diese Seite.</li>
+        <li><strong>Vorhören:</strong> Mit <strong>Abspielen</strong> hören Sie die Aufnahme vor dem Schließen des Editors.</li>
+        <li><strong>Zurück zu TTS:</strong> Tippen Sie auf <strong>Entfernen</strong> neben der Aufnahme, um sie zu löschen und wieder TTS für diese Taste zu nutzen.</li>
+        <li><strong>OBZ/OBF:</strong> Tafeln mit eigener Aufnahme lassen sich wie andere importieren und exportieren; wenn das Format es unterstützt, bleibt die Aufnahme bei der Taste erhalten.</li>
+      </ul>
+      <p class="note">
+        <strong>Hinweis:</strong> Eigene Aufnahmen ersetzen die Sprachsynthese nur für diese Taste. Standardsprache und -stimme in der Seitenleiste gelten weiter für Tasten ohne Aufnahme oder eigene Sprache.
+      </p>
+
+      <h3 id="editor-actions">4.5 Leeren, Abbrechen und Speichern</h3>
+      <p>Unten im Tasteneditor:</p>
+      <ul>
+        <li><strong>Leeren</strong> — setzt die Taste auf eine leere Position (entfernt Text, Notiz, Sprache, Farben, Hintergrundbild und Aufnahme). Wird sofort gespeichert und der Editor schließt sich.</li>
+        <li><strong>Abbrechen</strong> — schließt den Editor ohne die Änderungen dieser Sitzung zu speichern. Die Taste bleibt wie zuletzt gespeichert.</li>
+        <li><strong>Speichern</strong> — speichert alles im Editor (einschließlich Hintergrund und Aufnahme) und schließt den Editor.</li>
+      </ul>
+      <p class="muted">Sie können auch <span class="kbd">Esc</span> drücken — wie bei <strong>Abbrechen</strong>.</p>
+    </section>
+
+    <section class="card" id="reorder">
+      <h2>5. Tasten neu anordnen</h2>
+      <p>Im <strong>Einstellungsmodus</strong> ziehen Sie Tasten per Drag-and-Drop an eine neue Position.</p>
+      <p class="muted">Die neue Reihenfolge wird automatisch gespeichert.</p>
+    </section>
+
+    <section class="card" id="voices">
+      <h2>6. Standardsprache und Stimme</h2>
+      <ol>
+        <li>Öffnen Sie die Registerkarte <strong>Einstellungen</strong> in der Seitenleiste.</li>
+        <li>Wählen Sie <strong>Standardsprache</strong>.</li>
+        <li>Wählen Sie die <strong>Stimme</strong> für diese Sprache.</li>
+        <li>Klicken Sie auf <strong>▶ Test</strong>, um eine Probe zu hören.</li>
+      </ol>
+      <p class="note">
+        Gespeicherte Stimmen gelten pro Sprache und werden verwendet, wenn eine Taste keine eigene Sprache oder Stimme hat.
+      </p>
+    </section>
+
+    <section class="card" id="importexport">
+      <h2>7. Import, Export und Sicherung (OBZ/OBF)</h2>
+
+      <h3>7.1 Tafeln importieren</h3>
+      <ol>
+        <li>Öffnen Sie die Registerkarte <strong>Import/Export</strong>.</li>
+        <li>Wählen Sie den Importmodus:
+          <ul>
+            <li><strong>Zusammenführen — zu vorhandenen Tafeln hinzufügen</strong></li>
+            <li><strong>Ersetzen — alle löschen, dann importieren</strong></li>
+          </ul>
+        </li>
+        <li>Wählen Sie eine <code>.obz</code>- oder <code>.obf</code>-Datei.</li>
+      </ol>
+
+      <h3>7.2 Tafeln exportieren</h3>
+      <ul>
+        <li><strong>⬇ Alle Tafeln exportieren</strong> erstellt eine <code>.obz</code>-Sicherungsdatei.</li>
+        <li>In der Tafelliste nutzen Sie die Exportaktion auf einer Tafelkarte, um nur diese Tafel zu exportieren.</li>
+      </ul>
+
+      <h3>7.3 Plattformübergreifend teilen</h3>
+      <p>
+        Tafeln sind mit der Android-App
+        <a href="https://play.google.com/store/apps/details?id=app.hobbysoft.speakingbuttons" target="_blank" rel="noopener">Talking Buttons</a>
+        über das Open Board Format kompatibel.
+        Sie können aus der Erweiterung exportieren und auf Android importieren oder umgekehrt.
+      </p>
+    </section>
+
+    <section class="card" id="tips">
+      <h2>8. Hinweise und Unterschiede zur mobilen App</h2>
+      <ul>
+        <li>Die Chrome-Erweiterung öffnet Tafeln in einem normalen Browser-Tab zum Sprechen oder Bearbeiten.</li>
+        <li>TTS-Stimmen hängen von den im Browser oder System installierten Stimmen ab.</li>
+      </ul>
+      <p class="muted">Version: 1.7 — Benutzerhandbuch der Erweiterung (Deutsch).</p>
+    </section>
+  </main>
+</body>
+</html>

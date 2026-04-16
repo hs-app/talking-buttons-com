@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talking Buttons — Guia do usuário</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --primary: #1976d2;
+      --border: #e5e7eb;
+      --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+    .toc {
+      background: #e8f1fd;
+      border: 1px solid #d7e8fc;
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      margin-bottom: 20px;
+    }
+    .toc h2 { margin: 0 0 10px; font-size: 18px; }
+    .toc > ul {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .toc > ul > li {
+      margin-top: 8px;
+      padding-left: 0;
+    }
+    .toc > ul > li:first-child { margin-top: 0; }
+    .toc ul ul {
+      list-style: none;
+      margin: 6px 0 2px;
+      padding: 0 0 0 14px;
+      border-left: 2px solid #b6d2f5;
+    }
+    .toc ul ul li { margin-top: 4px; }
+    .toc ul ul li:first-child { margin-top: 0; }
+    .toc ul ul a { font-size: 0.95em; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px 18px 16px;
+      margin-bottom: 14px;
+    }
+    h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.3;
+      color: #111827;
+    }
+    h3 {
+      margin: 14px 0 6px;
+      font-size: 18px;
+      line-height: 1.35;
+      color: #111827;
+    }
+    p { margin: 0 0 8px; }
+    ul, ol { margin: 0 0 8px; padding-left: 20px; }
+    li + li { margin-top: 4px; }
+    .muted { color: var(--muted); }
+    .kbd {
+      display: inline-block;
+      border: 1px solid #d1d5db;
+      border-bottom-width: 2px;
+      border-radius: 6px;
+      padding: 0 6px;
+      background: #f9fafb;
+      font-size: 0.95em;
+      white-space: nowrap;
+    }
+    .note {
+      border-left: 4px solid var(--primary);
+      background: #f8fbff;
+      padding: 8px 10px;
+      border-radius: 6px;
+      margin-top: 8px;
+    }
+    a { color: var(--primary); }
+    code {
+      font-size: 1.2em;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 0; }
+      .card { box-shadow: none; break-inside: avoid; }
+      .toc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Talking Buttons — Guia do usuário</h1>
+    <p class="subtitle">
+      Saiba como criar painéis CAA, personalizar botões, gerenciar vozes e trocar painéis usando o Open Board Format.
+    </p>
+
+    <section class="toc">
+      <h2>Sumário</h2>
+      <ul>
+        <li><a href="#start">1. Primeiros passos</a></li>
+        <li><a href="#create">2. Criar um painel novo</a></li>
+        <li><a href="#size">3. Tamanho do painel e grade</a></li>
+        <li>
+          <a href="#customize">4. Personalizar botões</a>
+          <ul>
+            <li><a href="#btn-text">4.1 Texto do botão</a></li>
+            <li><a href="#btn-lang">4.2 Idioma do botão</a></li>
+            <li><a href="#btn-bg">4.3 Fundo do botão</a></li>
+            <li><a href="#custom-audio">4.4 Áudio personalizado (substitui a síntese vocal)</a></li>
+            <li><a href="#editor-actions">4.5 Limpar, Cancelar e Salvar</a></li>
+          </ul>
+        </li>
+        <li><a href="#reorder">5. Ordem dos botões</a></li>
+        <li><a href="#voices">6. Idioma e voz padrão</a></li>
+        <li><a href="#importexport">7. Importar, exportar e backup (OBZ/OBF)</a></li>
+        <li><a href="#tips">8. Dicas e diferenças em relação ao celular</a></li>
+      </ul>
+    </section>
+
+    <section class="card" id="start">
+      <h2>1. Primeiros passos</h2>
+      <ol>
+        <li>Instale a extensão na Chrome Web Store.</li>
+        <li>Clique no ícone da extensão na barra do Chrome para abrir o painel lateral.</li>
+        <li>Use as abas no topo:
+          <ul>
+            <li><strong>Painéis</strong> — lista de painéis e ações rápidas</li>
+            <li><strong>Importar/Exportar</strong> — troca de arquivos OBZ/OBF</li>
+            <li><strong>Configurações</strong> — padrões de síntese de voz</li>
+          </ul>
+        </li>
+      </ol>
+      <p class="note"><strong>Dica:</strong> clique em <span class="kbd">?</span> no cabeçalho a qualquer momento para abrir este guia de novo.</p>
+    </section>
+
+    <section class="card" id="create">
+      <h2>2. Criar um painel novo</h2>
+      <ol>
+        <li>Abra a aba <strong>Painéis</strong>.</li>
+        <li>Clique no botão <span class="kbd">+</span> no cabeçalho.</li>
+        <li>Digite o nome do painel e clique em <strong>Salvar</strong>.</li>
+        <li>O painel novo abre em uma aba inteira do navegador no <strong>modo Configurações</strong>.</li>
+      </ol>
+    </section>
+
+    <section class="card" id="size">
+      <h2>3. Tamanho do painel e grade</h2>
+      <p>Na aba do painel, clique em <strong>⚙ Configurações</strong> para editar opções de toda a grade:</p>
+      <ul>
+        <li><strong>Linhas</strong> e <strong>Colunas</strong> — tamanho da grade</li>
+        <li><strong>Fonte</strong> — tamanho do texto nos botões</li>
+        <li><strong>Quadrado</strong> — botões quadrados</li>
+      </ul>
+      <p>As alterações são salvas na hora.</p>
+      <p>Quando terminar, clique em <strong>✓ Concluído</strong> para sair do modo Configurações e voltar ao uso normal do painel (modo de fala).</p>
+    </section>
+
+    <section class="card" id="customize">
+      <h2>4. Personalizar botões</h2>
+      <p>Na aba do painel, no <strong>modo Configurações</strong>, clique em qualquer botão para editá-lo:</p>
+
+      <h3 id="btn-text">4.1 Texto do botão</h3>
+      <ul>
+        <li>Defina o texto principal — ele é mostrado e falado.</li>
+        <li>Adicione uma nota ou legenda, se quiser.</li>
+      </ul>
+
+      <h3 id="btn-lang">4.2 Idioma do botão</h3>
+      <ul>
+        <li>Cada botão pode usar o idioma e a voz <strong>padrão</strong>.</li>
+        <li>Ou você pode definir um idioma específico para esse botão.</li>
+      </ul>
+
+      <h3 id="btn-bg">4.3 Fundo do botão</h3>
+      <ul>
+        <li>Escolha a cor de fundo.</li>
+        <li>Adicione ou remova a imagem de fundo.</li>
+      </ul>
+
+      <h3 id="custom-audio">4.4 Áudio personalizado (substitui a síntese vocal)</h3>
+      <p>
+        Cada botão pode falar com o motor de <strong>texto para fala (TTS)</strong> do navegador ou com uma
+        <strong>mensagem gravada</strong>. Se houver gravação, ela tem prioridade:
+        ao tocar no botão, toca o seu áudio, não a voz sintetizada.
+      </p>
+      <ul>
+        <li>Use <strong>Gravar</strong>, <strong>Reproduzir</strong> e <strong>Parar</strong> para gravar e ouvir a mensagem.</li>
+        <li><strong>Microfone:</strong> na primeira gravação, o Chrome pode pedir permissão de microfone. Permita para este site.</li>
+        <li><strong>Ouvir:</strong> use <strong>Reproduzir</strong> para ouvir antes de fechar o editor.</li>
+        <li><strong>Voltar ao TTS:</strong> clique em <strong>Remover</strong> ao lado da gravação para apagá-la e usar de novo a síntese nesse botão.</li>
+        <li><strong>OBZ/OBF:</strong> painéis com áudio personalizado podem ser importados e exportados como os outros; quando o formato suporta, a gravação vai junto com o botão.</li>
+      </ul>
+      <p class="note">
+        <strong>Lembre-se:</strong> o áudio personalizado substitui a síntese só nesse botão. Idioma e voz padrão no painel lateral continuam valendo para botões sem gravação ou idioma próprio.
+      </p>
+
+      <h3 id="editor-actions">4.5 Limpar, Cancelar e Salvar</h3>
+      <p>Na parte inferior do editor de botões:</p>
+      <ul>
+        <li><strong>Limpar</strong> — esvazia o botão (remove texto, nota, idioma, cores, imagem de fundo e áudio). Salva na hora e fecha o editor.</li>
+        <li><strong>Cancelar</strong> — fecha o editor sem aplicar as mudanças desta sessão. O botão fica como na última gravação.</li>
+        <li><strong>Salvar</strong> — grava tudo no editor (incluindo fundo e áudio) e fecha o editor.</li>
+      </ul>
+      <p class="muted">Você também pode pressionar <span class="kbd">Esc</span> — o mesmo efeito de <strong>Cancelar</strong>.</p>
+    </section>
+
+    <section class="card" id="reorder">
+      <h2>5. Ordem dos botões</h2>
+      <p>No <strong>modo Configurações</strong>, arraste os botões para mudar a ordem.</p>
+      <p class="muted">A nova ordem é salva automaticamente.</p>
+    </section>
+
+    <section class="card" id="voices">
+      <h2>6. Idioma e voz padrão</h2>
+      <ol>
+        <li>Vá à aba <strong>Configurações</strong> do painel lateral.</li>
+        <li>Selecione <strong>Idioma padrão</strong>.</li>
+        <li>Escolha a <strong>Voz</strong> para esse idioma.</li>
+        <li>Clique em <strong>▶ Testar</strong> para ouvir uma amostra.</li>
+      </ol>
+      <p class="note">
+        As vozes salvas ficam por idioma e são usadas quando o botão não define outro idioma ou voz.
+      </p>
+    </section>
+
+    <section class="card" id="importexport">
+      <h2>7. Importar, exportar e backup (OBZ/OBF)</h2>
+
+      <h3>7.1 Importar painéis</h3>
+      <ol>
+        <li>Abra a aba <strong>Importar/Exportar</strong>.</li>
+        <li>Escolha o modo de importação:
+          <ul>
+            <li><strong>Mesclar — adicionar aos painéis existentes</strong></li>
+            <li><strong>Substituir — excluir todos, depois importar</strong></li>
+          </ul>
+        </li>
+        <li>Escolha um arquivo <code>.obz</code> ou <code>.obf</code>.</li>
+      </ol>
+
+      <h3>7.2 Exportar painéis</h3>
+      <ul>
+        <li><strong>⬇ Exportar todos os painéis</strong> cria um arquivo de backup <code>.obz</code>.</li>
+        <li>Na lista de painéis, use a ação de exportar no cartão de um painel para exportar só aquele painel.</li>
+      </ul>
+
+      <h3>7.3 Entre dispositivos</h3>
+      <p>
+        Os painéis são compatíveis com o aplicativo
+        <a href="https://play.google.com/store/apps/details?id=app.hobbysoft.speakingbuttons" target="_blank" rel="noopener">Talking Buttons para Android</a>
+        pelo Open Board Format.
+        Você pode exportar da extensão e importar no Android, ou o contrário.
+      </p>
+    </section>
+
+    <section class="card" id="tips">
+      <h2>8. Dicas e diferenças em relação ao celular</h2>
+      <ul>
+        <li>A extensão do Chrome abre os painéis em uma aba normal do navegador para falar ou editar.</li>
+        <li>As vozes de síntese dependem das vozes instaladas no navegador ou no sistema.</li>
+      </ul>
+      <p class="muted">Versão: 1.7 — guia do usuário da extensão (português).</p>
+    </section>
+  </main>
+</body>
+</html>

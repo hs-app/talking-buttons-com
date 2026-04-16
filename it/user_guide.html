@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talking Buttons — Guida utente</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --primary: #1976d2;
+      --border: #e5e7eb;
+      --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+    .toc {
+      background: #e8f1fd;
+      border: 1px solid #d7e8fc;
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      margin-bottom: 20px;
+    }
+    .toc h2 { margin: 0 0 10px; font-size: 18px; }
+    .toc > ul {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .toc > ul > li {
+      margin-top: 8px;
+      padding-left: 0;
+    }
+    .toc > ul > li:first-child { margin-top: 0; }
+    .toc ul ul {
+      list-style: none;
+      margin: 6px 0 2px;
+      padding: 0 0 0 14px;
+      border-left: 2px solid #b6d2f5;
+    }
+    .toc ul ul li { margin-top: 4px; }
+    .toc ul ul li:first-child { margin-top: 0; }
+    .toc ul ul a { font-size: 0.95em; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px 18px 16px;
+      margin-bottom: 14px;
+    }
+    h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.3;
+      color: #111827;
+    }
+    h3 {
+      margin: 14px 0 6px;
+      font-size: 18px;
+      line-height: 1.35;
+      color: #111827;
+    }
+    p { margin: 0 0 8px; }
+    ul, ol { margin: 0 0 8px; padding-left: 20px; }
+    li + li { margin-top: 4px; }
+    .muted { color: var(--muted); }
+    .kbd {
+      display: inline-block;
+      border: 1px solid #d1d5db;
+      border-bottom-width: 2px;
+      border-radius: 6px;
+      padding: 0 6px;
+      background: #f9fafb;
+      font-size: 0.95em;
+      white-space: nowrap;
+    }
+    .note {
+      border-left: 4px solid var(--primary);
+      background: #f8fbff;
+      padding: 8px 10px;
+      border-radius: 6px;
+      margin-top: 8px;
+    }
+    a { color: var(--primary); }
+    code {
+      font-size: 1.2em;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    @media print {
+      body { background: #fff; }
+      .wrap { max-width: none; padding: 0; }
+      .card { box-shadow: none; break-inside: avoid; }
+      .toc { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Talking Buttons — Guida utente</h1>
+    <p class="subtitle">
+      Come creare tavole CAA, personalizzare pulsanti, gestire le voci e scambiare tavole con Open Board Format.
+    </p>
+
+    <section class="toc">
+      <h2>Indice</h2>
+      <ul>
+        <li><a href="#start">1. Per iniziare</a></li>
+        <li><a href="#create">2. Creare una nuova tavola</a></li>
+        <li><a href="#size">3. Dimensione della tavola e griglia</a></li>
+        <li>
+          <a href="#customize">4. Personalizzare i pulsanti</a>
+          <ul>
+            <li><a href="#btn-text">4.1 Testo del pulsante</a></li>
+            <li><a href="#btn-lang">4.2 Lingua del pulsante</a></li>
+            <li><a href="#btn-bg">4.3 Sfondo del pulsante</a></li>
+            <li><a href="#custom-audio">4.4 Audio personalizzato (sostituisce la sintesi vocale)</a></li>
+            <li><a href="#editor-actions">4.5 Cancella, Annulla e Salva</a></li>
+          </ul>
+        </li>
+        <li><a href="#reorder">5. Ordine dei pulsanti</a></li>
+        <li><a href="#voices">6. Lingua e voce predefinite</a></li>
+        <li><a href="#importexport">7. Importazione, esportazione e backup (OBZ/OBF)</a></li>
+        <li><a href="#tips">8. Suggerimenti e differenze rispetto al mobile</a></li>
+      </ul>
+    </section>
+
+    <section class="card" id="start">
+      <h2>1. Per iniziare</h2>
+      <ol>
+        <li>Installate l'estensione dal Chrome Web Store.</li>
+        <li>Fate clic sull'icona dell'estensione nella barra di Chrome per aprire il pannello laterale.</li>
+        <li>Usate le schede in alto:
+          <ul>
+            <li><strong>Tavole</strong> — elenco delle tavole e azioni rapide</li>
+            <li><strong>Importa/Esporta</strong> — scambio di file OBZ/OBF</li>
+            <li><strong>Impostazioni</strong> — impostazioni predefinite della sintesi vocale</li>
+          </ul>
+        </li>
+      </ol>
+      <p class="note"><strong>Suggerimento:</strong> fate clic su <span class="kbd">?</span> nell'intestazione in qualsiasi momento per riaprire questa guida.</p>
+    </section>
+
+    <section class="card" id="create">
+      <h2>2. Creare una nuova tavola</h2>
+      <ol>
+        <li>Aprire la scheda <strong>Tavole</strong>.</li>
+        <li>Fare clic sul pulsante <span class="kbd">+</span> nell'intestazione.</li>
+        <li>Inserire il nome della tavola e fare clic su <strong>Salva</strong>.</li>
+        <li>La nuova tavola si apre in una scheda del browser a tutta larghezza in <strong>modalità Impostazioni</strong>.</li>
+      </ol>
+    </section>
+
+    <section class="card" id="size">
+      <h2>3. Dimensione della tavola e griglia</h2>
+      <p>Nella scheda della tavola, fare clic su <strong>⚙ Impostazioni</strong> per modificare le opzioni dell'intera griglia:</p>
+      <ul>
+        <li><strong>Righe</strong> e <strong>Colonne</strong> — dimensione della griglia</li>
+        <li><strong>Font</strong> — dimensione del testo sui pulsanti</li>
+        <li><strong>Quadrato</strong> — pulsanti quadrati</li>
+      </ul>
+      <p>Le modifiche vengono salvate subito.</p>
+      <p>Al termine, fare clic su <strong>✓ Fatto</strong> per uscire dalla modalità Impostazioni e tornare all'uso normale della tavola (modalità parlato).</p>
+    </section>
+
+    <section class="card" id="customize">
+      <h2>4. Personalizzare i pulsanti</h2>
+      <p>Nella scheda della tavola, in <strong>modalità Impostazioni</strong>, fate clic su un pulsante per modificarlo:</p>
+
+      <h3 id="btn-text">4.1 Testo del pulsante</h3>
+      <ul>
+        <li>Impostate il testo principale — viene mostrato e pronunciato.</li>
+        <li>Aggiungete facoltativamente una nota o un sottotitolo.</li>
+      </ul>
+
+      <h3 id="btn-lang">4.2 Lingua del pulsante</h3>
+      <ul>
+        <li>Ogni pulsante può usare la lingua e la voce <strong>predefinite</strong>.</li>
+        <li>Oppure potete impostare una lingua specifica per quel pulsante.</li>
+      </ul>
+
+      <h3 id="btn-bg">4.3 Sfondo del pulsante</h3>
+      <ul>
+        <li>Scegliete il colore di sfondo.</li>
+        <li>Aggiungete o rimuovete l'immagine di sfondo.</li>
+      </ul>
+
+      <h3 id="custom-audio">4.4 Audio personalizzato (sostituisce la sintesi vocale)</h3>
+      <p>
+        Ogni pulsante può parlare con il motore di <strong>sintesi vocale (TTS)</strong> del browser o con un
+        <strong>messaggio registrato</strong>. Se è presente una registrazione, ha la priorità:
+        toccando il pulsante si sente la vostra registrazione, non la voce sintetizzata.
+      </p>
+      <ul>
+        <li>Usate <strong>Registra</strong>, <strong>Riproduci</strong> e <strong>Stop</strong> per registrare e ascoltare il messaggio.</li>
+        <li><strong>Microfono:</strong> la prima volta che registrate, Chrome può chiedere l'accesso al microfono. Concedetelo per questo sito.</li>
+        <li><strong>Anteprima:</strong> usate <strong>Riproduci</strong> per ascoltare prima di chiudere l'editor.</li>
+        <li><strong>Torna al TTS:</strong> toccate <strong>Rimuovi</strong> accanto alla registrazione per eliminarla e usare di nuovo la sintesi per quel pulsante.</li>
+        <li><strong>OBZ/OBF:</strong> le tavole con audio personalizzato si possono importare ed esportare come le altre; se il formato lo consente, la registrazione resta col pulsante.</li>
+      </ul>
+      <p class="note">
+        <strong>Ricordate:</strong> l'audio personalizzato sostituisce la sintesi solo per quel pulsante. Lingua e voce predefinite nel pannello laterale si applicano ancora ai pulsanti senza registrazione o lingua propria.
+      </p>
+
+      <h3 id="editor-actions">4.5 Cancella, Annulla e Salva</h3>
+      <p>In fondo all'editor del pulsante:</p>
+      <ul>
+        <li><strong>Cancella</strong> — azzera il pulsante (rimuove testo, nota, lingua, colori, immagine di sfondo e audio). Viene salvato subito e l'editor si chiude.</li>
+        <li><strong>Annulla</strong> — chiude l'editor senza applicare le modifiche di questa sessione. Il pulsante resta come ultimo salvataggio.</li>
+        <li><strong>Salva</strong> — salva tutto nell'editor (inclusi sfondo e audio) e chiude l'editor.</li>
+      </ul>
+      <p class="muted">Potete anche premere <span class="kbd">Esc</span> — come <strong>Annulla</strong>.</p>
+    </section>
+
+    <section class="card" id="reorder">
+      <h2>5. Ordine dei pulsanti</h2>
+      <p>In <strong>modalità Impostazioni</strong>, trascinate i pulsanti per cambiarne la posizione.</p>
+      <p class="muted">Il nuovo ordine viene salvato automaticamente.</p>
+    </section>
+
+    <section class="card" id="voices">
+      <h2>6. Lingua e voce predefinite</h2>
+      <ol>
+        <li>Andate alla scheda <strong>Impostazioni</strong> del pannello laterale.</li>
+        <li>Selezionate <strong>Lingua predefinita</strong>.</li>
+        <li>Scegliete la <strong>Voce</strong> per quella lingua.</li>
+        <li>Fate clic su <strong>▶ Prova</strong> per un'anteprima.</li>
+      </ol>
+      <p class="note">
+        Le voci salvate sono memorizzate per lingua e usate quando un pulsante non ha lingua o voce proprie.
+      </p>
+    </section>
+
+    <section class="card" id="importexport">
+      <h2>7. Importazione, esportazione e backup (OBZ/OBF)</h2>
+
+      <h3>7.1 Importare tavole</h3>
+      <ol>
+        <li>Aprire la scheda <strong>Importa/Esporta</strong>.</li>
+        <li>Selezionare la modalità di importazione:
+          <ul>
+            <li><strong>Unisci — aggiungi alle tavole esistenti</strong></li>
+            <li><strong>Sostituisci — elimina tutto, poi importa</strong></li>
+          </ul>
+        </li>
+        <li>Scegliere un file <code>.obz</code> o <code>.obf</code>.</li>
+      </ol>
+
+      <h3>7.2 Esportare tavole</h3>
+      <ul>
+        <li><strong>⬇ Esporta tutte le tavole</strong> crea un file di backup <code>.obz</code>.</li>
+        <li>Nell'elenco delle tavole, usate l'azione di esportazione sulla scheda di una tavola per esportare solo quella.</li>
+      </ul>
+
+      <h3>7.3 Condivisione tra piattaforme</h3>
+      <p>
+        Le tavole sono compatibili con l'app
+        <a href="https://play.google.com/store/apps/details?id=app.hobbysoft.speakingbuttons" target="_blank" rel="noopener">Talking Buttons per Android</a>
+        tramite Open Board Format.
+        Potete esportare dall'estensione e importare su Android, o il contrario.
+      </p>
+    </section>
+
+    <section class="card" id="tips">
+      <h2>8. Suggerimenti e differenze rispetto al mobile</h2>
+      <ul>
+        <li>L'estensione Chrome apre le tavole in una scheda normale del browser per parlare o modificare.</li>
+        <li>Le voci TTS dipendono dalle voci installate nel browser o nel sistema.</li>
+      </ul>
+      <p class="muted">Versione: 1.7 — guida utente dell'estensione (italiano).</p>
+    </section>
+  </main>
+</body>
+</html>
