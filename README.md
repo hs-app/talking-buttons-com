@@ -47,3 +47,5 @@ Marketing screenshots live under [`images/`](images/) and are shown on the Engli
 ## Canonical URLs
 
 Pages assume the site is served at **https://talking-buttons.com/**. If you test on `https://<user>.github.io/<repo>/`, relative links still work; `canonical` and `hreflang` URLs point at the custom domain.
+
+Marketing pages use trailing-slash home URLs (`/en/`, `/ru/`) in links and in [`sitemap.xml`](sitemap.xml). The site root [`index.html`](index.html) is `noindex` (locale router only). Post-install and user-guide pages are also `noindex`. Submit `https://talking-buttons.com/sitemap.xml` in Google Search Console ([`robots.txt`](robots.txt) references it).
