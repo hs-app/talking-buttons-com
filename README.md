@@ -34,7 +34,7 @@ At your DNS provider, follow [GitHub Pages custom domain](https://docs.github.co
 
 ## Support email
 
-Pages use **app.hobbysoft@gmail.com**.
+Pages use **info@talking-buttons.com**.
 
 ## Board library (OBF/OBZ)
 
