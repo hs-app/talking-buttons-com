@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, follow" />
   <title>Talking Buttons — Guida utente</title>
   <style>
     :root {
@@ -140,7 +139,9 @@
             <li><a href="#btn-lang">4.2 Lingua del pulsante</a></li>
             <li><a href="#btn-bg">4.3 Sfondo del pulsante</a></li>
             <li><a href="#custom-audio">4.4 Audio personalizzato (sostituisce la sintesi vocale)</a></li>
-            <li><a href="#editor-actions">4.5 Cancella, Annulla e Salva</a></li>
+            <li><a href="#folder-buttons">4.5 Pulsanti cartella (collegamento a un'altra tavola)</a></li>
+            <li><a href="#copy-to-board">4.6 Copia su un'altra tavola</a></li>
+            <li><a href="#editor-actions">4.7 Cancella, Annulla, Salva e Salva e avanti</a></li>
           </ul>
         </li>
         <li><a href="#reorder">5. Ordine dei pulsanti</a></li>
@@ -190,7 +191,7 @@
 
     <section class="card" id="customize">
       <h2>4. Personalizzare i pulsanti</h2>
-      <p>Nella scheda della tavola, in <strong>modalità Impostazioni</strong>, fate clic su un pulsante per modificarlo:</p>
+      <p>Nella scheda della tavola, in <strong>modalità Impostazioni</strong>, fate clic su un pulsante per modificarlo. Gli spazi vuoti restano sulla griglia in modalità Impostazioni, ma sono nascosti nella modalità parlato normale.</p>
 
       <h3 id="btn-text">4.1 Testo del pulsante</h3>
       <ul>
@@ -227,12 +228,41 @@
         <strong>Ricordate:</strong> l'audio personalizzato sostituisce la sintesi solo per quel pulsante. Lingua e voce predefinite nel pannello laterale si applicano ancora ai pulsanti senza registrazione o lingua propria.
       </p>
 
-      <h3 id="editor-actions">4.5 Cancella, Annulla e Salva</h3>
+      <h3 id="folder-buttons">4.5 Pulsanti cartella (collegamento a un'altra tavola)</h3>
+      <p>
+        Sulle tavole a griglia personalizzate (non sui layout fissi da 2/4/6 pulsanti), potete trasformare un pulsante in una
+        <strong>cartella</strong> che apre un'altra tavola invece di parlare.
+      </p>
+      <ol>
+        <li>Aprire la tavola in <strong>modalità Impostazioni</strong> e toccare il pulsante da modificare.</li>
+        <li>In <strong>Azione del pulsante</strong>, scegliere <strong>Apri un'altra tavola</strong>.</li>
+        <li>Scegliere una tavola esistente dall'elenco oppure fare clic su <strong>Crea nuova tavola</strong> per aggiungere una tavola collegata.</li>
+        <li>Fare clic su <strong>Salva</strong>. Sul pulsante compare una piccola icona cartella.</li>
+      </ol>
+      <p class="note">
+        Le tavole collegate restano nell'elenco del pannello laterale come tavole indipendenti. Esportando una tavola con pulsanti cartella, tutte le tavole collegate sono incluse automaticamente nel file <code>.obz</code>.
+      </p>
+
+      <h3 id="copy-to-board">4.6 Copia su un'altra tavola</h3>
+      <p>
+        Sulle tavole a griglia personalizzate, potete duplicare il pulsante che state modificando su un'altra tavola a griglia senza uscire dall'editor.
+      </p>
+      <ol>
+        <li>Nell'editor del pulsante, fare clic su <strong>Copia su tavola</strong>.</li>
+        <li>Scegliere una tavola di destinazione dall'elenco (i layout fissi da 2/4/6 pulsanti non sono elencati).</li>
+        <li>L'estensione copia testo, nota, lingua, colori, immagine di sfondo, audio e collegamento cartella attuali nel primo spazio vuoto di quella tavola. Se la tavola è piena ma può crescere, viene aggiunta automaticamente una nuova riga.</li>
+      </ol>
+      <p class="note">
+        La copia usa il contenuto attuale dell'editor. Fare clic prima su <strong>Salva</strong> se volete l'ultima versione salvata invece di modifiche non salvate.
+      </p>
+
+      <h3 id="editor-actions">4.7 Cancella, Annulla, Salva e Salva e avanti</h3>
       <p>In fondo all'editor del pulsante:</p>
       <ul>
-        <li><strong>Cancella</strong> — azzera il pulsante (rimuove testo, nota, lingua, colori, immagine di sfondo e audio). Viene salvato subito e l'editor si chiude.</li>
+        <li><strong>Cancella</strong> — reimposta il pulsante come spazio vuoto (rimuove testo, nota, lingua, colori, immagine di sfondo, audio personalizzato e collegamenti ad altre tavole). Viene chiesta conferma; la modifica viene salvata subito e l'editor si chiude.</li>
         <li><strong>Annulla</strong> — chiude l'editor senza applicare le modifiche di questa sessione. Il pulsante resta come ultimo salvataggio.</li>
         <li><strong>Salva</strong> — salva tutto nell'editor (inclusi sfondo e audio) e chiude l'editor.</li>
+        <li><strong>Salva e avanti</strong> — salva il pulsante e apre subito lo spazio successivo nell'ordine della griglia (#N+1, tornando dall'ultimo al #1). Utile per compilare molti pulsanti di seguito.</li>
       </ul>
       <p class="muted">Potete anche premere <span class="kbd">Esc</span> — come <strong>Annulla</strong>.</p>
     </section>
@@ -259,12 +289,7 @@
     <section class="card" id="importexport">
       <h2>7. Importazione, esportazione e backup (OBZ/OBF)</h2>
 
-      <h3>7.1 Libreria di tavole</h3>
-      <p>
-        La <a href="boards.html">Libreria di tavole</a> offre tavole di comunicazione pronte da scaricare e importare. Sfoglia la libreria per trovare tavole per conversazioni quotidiane, azioni, emozioni e molto altro.
-      </p>
-
-      <h3>7.2 Importare tavole da un file</h3>
+      <h3>7.1 Importare tavole</h3>
       <ol>
         <li>Aprire la scheda <strong>Importa/Esporta</strong>.</li>
         <li>Selezionare la modalità di importazione:
@@ -275,18 +300,14 @@
         </li>
         <li>Scegliere un file <code>.obz</code> o <code>.obf</code>.</li>
       </ol>
-      <p>
-        Puoi trovare tavole di comunicazione gratuite e con licenza aperta anche su
-        <a href="https://www.openboardformat.org/examples" target="_blank" rel="noopener">openboardformat.org</a>.
-      </p>
 
-      <h3>7.3 Esportare tavole</h3>
+      <h3>7.2 Esportare tavole</h3>
       <ul>
         <li><strong>⬇ Esporta tutte le tavole</strong> crea un file di backup <code>.obz</code>.</li>
         <li>Nell'elenco delle tavole, usate l'azione di esportazione sulla scheda di una tavola per esportare solo quella.</li>
       </ul>
 
-      <h3>7.4 Condivisione tra piattaforme</h3>
+      <h3>7.3 Condivisione tra piattaforme</h3>
       <p>
         Le tavole sono compatibili con l'app
         <a href="https://play.google.com/store/apps/details?id=app.hobbysoft.speakingbuttons" target="_blank" rel="noopener">Talking Buttons per Android</a>
@@ -301,7 +322,7 @@
         <li>L'estensione Chrome apre le tavole in una scheda normale del browser per parlare o modificare.</li>
         <li>Le voci TTS dipendono dalle voci installate nel browser o nel sistema.</li>
       </ul>
-      <p class="muted">Versione: 1.7 — guida utente dell'estensione (italiano).</p>
+      <p class="muted">Versione: 2.0 — guida utente dell'estensione (italiano).</p>
     </section>
   </main>
 </body>

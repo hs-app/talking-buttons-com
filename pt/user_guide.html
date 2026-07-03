@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, follow" />
   <title>Talking Buttons — Guia do usuário</title>
   <style>
     :root {
@@ -140,7 +139,9 @@
             <li><a href="#btn-lang">4.2 Idioma do botão</a></li>
             <li><a href="#btn-bg">4.3 Fundo do botão</a></li>
             <li><a href="#custom-audio">4.4 Áudio personalizado (substitui a síntese vocal)</a></li>
-            <li><a href="#editor-actions">4.5 Limpar, Cancelar e Salvar</a></li>
+            <li><a href="#folder-buttons">4.5 Botões pasta (link para outro painel)</a></li>
+            <li><a href="#copy-to-board">4.6 Copiar para outro painel</a></li>
+            <li><a href="#editor-actions">4.7 Limpar, Cancelar, Salvar e Salvar e próximo</a></li>
           </ul>
         </li>
         <li><a href="#reorder">5. Ordem dos botões</a></li>
@@ -190,7 +191,7 @@
 
     <section class="card" id="customize">
       <h2>4. Personalizar botões</h2>
-      <p>Na aba do painel, no <strong>modo Configurações</strong>, clique em qualquer botão para editá-lo:</p>
+      <p>Na aba do painel, no <strong>modo Configurações</strong>, clique em qualquer botão para editá-lo. Espaços vazios permanecem na grade no modo Configurações, mas ficam ocultos no modo normal de fala.</p>
 
       <h3 id="btn-text">4.1 Texto do botão</h3>
       <ul>
@@ -227,12 +228,41 @@
         <strong>Lembre-se:</strong> o áudio personalizado substitui a síntese só nesse botão. Idioma e voz padrão no painel lateral continuam valendo para botões sem gravação ou idioma próprio.
       </p>
 
-      <h3 id="editor-actions">4.5 Limpar, Cancelar e Salvar</h3>
+      <h3 id="folder-buttons">4.5 Botões pasta (link para outro painel)</h3>
+      <p>
+        Em painéis de grade personalizados (não em layouts fixos de 2/4/6 botões), você pode transformar um botão em uma
+        <strong>pasta</strong> que abre outro painel em vez de falar.
+      </p>
+      <ol>
+        <li>Abra o painel no <strong>modo Configurações</strong> e toque o botão para editar.</li>
+        <li>Em <strong>Ação do botão</strong>, escolha <strong>Abrir outro painel</strong>.</li>
+        <li>Escolha um painel existente na lista ou clique em <strong>Criar novo painel</strong> para adicionar um painel vinculado.</li>
+        <li>Clique em <strong>Salvar</strong>. Um pequeno ícone de pasta aparece no botão.</li>
+      </ol>
+      <p class="note">
+        Painéis vinculados permanecem na lista do painel lateral como painéis independentes. Ao exportar um painel com botões pasta, todos os painéis vinculados são incluídos automaticamente no arquivo <code>.obz</code>.
+      </p>
+
+      <h3 id="copy-to-board">4.6 Copiar para outro painel</h3>
+      <p>
+        Em painéis de grade personalizados, você pode duplicar o botão que está editando em outro painel de grade sem sair do editor.
+      </p>
+      <ol>
+        <li>No editor de botões, clique em <strong>Copiar para painel</strong>.</li>
+        <li>Escolha um painel de destino na lista (layouts fixos de 2/4/6 botões não aparecem).</li>
+        <li>A extensão copia o texto, nota, idioma, cores, imagem de fundo, áudio e link de pasta atuais para o primeiro espaço vazio desse painel. Se o painel estiver cheio, mas puder crescer, uma nova linha é adicionada automaticamente.</li>
+      </ol>
+      <p class="note">
+        A cópia usa o conteúdo atual do editor. Clique em <strong>Salvar</strong> primeiro se quiser a última versão salva em vez de alterações não salvas.
+      </p>
+
+      <h3 id="editor-actions">4.7 Limpar, Cancelar, Salvar e Salvar e próximo</h3>
       <p>Na parte inferior do editor de botões:</p>
       <ul>
-        <li><strong>Limpar</strong> — esvazia o botão (remove texto, nota, idioma, cores, imagem de fundo e áudio). Salva na hora e fecha o editor.</li>
+        <li><strong>Limpar</strong> — redefine o botão como espaço vazio (remove texto, nota, idioma, cores, imagem de fundo, áudio personalizado e links para painéis). É pedida confirmação; a alteração é salva na hora e o editor fecha.</li>
         <li><strong>Cancelar</strong> — fecha o editor sem aplicar as mudanças desta sessão. O botão fica como na última gravação.</li>
         <li><strong>Salvar</strong> — grava tudo no editor (incluindo fundo e áudio) e fecha o editor.</li>
+        <li><strong>Salvar e próximo</strong> — salva o botão e abre imediatamente o próximo espaço na ordem da grade (#N+1, voltando do último para o #1). Útil ao preencher muitos botões em sequência.</li>
       </ul>
       <p class="muted">Você também pode pressionar <span class="kbd">Esc</span> — o mesmo efeito de <strong>Cancelar</strong>.</p>
     </section>
@@ -259,12 +289,7 @@
     <section class="card" id="importexport">
       <h2>7. Importar, exportar e backup (OBZ/OBF)</h2>
 
-      <h3>7.1 Biblioteca de painéis</h3>
-      <p>
-        A <a href="boards.html">Biblioteca de painéis</a> oferece painéis de comunicação prontos para baixar e importar. Navegue pela biblioteca para encontrar painéis para conversas do dia a dia, ações, emoções e muito mais.
-      </p>
-
-      <h3>7.2 Importar painéis de um arquivo</h3>
+      <h3>7.1 Importar painéis</h3>
       <ol>
         <li>Abra a aba <strong>Importar/Exportar</strong>.</li>
         <li>Escolha o modo de importação:
@@ -275,18 +300,14 @@
         </li>
         <li>Escolha um arquivo <code>.obz</code> ou <code>.obf</code>.</li>
       </ol>
-      <p>
-        Você também pode encontrar painéis de comunicação gratuitos e com licença aberta em
-        <a href="https://www.openboardformat.org/examples" target="_blank" rel="noopener">openboardformat.org</a>.
-      </p>
 
-      <h3>7.3 Exportar painéis</h3>
+      <h3>7.2 Exportar painéis</h3>
       <ul>
         <li><strong>⬇ Exportar todos os painéis</strong> cria um arquivo de backup <code>.obz</code>.</li>
         <li>Na lista de painéis, use a ação de exportar no cartão de um painel para exportar só aquele painel.</li>
       </ul>
 
-      <h3>7.4 Entre dispositivos</h3>
+      <h3>7.3 Entre dispositivos</h3>
       <p>
         Os painéis são compatíveis com o aplicativo
         <a href="https://play.google.com/store/apps/details?id=app.hobbysoft.speakingbuttons" target="_blank" rel="noopener">Talking Buttons para Android</a>
@@ -301,7 +322,7 @@
         <li>A extensão do Chrome abre os painéis em uma aba normal do navegador para falar ou editar.</li>
         <li>As vozes de síntese dependem das vozes instaladas no navegador ou no sistema.</li>
       </ul>
-      <p class="muted">Versão: 1.7 — guia do usuário da extensão (português).</p>
+      <p class="muted">Versão: 2.0 — guia do usuário da extensão (português).</p>
     </section>
   </main>
 </body>

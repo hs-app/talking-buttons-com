@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, follow" />
   <title>Talking Buttons — Guide d'utilisation</title>
   <style>
     :root {
@@ -140,7 +139,9 @@
             <li><a href="#btn-lang">4.2 Langue du bouton</a></li>
             <li><a href="#btn-bg">4.3 Arrière-plan du bouton</a></li>
             <li><a href="#custom-audio">4.4 Audio personnalisé (remplace la synthèse vocale)</a></li>
-            <li><a href="#editor-actions">4.5 Effacer, Annuler et Enregistrer</a></li>
+            <li><a href="#folder-buttons">4.5 Boutons dossier (lien vers un autre tableau)</a></li>
+            <li><a href="#copy-to-board">4.6 Copier vers un autre tableau</a></li>
+            <li><a href="#editor-actions">4.7 Effacer, Annuler, Enregistrer et Enregistrer et suivant</a></li>
           </ul>
         </li>
         <li><a href="#reorder">5. Ordre des boutons</a></li>
@@ -190,7 +191,7 @@
 
     <section class="card" id="customize">
       <h2>4. Personnaliser les boutons</h2>
-      <p>Dans l'onglet du tableau, en <strong>mode Paramètres</strong>, cliquez sur un bouton pour le modifier :</p>
+      <p>Dans l'onglet du tableau, en <strong>mode Paramètres</strong>, cliquez sur un bouton pour le modifier. Les emplacements vides restent visibles sur la grille en mode Paramètres, mais sont masqués en mode parole normal.</p>
 
       <h3 id="btn-text">4.1 Texte du bouton</h3>
       <ul>
@@ -227,12 +228,41 @@
         <strong>Rappel :</strong> l'audio personnalisé remplace la synthèse seulement pour ce bouton. La langue et la voix par défaut du panneau latéral s'appliquent encore aux boutons sans enregistrement ni langue propre.
       </p>
 
-      <h3 id="editor-actions">4.5 Effacer, Annuler et Enregistrer</h3>
+      <h3 id="folder-buttons">4.5 Boutons dossier (lien vers un autre tableau)</h3>
+      <p>
+        Sur les tableaux en grille personnalisés (pas les dispositions fixes 2/4/6 boutons), vous pouvez transformer un bouton en
+        <strong>dossier</strong> qui ouvre un autre tableau au lieu de parler.
+      </p>
+      <ol>
+        <li>Ouvrez le tableau en <strong>mode Paramètres</strong> et touchez le bouton à modifier.</li>
+        <li>Sous <strong>Action du bouton</strong>, choisissez <strong>Ouvrir un autre tableau</strong>.</li>
+        <li>Choisissez un tableau existant dans la liste, ou cliquez sur <strong>Créer un nouveau tableau</strong> pour ajouter un tableau lié.</li>
+        <li>Cliquez sur <strong>Enregistrer</strong>. Une petite icône de dossier apparaît sur le bouton.</li>
+      </ol>
+      <p class="note">
+        Les tableaux liés restent dans la liste du panneau latéral comme tableaux indépendants. L'export d'un tableau contenant des boutons dossier inclut automatiquement tous les tableaux liés dans le fichier <code>.obz</code>.
+      </p>
+
+      <h3 id="copy-to-board">4.6 Copier vers un autre tableau</h3>
+      <p>
+        Sur les tableaux en grille personnalisés, vous pouvez dupliquer le bouton en cours d'édition vers un autre tableau en grille sans quitter l'éditeur.
+      </p>
+      <ol>
+        <li>Dans l'éditeur de bouton, cliquez sur <strong>Copier vers un tableau</strong>.</li>
+        <li>Choisissez un tableau de destination dans la liste (les dispositions fixes 2/4/6 boutons ne sont pas proposées).</li>
+        <li>L'extension copie le texte, la note, la langue, les couleurs, l'image de fond, l'audio et le lien dossier actuels dans le premier emplacement vide de ce tableau. Si le tableau est plein mais peut s'agrandir, une nouvelle ligne est ajoutée automatiquement.</li>
+      </ol>
+      <p class="note">
+        La copie utilise le contenu actuel de l'éditeur. Cliquez d'abord sur <strong>Enregistrer</strong> si vous voulez la dernière version enregistrée plutôt que des modifications non sauvegardées.
+      </p>
+
+      <h3 id="editor-actions">4.7 Effacer, Annuler, Enregistrer et Enregistrer et suivant</h3>
       <p>En bas de l'éditeur de bouton :</p>
       <ul>
-        <li><strong>Effacer</strong> — vide le bouton (supprime texte, note, langue, couleurs, image de fond et audio). Enregistrement immédiat et fermeture de l'éditeur.</li>
+        <li><strong>Effacer</strong> — réinitialise le bouton en emplacement vide (supprime texte, note, langue, couleurs, image de fond, audio personnalisé et liens vers d'autres tableaux). Une confirmation est demandée ; le changement est enregistré immédiatement et l'éditeur se ferme.</li>
         <li><strong>Annuler</strong> — ferme l'éditeur sans appliquer les changements de cette session. Le bouton reste comme la dernière sauvegarde.</li>
         <li><strong>Enregistrer</strong> — enregistre tout le contenu de l'éditeur (y compris fond et audio) et ferme l'éditeur.</li>
+        <li><strong>Enregistrer et suivant</strong> — enregistre le bouton et ouvre immédiatement l'emplacement suivant dans l'ordre de la grille (#N+1, en repassant du dernier au #1). Pratique pour remplir de nombreux boutons d'affilée.</li>
       </ul>
       <p class="muted">Vous pouvez aussi appuyer sur <span class="kbd">Échap</span> — comme <strong>Annuler</strong>.</p>
     </section>
@@ -259,12 +289,7 @@
     <section class="card" id="importexport">
       <h2>7. Import, export et sauvegarde (OBZ/OBF)</h2>
 
-      <h3>7.1 Bibliothèque de tableaux</h3>
-      <p>
-        La <a href="boards.html">Bibliothèque de tableaux</a> propose des tableaux de communication prêts à l'emploi que vous pouvez télécharger et importer. Parcourez la bibliothèque pour trouver des tableaux pour les conversations quotidiennes, les actions, les émotions, et bien plus.
-      </p>
-
-      <h3>7.2 Importer des tableaux depuis un fichier</h3>
+      <h3>7.1 Importer des tableaux</h3>
       <ol>
         <li>Ouvrez l'onglet <strong>Import/Export</strong>.</li>
         <li>Choisissez le mode d'importation :
@@ -275,18 +300,14 @@
         </li>
         <li>Choisissez un fichier <code>.obz</code> ou <code>.obf</code>.</li>
       </ol>
-      <p>
-        Vous pouvez également trouver des tableaux de communication gratuits et libres sur
-        <a href="https://www.openboardformat.org/examples" target="_blank" rel="noopener">openboardformat.org</a>.
-      </p>
 
-      <h3>7.3 Exporter des tableaux</h3>
+      <h3>7.2 Exporter des tableaux</h3>
       <ul>
         <li><strong>⬇ Exporter tous les tableaux</strong> crée un fichier de sauvegarde <code>.obz</code>.</li>
         <li>Dans la liste des tableaux, utilisez l'action d'export sur la carte d'un tableau pour n'exporter que celui-ci.</li>
       </ul>
 
-      <h3>7.4 Partage multiplateforme</h3>
+      <h3>7.3 Partage multiplateforme</h3>
       <p>
         Les tableaux sont compatibles avec l'application
         <a href="https://play.google.com/store/apps/details?id=app.hobbysoft.speakingbuttons" target="_blank" rel="noopener">Talking Buttons pour Android</a>
@@ -301,7 +322,7 @@
         <li>L'extension Chrome ouvre les tableaux dans un onglet normal du navigateur pour parler ou modifier.</li>
         <li>Les voix TTS dépendent des voix installées dans le navigateur ou le système.</li>
       </ul>
-      <p class="muted">Version : 1.7 — guide d'utilisation de l'extension (français).</p>
+      <p class="muted">Version : 2.0 — guide d'utilisation de l'extension (français).</p>
     </section>
   </main>
 </body>

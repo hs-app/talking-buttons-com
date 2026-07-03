@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, follow" />
   <title>Talking Buttons — Guía del usuario</title>
   <style>
     :root {
@@ -140,7 +139,9 @@
             <li><a href="#btn-lang">4.2 Idioma del botón</a></li>
             <li><a href="#btn-bg">4.3 Fondo del botón</a></li>
             <li><a href="#custom-audio">4.4 Audio personalizado (reemplaza la síntesis de voz)</a></li>
-            <li><a href="#editor-actions">4.5 Borrar, Cancelar y Guardar</a></li>
+            <li><a href="#folder-buttons">4.5 Botones carpeta (enlace a otro tablero)</a></li>
+            <li><a href="#copy-to-board">4.6 Copiar a otro tablero</a></li>
+            <li><a href="#editor-actions">4.7 Borrar, Cancelar, Guardar y Guardar y siguiente</a></li>
           </ul>
         </li>
         <li><a href="#reorder">5. Orden de los botones</a></li>
@@ -190,7 +191,7 @@
 
     <section class="card" id="customize">
       <h2>4. Personalizar botones</h2>
-      <p>En la pestaña del tablero, en <strong>modo Configuración</strong>, pulse cualquier botón para editarlo:</p>
+      <p>En la pestaña del tablero, en <strong>modo Configuración</strong>, pulse cualquier botón para editarlo. Las casillas vacías permanecen en la cuadrícula en modo Configuración, pero se ocultan en el modo normal de habla.</p>
 
       <h3 id="btn-text">4.1 Texto del botón</h3>
       <ul>
@@ -227,12 +228,41 @@
         <strong>Recuerde:</strong> el audio personalizado solo sustituye la síntesis en ese botón. El idioma y la voz predeterminados del panel lateral siguen aplicándose a los botones sin grabación ni idioma propio.
       </p>
 
-      <h3 id="editor-actions">4.5 Borrar, Cancelar y Guardar</h3>
+      <h3 id="folder-buttons">4.5 Botones carpeta (enlace a otro tablero)</h3>
+      <p>
+        En tableros de cuadrícula personalizados (no en diseños fijos de 2/4/6 botones), puede convertir un botón en una
+        <strong>carpeta</strong> que abre otro tablero en lugar de hablar.
+      </p>
+      <ol>
+        <li>Abra el tablero en <strong>modo Configuración</strong> y pulse el botón para editarlo.</li>
+        <li>En <strong>Acción del botón</strong>, elija <strong>Abrir otro tablero</strong>.</li>
+        <li>Elija un tablero existente de la lista o pulse <strong>Crear tablero nuevo</strong> para añadir un tablero vinculado.</li>
+        <li>Pulse <strong>Guardar</strong>. Aparece un pequeño icono de carpeta en el botón.</li>
+      </ol>
+      <p class="note">
+        Los tableros vinculados permanecen en la lista del panel lateral como tableros independientes. Al exportar un tablero con botones carpeta, todos los tableros vinculados se incluyen automáticamente en el archivo <code>.obz</code>.
+      </p>
+
+      <h3 id="copy-to-board">4.6 Copiar a otro tablero</h3>
+      <p>
+        En tableros de cuadrícula personalizados, puede duplicar el botón que está editando en otro tablero de cuadrícula sin salir del editor.
+      </p>
+      <ol>
+        <li>En el editor de botones, pulse <strong>Copiar a tablero</strong>.</li>
+        <li>Elija un tablero de destino de la lista (los diseños fijos de 2/4/6 botones no aparecen).</li>
+        <li>La extensión copia el texto, nota, idioma, colores, imagen de fondo, audio y enlace de carpeta actuales en la primera casilla vacía de ese tablero. Si el tablero está lleno pero puede crecer, se añade una fila automáticamente.</li>
+      </ol>
+      <p class="note">
+        La copia usa el contenido actual del editor. Pulse <strong>Guardar</strong> primero si desea la última versión guardada en lugar de cambios sin guardar.
+      </p>
+
+      <h3 id="editor-actions">4.7 Borrar, Cancelar, Guardar y Guardar y siguiente</h3>
       <p>En la parte inferior del editor de botones:</p>
       <ul>
-        <li><strong>Borrar</strong> — deja el botón vacío (quita texto, nota, idioma, colores, imagen de fondo y audio). Se guarda al instante y se cierra el editor.</li>
-        <li><strong>Cancelar</strong> — cierra el editor sin guardar los cambios de esta sesión. El botón queda como última vez guardado.</li>
+        <li><strong>Borrar</strong> — restablece el botón como casilla vacía (elimina texto, nota, idioma, colores, imagen de fondo, audio personalizado y enlaces a tableros). Se le pide confirmación; el cambio se guarda al instante y se cierra el editor.</li>
+        <li><strong>Cancelar</strong> — cierra el editor sin aplicar los cambios de esta sesión. El botón queda como la última vez guardado.</li>
         <li><strong>Guardar</strong> — guarda todo lo del editor (incluidos fondo y audio) y cierra el editor.</li>
+        <li><strong>Guardar y siguiente</strong> — guarda el botón y abre de inmediato la siguiente casilla en orden de cuadrícula (#N+1, volviendo de la última a la #1). Útil al rellenar muchos botones seguidos.</li>
       </ul>
       <p class="muted">También puede pulsar <span class="kbd">Esc</span> para cerrar como con <strong>Cancelar</strong>.</p>
     </section>
@@ -259,12 +289,7 @@
     <section class="card" id="importexport">
       <h2>7. Importar, exportar y copia de seguridad (OBZ/OBF)</h2>
 
-      <h3>7.1 Biblioteca de tableros</h3>
-      <p>
-        La <a href="boards.html">Biblioteca de tableros</a> ofrece tableros de comunicación listos para descargar e importar. Explore la biblioteca para encontrar tableros para conversaciones cotidianas, acciones, emociones y más.
-      </p>
-
-      <h3>7.2 Importar tableros desde un archivo</h3>
+      <h3>7.1 Importar tableros</h3>
       <ol>
         <li>Abra la pestaña <strong>Importar/Exportar</strong>.</li>
         <li>Elija el modo de importación:
@@ -275,18 +300,14 @@
         </li>
         <li>Elija un archivo <code>.obz</code> o <code>.obf</code>.</li>
       </ol>
-      <p>
-        También puede encontrar tableros de comunicación gratuitos y de licencia abierta en
-        <a href="https://www.openboardformat.org/examples" target="_blank" rel="noopener">openboardformat.org</a>.
-      </p>
 
-      <h3>7.3 Exportar tableros</h3>
+      <h3>7.2 Exportar tableros</h3>
       <ul>
         <li><strong>⬇ Exportar todos los tableros</strong> crea un archivo de copia de seguridad <code>.obz</code>.</li>
         <li>En la lista de tableros, use la acción de exportar en la tarjeta de un tablero para exportar solo ese tablero.</li>
       </ul>
 
-      <h3>7.4 Uso entre dispositivos</h3>
+      <h3>7.3 Uso entre dispositivos</h3>
       <p>
         Los tableros son compatibles con la aplicación
         <a href="https://play.google.com/store/apps/details?id=app.hobbysoft.speakingbuttons" target="_blank" rel="noopener">Talking Buttons para Android</a>
@@ -301,7 +322,7 @@
         <li>La extensión de Chrome abre los tableros en una pestaña normal del navegador para hablar o editar.</li>
         <li>Las voces de síntesis dependen de las voces instaladas en el navegador o el sistema.</li>
       </ul>
-      <p class="muted">Versión: 1.7 — guía del usuario de la extensión (español).</p>
+      <p class="muted">Versión: 2.0 — guía del usuario de la extensión (español).</p>
     </section>
   </main>
 </body>

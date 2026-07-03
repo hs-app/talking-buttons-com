@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, follow" />
   <title>Talking Buttons - User Guide</title>
   <style>
     :root {
@@ -140,13 +139,16 @@
             <li><a href="#btn-lang">4.2 Button Language</a></li>
             <li><a href="#btn-bg">4.3 Button Background</a></li>
             <li><a href="#custom-audio">4.4 Custom audio (overrides TTS)</a></li>
-            <li><a href="#editor-actions">4.5 Clear, Cancel, and Save</a></li>
+            <li><a href="#folder-buttons">4.5 Folder buttons (link to another board)</a></li>
+            <li><a href="#copy-to-board">4.6 Copy to another board</a></li>
+            <li><a href="#editor-actions">4.7 Clear, Cancel, Save, and Save &amp; next</a></li>
           </ul>
         </li>
         <li><a href="#reorder">5. Reorder Buttons</a></li>
         <li><a href="#voices">6. Set Default Language and Voice</a></li>
         <li><a href="#importexport">7. Import, Export, and Backup (OBZ/OBF)</a></li>
-        <li><a href="#tips">8. Tips and Known Differences from Mobile</a></li>
+        <li><a href="#folders-nav">8. Navigate nested boards</a></li>
+        <li><a href="#tips">9. Tips and Known Differences from Mobile</a></li>
       </ul>
     </section>
 
@@ -190,7 +192,7 @@
 
     <section class="card" id="customize">
       <h2>4. Customize Buttons</h2>
-      <p>In board tab and <strong>Settings mode</strong>, click any button to edit:</p>
+      <p>In board tab and <strong>Settings mode</strong>, click any button to edit. Empty slots remain on the grid in settings mode but are hidden in normal speaking mode.</p>
 
       <h3 id="btn-text">4.1 Button Text</h3>
       <ul>
@@ -227,12 +229,41 @@
         <strong>Remember:</strong> Custom audio overrides TTS only for that button. Default language and voice in the side panel still apply to buttons without a recording or language override.
       </p>
 
-      <h3 id="editor-actions">4.5 Clear, Cancel, and Save</h3>
+      <h3 id="folder-buttons">4.5 Folder buttons (link to another board)</h3>
+      <p>
+        On custom grid boards (not fixed 2/4/6-button layouts), you can turn a button into a
+        <strong>folder</strong> that opens another board instead of speaking.
+      </p>
+      <ol>
+        <li>Open the board in <strong>Settings mode</strong> and tap the button to edit.</li>
+        <li>Under <strong>Button action</strong>, choose <strong>Open another board</strong>.</li>
+        <li>Pick an existing board from the list, or click <strong>Create new board</strong> to add a linked board.</li>
+        <li>Click <strong>Save</strong>. A small folder icon appears on the button.</li>
+      </ol>
+      <p class="note">
+        Linked boards stay in the side-panel board list as independent boards. Exporting a board that contains folder buttons includes all linked boards in the <code>.obz</code> file automatically.
+      </p>
+
+      <h3 id="copy-to-board">4.6 Copy to another board</h3>
+      <p>
+        On custom grid boards, you can duplicate the button you are editing onto another grid board without leaving the editor.
+      </p>
+      <ol>
+        <li>In the button editor, click <strong>Copy to board</strong>.</li>
+        <li>Choose a destination board from the list (fixed 2/4/6-button layouts are not listed).</li>
+        <li>The extension copies the current text, note, language, colours, background image, audio, and folder-link settings into the first empty slot on that board. If the board is full but can grow, a new row is added automatically.</li>
+      </ol>
+      <p class="note">
+        The copy uses whatever is currently in the editor. Click <strong>Save</strong> first if you want the last saved version instead of unsaved edits.
+      </p>
+
+      <h3 id="editor-actions">4.7 Clear, Cancel, Save, and Save &amp; next</h3>
       <p>At the bottom of the button editor:</p>
       <ul>
-        <li><strong>Clear</strong> — Resets this button to an empty slot (removes text, note, language override, colors, background image, and custom audio). This is saved right away and the settings window closes.</li>
-        <li><strong>Cancel</strong> — Closes the settings window without applying changes from this edit session. The button stays as it was last saved.</li>
-        <li><strong>Save</strong> — Stores everything in the editor (including background image and custom audio) and closes the settings window.</li>
+        <li><strong>Clear</strong> — Resets this button to an empty slot (removes text, note, language override, colours, background image, custom audio, and board links). You are asked to confirm; the change is saved right away and the editor closes.</li>
+        <li><strong>Cancel</strong> — Closes the editor without applying changes from this edit session. The button stays as it was last saved.</li>
+        <li><strong>Save</strong> — Stores everything in the editor (including background image and custom audio) and closes the editor.</li>
+        <li><strong>Save &amp; next</strong> — Saves the button and immediately opens the next slot in grid order (#N+1, wrapping from the last slot back to #1). Useful when filling many buttons in one session.</li>
       </ul>
       <p class="muted">You can also press <span class="kbd">Esc</span> to close the editor the same way as <strong>Cancel</strong>.</p>
     </section>
@@ -259,12 +290,7 @@
     <section class="card" id="importexport">
       <h2>7. Import, Export, and Backup (OBZ/OBF)</h2>
 
-      <h3>7.1 Board Library</h3>
-      <p>
-        The <a href="boards.html">Board Library</a> offers ready-made communication boards you can download and import. Browse the library to find boards for everyday conversations, actions, emotions, and more.
-      </p>
-
-      <h3>7.2 Import Boards from a File</h3>
+      <h3>7.1 Import Boards</h3>
       <ol>
         <li>Open <strong>Import/Export</strong> tab.</li>
         <li>Select import mode:
@@ -275,18 +301,14 @@
         </li>
         <li>Choose a <code>.obz</code> or <code>.obf</code> file.</li>
       </ol>
-      <p>
-        You can also find free, open-licensed communication boards at
-        <a href="https://www.openboardformat.org/examples" target="_blank" rel="noopener">openboardformat.org</a>.
-      </p>
 
-      <h3>7.3 Export Boards</h3>
+      <h3>7.2 Export Boards</h3>
       <ul>
         <li><strong>Export all boards</strong> creates one <code>.obz</code> backup file.</li>
-        <li>From board list, use export action on a board card to export a single board.</li>
+        <li>From board list, use export action on a board card to export a single board <em>and any boards linked from it via folder buttons</em>.</li>
       </ul>
 
-      <h3>7.4 Cross-platform Sharing</h3>
+      <h3>7.3 Cross-platform Sharing</h3>
       <p>
         Boards are compatible with the
         <a href="https://play.google.com/store/apps/details?id=app.hobbysoft.speakingbuttons" target="_blank" rel="noopener">Android Talking Buttons app</a>
@@ -295,13 +317,30 @@
       </p>
     </section>
 
+    <section class="card" id="folders-nav">
+      <h2>8. Navigate nested boards</h2>
+      <p>
+        In normal (speaking) mode, tapping a folder button opens the linked board in the same browser tab.
+        You can nest boards as deeply as you need (for example: Home → Food → Drinks).
+      </p>
+      <ul>
+        <li>Use the <strong>←</strong> back button in the board toolbar to return to the previous board.</li>
+        <li>Your browser <strong>Back</strong> key works the same way while navigating between linked boards.</li>
+        <li>In Settings mode, tapping a folder button opens the editor — it does not navigate away.</li>
+      </ul>
+      <p class="note">
+        On the <strong>Boards</strong> tab, enable <strong>Show top-level boards only</strong> to hide boards that are only linked as sub-boards from other boards.
+      </p>
+    </section>
+
     <section class="card" id="tips">
-      <h2>8. Tips and Known Differences from Mobile</h2>
+      <h2>9. Tips and Known Differences from Mobile</h2>
       <ul>
         <li>Chrome extension opens boards in a regular browser tab for speaking/editing.</li>
         <li>TTS voices depend on browser/OS installed voices.</li>
+        <li>Folder buttons and nested navigation work the same as on Android; boards shared as <code>.obz</code> files preserve folder links.</li>
       </ul>
-      <p class="muted">Version: 1.7 extension user guide (English).</p>
+      <p class="muted">Version: 2.0 extension user guide (English).</p>
     </section>
   </main>
 </body>
