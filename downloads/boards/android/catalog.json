@@ -3,6 +3,11 @@
   "bundles": {
     "themed": {
       "en": ["AAC_boards_phone_v4.obz"],
+      "de": ["AAC_boards_phone_v4.obz"],
+      "es": ["AAC_boards_phone_v4.obz"],
+      "fr": ["AAC_boards_phone_v4.obz"],
+      "it": ["AAC_boards_phone_v4.obz"],
+      "pt": ["AAC_boards_phone_v4.obz"],
       "ru": ["AAC_boards_phone_v4.obz"]
     },
     "symbols": {
