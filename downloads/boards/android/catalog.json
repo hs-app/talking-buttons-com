@@ -12,6 +12,11 @@
     },
     "symbols": {
       "en": ["Adam_Urdu_Symbols.obz", "Mulberry_Symbols.obz"],
+      "de": ["Adam_Urdu_Symbols.obz", "Mulberry_Symbols.obz"],
+      "es": ["Adam_Urdu_Symbols.obz", "Mulberry_Symbols.obz"],
+      "fr": ["Adam_Urdu_Symbols.obz", "Mulberry_Symbols.obz"],
+      "it": ["Adam_Urdu_Symbols.obz", "Mulberry_Symbols.obz"],
+      "pt": ["Adam_Urdu_Symbols.obz", "Mulberry_Symbols.obz"],
       "ru": ["Adam_Urdu_Symbols.obz", "Mulberry_Symbols.obz"]
     }
   }
