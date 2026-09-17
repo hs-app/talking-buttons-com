@@ -51,14 +51,14 @@
 
     <section class="app-video" aria-labelledby="video-android-heading">
       <h2 id="video-android-heading">Видеоруководство</h2>
-      <div class="video-embed">
-        <iframe
-          src="https://www.youtube.com/embed/ldB1YyWvS8o?feature=oembed"
-          title="Видеоруководство по приложению Говорящие кнопки для Android"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <div class="video-embed" data-youtube-id="ldB1YyWvS8o" data-youtube-title="Видеоруководство по приложению Говорящие кнопки для Android">
+        <a class="video-facade" href="https://www.youtube.com/watch?v=ldB1YyWvS8o" target="_blank" rel="noopener">
+          <img src="https://i.ytimg.com/vi/ldB1YyWvS8o/hqdefault.jpg" alt="" width="480" height="360" decoding="async">
+          <span class="video-play" aria-hidden="true"></span>
+          <span class="visually-hidden">Смотреть видеоруководство</span>
+        </a>
       </div>
+      <p class="video-fallback"><a href="https://www.youtube.com/watch?v=ldB1YyWvS8o" target="_blank" rel="noopener">Смотреть на YouTube</a></p>
     </section>
 	
     <section class="app-screenshots" aria-labelledby="screenshots-android-heading">
@@ -101,5 +101,6 @@
     </div>
   </footer>
   <script>try { localStorage.setItem('tb_locale', 'ru'); } catch (e) {}</script>
+  <script src="../js/youtube-facade.js" defer></script>
 </body>
 </html>
